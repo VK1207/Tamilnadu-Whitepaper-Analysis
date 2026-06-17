@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Economics Explained — GDP, GSDP, GST & The Paradox | TN White Paper</title>
+<meta name="description" content="GDP vs GSDP explained in plain English and Tamil. Tamil Nadu's fiscal paradox. How GST is collected and how to fix it without burdening citizens.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&family=Mukta:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+:root {
+  --primary: #0f2d52; --primary-light: #1a4a7a;
+  --red: #b91c1c; --amber: #d97706; --green: #15803d;
+  --text: #0f172a; --muted: #475569; --border: #e2e8f0;
+  --surface: #f8fafc; --white: #ffffff;
+  --radius: 14px; --shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+body { font-family: 'Inter', sans-serif; background: #f0f4f8; color: var(--text); font-size: 15px; line-height: 1.65; }
+
+.nav { background: var(--primary); padding: 12px 24px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+.nav a { color: #94a3b8; text-decoration: none; font-size: 0.82em; transition: color 0.2s; }
+.nav a:hover { color: #fcd34d; }
+.nav-sep { color: #334155; }
+
+.hero { background: linear-gradient(135deg, #0f2d52 0%, #1e3a5f 55%, #0f2d52 100%); padding: 56px 24px 48px; text-align: center; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 50%, rgba(21,128,61,0.12) 0%, transparent 55%); pointer-events: none; }
+.hero-badge { display: inline-block; background: rgba(21,128,61,0.2); border: 1px solid rgba(21,128,61,0.45); color: #4ade80; font-size: 0.7em; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 5px 16px; border-radius: 20px; margin-bottom: 18px; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.6em, 4.5vw, 2.4em); color: #fff; line-height: 1.2; margin-bottom: 12px; }
+.hero h1 span { color: #4ade80; }
+.hero-divider { width: 50px; height: 3px; background: linear-gradient(90deg, #15803d, #0f2d52); margin: 16px auto; border-radius: 2px; }
+.hero-sub { font-size: 0.92em; color: #94a3b8; max-width: 580px; margin: 0 auto; line-height: 1.7; }
+.hero-pills { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
+.hero-pill { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: #cbd5e1; font-size: 0.78em; padding: 6px 14px; border-radius: 20px; cursor: pointer; text-decoration: none; transition: all 0.2s; }
+.hero-pill:hover { background: rgba(21,128,61,0.2); border-color: rgba(21,128,61,0.4); color: #4ade80; }
+
+.page { max-width: 900px; margin: 28px auto; padding: 0 16px; }
+.card { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); margin-bottom: 24px; overflow: hidden; }
+.card-header { padding: 24px 28px 20px; border-bottom: 2px solid var(--border); display: flex; align-items: flex-start; gap: 14px; }
+.card-header-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3em; flex-shrink: 0; }
+.card-header h2 { font-family: 'Playfair Display', serif; font-size: 1.3em; color: var(--primary); margin-bottom: 4px; line-height: 1.3; }
+.card-header .ch-sub { font-family: 'Mukta', sans-serif; font-size: 0.9em; color: #64748b; }
+.card-body { padding: 24px 28px; }
+
+.prose { font-size: 0.93em; color: #1e293b; line-height: 1.75; margin-bottom: 14px; }
+.prose-ta { font-family: 'Mukta', sans-serif; font-size: 0.98em; color: #1e293b; line-height: 1.85; margin-bottom: 14px; }
+.prose strong, .prose-ta strong { color: var(--primary); font-weight: 700; }
+
+.analogy { background: linear-gradient(135deg, #fffbeb, #fef9c3); border: 1.5px solid #fde68a; border-radius: 12px; padding: 18px 22px; margin: 16px 0; }
+.analogy .an-head { font-size: 0.72em; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: #92400e; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+.analogy .an-en { font-size: 0.9em; color: #78350f; line-height: 1.7; margin-bottom: 10px; }
+.analogy .an-ta { font-family: 'Mukta', sans-serif; font-size: 0.95em; color: #92400e; line-height: 1.8; border-top: 1px dashed #fcd34d; padding-top: 10px; }
+
+.callout { display: flex; gap: 14px; padding: 16px 20px; border-radius: 10px; margin: 16px 0; border: 1px solid; font-size: 0.9em; line-height: 1.65; }
+.callout-icon { font-size: 1.3em; flex-shrink: 0; margin-top: 1px; }
+.callout.danger { background: #fff1f2; border-color: #fca5a5; color: #7f1d1d; }
+.callout.info { background: #eff6ff; border-color: #93c5fd; color: #1e3a5f; }
+.callout.success { background: #f0fdf4; border-color: #86efac; color: #14532d; }
+.callout.warn { background: #fffbeb; border-color: #fcd34d; color: #78350f; }
+.callout strong { font-weight: 700; }
+
+.comp-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.88em; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+.comp-table thead tr { background: linear-gradient(90deg, var(--primary), var(--primary-light)); }
+.comp-table th { color: #fff; padding: 11px 14px; text-align: left; font-size: 0.82em; font-weight: 600; }
+.comp-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); color: #1e293b; background: #fff; vertical-align: top; line-height: 1.55; }
+.comp-table tr:nth-child(even) td { background: var(--surface); }
+.comp-table tr:hover td { background: #dbeafe !important; color: #0f172a !important; }
+.comp-table td:first-child { font-weight: 700; color: var(--primary); }
+.comp-table .red-cell { color: var(--red); font-weight: 700; }
+.comp-table .green-cell { color: var(--green); font-weight: 700; }
+.comp-table .amber-cell { color: var(--amber); font-weight: 700; }
+
+.stat-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; margin: 16px 0; }
+.stat-box { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px; text-align: center; }
+.stat-box .sb-num { font-size: 1.5em; font-weight: 800; margin-bottom: 4px; }
+.stat-box .sb-label { font-size: 0.72em; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; line-height: 1.3; }
+.stat-box.red { border-top: 3px solid var(--red); } .stat-box.red .sb-num { color: var(--red); }
+.stat-box.green { border-top: 3px solid var(--green); } .stat-box.green .sb-num { color: var(--green); }
+.stat-box.amber { border-top: 3px solid var(--amber); } .stat-box.amber .sb-num { color: var(--amber); }
+.stat-box.blue { border-top: 3px solid var(--primary); } .stat-box.blue .sb-num { color: var(--primary); }
+
+.process-flow { display: flex; flex-direction: column; gap: 0; margin: 16px 0; }
+.pf-item { display: flex; gap: 16px; align-items: flex-start; padding: 14px 0; border-bottom: 1px dashed var(--border); }
+.pf-item:last-child { border-bottom: none; }
+.pf-num { width: 32px; height: 32px; border-radius: 50%; background: var(--primary); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 0.85em; font-weight: 800; flex-shrink: 0; margin-top: 2px; }
+.pf-content { flex: 1; }
+.pf-title { font-weight: 700; color: var(--primary); margin-bottom: 4px; font-size: 0.93em; }
+.pf-text { font-size: 0.87em; color: #334155; line-height: 1.65; }
+.pf-text-ta { font-family: 'Mukta', sans-serif; font-size: 0.92em; color: #475569; margin-top: 4px; line-height: 1.7; }
+
+.method-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0; }
+@media(max-width:580px) { .method-grid { grid-template-columns: 1fr; } }
+.method-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+.method-card .mc-icon { font-size: 1.5em; margin-bottom: 8px; }
+.method-card .mc-title { font-weight: 700; color: var(--primary); font-size: 0.93em; margin-bottom: 6px; }
+.method-card .mc-en { font-size: 0.85em; color: #334155; line-height: 1.65; margin-bottom: 6px; }
+.method-card .mc-ta { font-family: 'Mukta', sans-serif; font-size: 0.9em; color: #475569; line-height: 1.7; }
+.method-card .mc-badge { display: inline-block; font-size: 0.68em; padding: 2px 8px; border-radius: 10px; font-weight: 700; margin-bottom: 8px; text-transform: uppercase; }
+.badge-noburd { background: #dcfce7; color: #15803d; }
+.badge-light { background: #fef3c7; color: #92400e; }
+
+.section-divider { text-align: center; margin: 32px 0 8px; position: relative; }
+.section-divider::before { content: ''; position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--border); }
+.section-divider span { position: relative; background: #f0f4f8; padding: 0 16px; font-size: 0.75em; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: var(--primary); }
+
+.big-number-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+@media(max-width:500px) { .big-number-row { grid-template-columns: 1fr; } }
+.big-num-card { border-radius: 12px; padding: 20px; text-align: center; }
+.big-num-card.gdp { background: linear-gradient(135deg, #eff6ff, #dbeafe); border: 1.5px solid #93c5fd; }
+.big-num-card.gsdp { background: linear-gradient(135deg, #f0fdf4, #dcfce7); border: 1.5px solid #86efac; }
+.big-num-card .bn-title { font-size: 0.72em; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px; }
+.big-num-card.gdp .bn-title { color: #1e40af; }
+.big-num-card.gsdp .bn-title { color: #15803d; }
+.big-num-card .bn-num { font-family: 'Playfair Display', serif; font-size: 2em; font-weight: 800; margin-bottom: 4px; }
+.big-num-card.gdp .bn-num { color: #1e40af; }
+.big-num-card.gsdp .bn-num { color: #15803d; }
+.big-num-card .bn-sub { font-size: 0.78em; color: #64748b; line-height: 1.4; }
+.big-num-card .bn-ta { font-family: 'Mukta', sans-serif; font-size: 0.88em; margin-top: 8px; color: #475569; }
+
+.closing-box { background: linear-gradient(135deg, #0f2d52, #1a1a4e); border-radius: var(--radius); padding: 28px; margin: 20px 0; color: #fff; }
+.closing-box h3 { font-family: 'Playfair Display', serif; font-size: 1.2em; color: #4ade80; margin-bottom: 14px; }
+.closing-box p { font-size: 0.9em; color: #cbd5e1; line-height: 1.75; margin-bottom: 10px; }
+.closing-box strong { color: #fef3c7; }
+.closing-box .ta-close { font-family: 'Mukta', sans-serif; color: #94a3b8; font-size: 0.95em; line-height: 1.85; margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.1); }
+
+footer { background: var(--primary); color: #475569; padding: 24px; text-align: center; font-size: 0.8em; margin-top: 30px; }
+footer a { color: #64748b; text-decoration: none; }
+.footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 10px; }
+
+@media(max-width:480px) { .card-header { padding: 18px 16px 14px; flex-direction: column; } .card-body { padding: 18px 16px; } }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html">Home</a>
+  <span class="nav-sep">|</span>
+  <a href="TN_WhitePaper_Comparative_Analysis_v2.html">Full Report</a>
+  <span class="nav-sep">|</span>
+  <a href="accountability.html">Accountability Gap</a>
+  <span class="nav-sep">|</span>
+  <a href="glossary.html">Glossary</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-badge">Economics Guide - English and Tamil</div>
+  <h1>Understanding <span>Tamil Nadu's Economy</span></h1>
+  <div class="hero-divider"></div>
+  <p class="hero-sub">GDP vs. GSDP explained simply. The Tamil Nadu fiscal paradox unpacked. How GST works and how to fix collection without burdening honest citizens.</p>
+  <div class="hero-pills">
+    <a href="#gdp-gsdp" class="hero-pill">📊 GDP vs GSDP</a>
+    <a href="#paradox" class="hero-pill">🔍 The Paradox</a>
+    <a href="#gst" class="hero-pill">💰 How GST Works</a>
+    <a href="#fix-gst" class="hero-pill">✅ How to Fix GST</a>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- ===== GDP vs GSDP ===== -->
+  <div class="section-divider" id="gdp-gsdp"><span>Part 1 - GDP vs. GSDP</span></div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-header-icon" style="background:#dbeafe;">📊</div>
+      <div>
+        <h2>GDP vs. GSDP - What Is the Difference?</h2>
+        <div class="ch-sub">GDP vs GSDP - என்ன வித்தியாசம்?</div>
+      </div>
+    </div>
+    <div class="card-body">
+
+      <div class="big-number-row">
+        <div class="big-num-card gdp">
+          <div class="bn-title">GDP - India's Total</div>
+          <div class="bn-num">₹347L cr</div>
+          <div class="bn-sub">All 28 States + UTs combined output in 2025-26</div>
+          <div class="bn-ta">28 மாநிலங்கள் + யூடிகள் சேர்ந்த மொத்த உற்பத்தி</div>
+        </div>
+        <div class="big-num-card gsdp">
+          <div class="bn-title">GSDP - Tamil Nadu Only</div>
+          <div class="bn-num">₹35.29L cr</div>
+          <div class="bn-sub">Tamil Nadu's own economy - 2nd largest State in India</div>
+          <div class="bn-ta">தமிழ்நாட்டின் சொந்த பொருளாதாரம் - இந்தியாவில் 2வது பெரியது</div>
+        </div>
+      </div>
+
+      <p class="prose">GDP (Gross Domestic Product) measures the total value of everything produced in the entire country in one year. GSDP (Gross State Domestic Product) measures the same thing but only for one State. Every factory, farm, software company, shop, and service in Tamil Nadu contributes to its GSDP. Add up all States' GSDPs and you get close to national GDP.</p>
+      <p class="prose-ta">GDP (மொத்த உள்நாட்டு உற்பத்தி) என்பது ஒரு வருடத்தில் நாடு முழுவதும் உற்பத்தி செய்யப்படும் அனைத்தின் மொத்த மதிப்பை அளவிடுகிறது. GSDP (மொத்த மாநில உள்நாட்டு உற்பத்தி) ஒரு மாநிலத்திற்கு மட்டும் இதையே செய்கிறது. தமிழ்நாட்டில் உள்ள ஒவ்வொரு தொழிற்சாலை, விவசாயம், மென்பொருள் நிறுவனம், கடை மற்றும் சேவையும் அதன் GSDP-க்கு பங்களிக்கிறது.</p>
+
+      <div class="analogy">
+        <div class="an-head">🏠 Household Analogy / வீட்டு உதாரணம்</div>
+        <div class="an-en">
+          Think of India as a large housing society with 28 flats.<br><br>
+          <strong>GDP</strong> = The total annual income of ALL 28 families in the society combined.<br>
+          <strong>GSDP</strong> = The annual income of just your flat alone - say Flat No.6 (Tamil Nadu).<br><br>
+          When Tamil Nadu's government calculates its budget, borrows money, sets tax targets, and measures its debt - it compares everything to <strong>its own flat's income (GSDP)</strong>, not the income of the entire 28-flat society (GDP). Using national GDP would make Tamil Nadu's debt look tiny and meaningless - like saying "my flat owes only 0.03% of the society's total income."
+        </div>
+        <div class="an-ta">
+          இந்தியாவை 28 வீடுகள் கொண்ட ஒரு பெரிய வீட்டு சங்கம் என்று நினைத்துக்கொள்ளுங்கள்.<br><br>
+          <strong>GDP</strong> = அந்த சங்கத்தில் உள்ள அனைத்து 28 குடும்பங்களின் மொத்த வருடாந்திர வருமானம்.<br>
+          <strong>GSDP</strong> = உங்கள் வீடு மட்டும் - வீடு எண் 6 (தமிழ்நாடு) - இன் வருடாந்திர வருமானம்.<br><br>
+          தமிழ்நாட்டு அரசு பட்ஜெட் கணக்கிடும்போது, கடன் வாங்கும்போது, வரி இலக்கை நிர்ணயிக்கும்போது - அனைத்தையும் <strong>தனது சொந்த வீட்டின் வருமானத்துடன் (GSDP)</strong> ஒப்பிடுகிறது, 28-வீடு சங்கத்தின் வருமானத்துடன் (GDP) அல்ல.
+        </div>
+      </div>
+
+      <table class="comp-table">
+        <thead><tr><th>Aspect</th><th>GDP</th><th>GSDP</th></tr></thead>
+        <tbody>
+          <tr><td>What it measures</td><td>Entire country's economic output in one year</td><td>One State's economic output in one year</td></tr>
+          <tr><td>Who uses it</td><td>Central Govt, RBI, national policymakers</td><td>State governments for all fiscal planning</td></tr>
+          <tr><td>Tamil Nadu's figure</td><td>TN contributes ~9.16% of India's GDP</td><td>TN's GSDP is ₹35.29 lakh crore (2nd largest)</td></tr>
+          <tr><td>Relevance to TN budget</td><td>Not directly used for State fiscal ratios</td><td>All State fiscal ratios use GSDP as denominator</td></tr>
+          <tr><td>Example</td><td>"TN contributes 9.16% of national output"</td><td>"TN's fiscal deficit is 3.77% of its own GSDP"</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout info">
+        <span class="callout-icon">📌</span>
+        <div><strong>Why GSDP matters more for this report:</strong> Tamil Nadu's government cannot control what UP or Maharashtra produces. It taxes Tamil Nadu's economy, borrows against Tamil Nadu's economy, and spends within Tamil Nadu. So every ratio - debt, deficit, tax effort, capital spending - is measured against GSDP. That is why this report uses GSDP throughout, not GDP.</div>
+      </div>
+
+      <!-- VISUAL COMPARISON -->
+      <h3 style="color:var(--primary);font-size:1.0em;font-weight:700;margin:20px 0 12px;">How Tamil Nadu's GSDP Compares</h3>
+      <table class="comp-table">
+        <thead><tr><th>State</th><th>GSDP 2025-26</th><th>India GDP Share</th><th>Rank</th></tr></thead>
+        <tbody>
+          <tr><td>Maharashtra</td><td>₹42.48 lakh crore</td><td>~12.2%</td><td class="green-cell">1st</td></tr>
+          <tr><td>Tamil Nadu</td><td>₹35.29 lakh crore</td><td>~9.16%</td><td class="amber-cell">2nd</td></tr>
+          <tr><td>Karnataka</td><td>₹28.78 lakh crore</td><td>~8.3%</td><td>3rd</td></tr>
+          <tr><td>Gujarat</td><td>₹26.45 lakh crore</td><td>~7.6%</td><td>4th</td></tr>
+        </tbody>
+      </table>
+      <p class="prose" style="font-size:0.85em; color:var(--muted);">Tamil Nadu has the 2nd largest State economy in India. Bigger than Denmark, Singapore, and Malaysia if it were a country.</p>
+      <p class="prose-ta" style="font-size:0.88em; color:var(--muted);">தமிழ்நாடு இந்தியாவில் 2வது பெரிய மாநில பொருளாதாரத்தை கொண்டுள்ளது. ஒரு நாடாக இருந்தால் டென்மார்க், சிங்கப்பூர், மலேசியாவை விட பெரியது.</p>
+    </div>
+  </div>
+
+  <!-- ===== THE PARADOX ===== -->
+  <div class="section-divider" id="paradox"><span>Part 2 - The Tamil Nadu Paradox</span></div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-header-icon" style="background:#fef3c7;">🔍</div>
+      <div>
+        <h2>The Paradox - Big Economy, Poor Fiscal Performance</h2>
+        <div class="ch-sub">முரண்பாடு - பெரிய பொருளாதாரம், மோசமான நிதி மேலாண்மை</div>
+      </div>
+    </div>
+    <div class="card-body">
+
+      <div class="callout warn">
+        <span class="callout-icon">🎯</span>
+        <div><strong>The Core Paradox in One Sentence:</strong> Tamil Nadu has India's 2nd largest economy but the worst fiscal ratios among comparable States - highest debt per person, lowest capital investment, highest interest burden, and lowest tax effort relative to its own economic size.<br><br>
+        <span style="font-family:'Mukta',sans-serif; font-size:1.05em;">ஒரு வரியில் முரண்பாடு: தமிழ்நாடு இந்தியாவின் 2வது பெரிய பொருளாதாரத்தை கொண்டுள்ளது, ஆனால் ஒப்பிடக்கூடிய மாநிலங்களில் மிக மோசமான நிதி விகிதங்களை கொண்டுள்ளது.</span></div>
+      </div>
+
+      <div class="analogy">
+        <div class="an-head">🏠 Street Analogy / தெரு உதாரணம்</div>
+        <div class="an-en">
+          In your street of 4 neighbours, your family earns the <strong>2nd highest income</strong>. But look at the full picture:<br><br>
+          You have the <strong>most debt</strong> on the street (₹1,28,934 per person vs. neighbour's ₹70,798)<br>
+          You spend the <strong>least</strong> on fixing and building your house (1.44% vs. neighbour's 2.86%)<br>
+          <strong>₹22.80 out of every ₹100</strong> you earn goes only to loan interest - before buying groceries<br>
+          Your neighbour earning ₹2 lakh less than you <strong>collects more savings</strong> each year<br>
+          You save the <strong>lowest percentage</strong> of your income on the street<br><br>
+          That is Tamil Nadu's paradox. <strong>2nd biggest income. Worst money management.</strong>
+        </div>
+        <div class="an-ta">
+          4 அண்டை வீட்டார் இருக்கும் உங்கள் தெருவில், உங்கள் குடும்பம் <strong>2வது அதிக வருமானம்</strong> சம்பாதிக்கிறது. ஆனால் முழு படத்தை பாருங்கள்:<br><br>
+          தெருவிலேயே <strong>அதிக கடன்</strong> உங்களிடம் (ஒருவருக்கு ₹1,28,934 vs. அண்டை வீட்டாரின் ₹70,798)<br>
+          வீட்டை சரி செய்யவும் கட்டவும் <strong>மிகக் குறைவாக</strong> செலவழிக்கிறீர்கள் (1.44% vs. அண்டை வீட்டாரின் 2.86%)<br>
+          சம்பாதிக்கும் <strong>ஒவ்வொரு ₹100-லும் ₹22.80</strong> வட்டிக்கே போகிறது - கடைக்கு போவதற்கு முன்பே<br>
+          உங்களை விட ₹2 லட்சம் குறைவாக சம்பாதிக்கும் அண்டை வீட்டார் <strong>அதிக சேமிப்பு</strong> வைக்கிறார்<br><br>
+          இதுவே தமிழ்நாட்டின் முரண்பாடு. <strong>2வது பெரிய வருமானம். மிக மோசமான பண மேலாண்மை.</strong>
+        </div>
+      </div>
+
+      <h3 style="color:var(--primary);font-size:1.0em;font-weight:700;margin:20px 0 12px;">The Numbers That Prove the Paradox</h3>
+      <table class="comp-table">
+        <thead><tr><th>Fiscal Ratio</th><th>Tamil Nadu</th><th>Karnataka</th><th>Maharashtra</th><th>Gujarat</th><th>TN Rank</th></tr></thead>
+        <tbody>
+          <tr><td>GSDP Rank</td><td class="green-cell">2nd Largest</td><td>3rd</td><td>1st</td><td>4th</td><td class="green-cell">2nd Best</td></tr>
+          <tr><td>Debt / GSDP</td><td class="red-cell">28.3%</td><td>23.4%</td><td>19.7%</td><td>17.6%</td><td class="red-cell">Worst</td></tr>
+          <tr><td>Tax Collection / GSDP</td><td class="red-cell">5.45%</td><td>6.8%</td><td>6.9%</td><td>6.2%</td><td class="red-cell">Worst</td></tr>
+          <tr><td>Capital Expenditure / GSDP</td><td class="red-cell">1.44%</td><td>1.89%</td><td>1.76%</td><td>2.86%</td><td class="red-cell">Worst</td></tr>
+          <tr><td>Interest / Revenue</td><td class="red-cell">22.8%</td><td>16.4%</td><td>10.3%</td><td>12.0%</td><td class="red-cell">Worst</td></tr>
+          <tr><td>Per Capita Debt</td><td class="red-cell">₹1,28,934</td><td>₹1,11,375</td><td>₹77,569</td><td>₹70,798</td><td class="red-cell">Worst</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout danger">
+        <span class="callout-icon">⚠️</span>
+        <div><strong>What causes this paradox?</strong> Not poverty - Tamil Nadu is wealthy. The causes are: revenue leakage through corruption, welfare expansion without matching revenue mobilisation, PSU losses without structural reform, and declining capital investment. Every single one of these is a policy choice - not fate. The 2026 White Paper confirms: peer States consolidated post-COVID. Tamil Nadu chose not to. That is not a circumstance, it is a decision.<br><br>
+        <span style="font-family:'Mukta',sans-serif; font-size:1.0em;">இந்த முரண்பாட்டிற்கு என்ன காரணம்? வறுமை அல்ல - தமிழ்நாடு வளமானது. காரணங்கள்: ஊழல் மூலம் வருவாய் கசிவு, வருவாய் திரட்டல் இல்லாமல் நலத்திட்ட விரிவாக்கம், கட்டமைப்பு சீர்திருத்தம் இல்லாமல் அரசு நிறுவன நஷ்டங்கள், மற்றும் குறைந்து வரும் மூலதன முதலீடு. இவை அனைத்தும் கொள்கை தேர்வுகள் - விதி அல்ல.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HOW GST WORKS ===== -->
+  <div class="section-divider" id="gst"><span>Part 3 - How GST Works and Where It Leaks</span></div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-header-icon" style="background:#f3e8ff;">💰</div>
+      <div>
+        <h2>How GST Is Collected - and Where It Leaks</h2>
+        <div class="ch-sub">GST எப்படி வசூலிக்கப்படுகிறது - எங்கு கசிகிறது?</div>
+      </div>
+    </div>
+    <div class="card-body">
+
+      <p class="prose">GST (Goods and Services Tax) is charged on every purchase you make. When you buy a shirt, pay a restaurant bill, or hire any service - GST is included. The business collects it from you and must deposit it with the government monthly. Tamil Nadu should be collecting far more than it currently does - without raising any rates at all.</p>
+      <p class="prose-ta">GST (பொருட்கள் மற்றும் சேவை வரி) நீங்கள் செய்யும் ஒவ்வொரு கொள்முதலிலும் வசூலிக்கப்படுகிறது. நீங்கள் ஒரு சட்டை வாங்கும்போது, உணவகத்தில் பில் கட்டும்போது, எந்த சேவையையும் பெறும்போது - GST சேர்க்கப்பட்டுள்ளது. தொழில் அதை உங்களிடம் வசூலித்து மாதந்தோறும் அரசாங்கத்திடம் செலுத்த வேண்டும். எந்த விகிதத்தையும் உயர்த்தாமல் தமிழ்நாடு இப்போது வசூலிப்பதை விட மிக அதிகமாக வசூலிக்க வேண்டும்.</p>
+
+      <div class="callout warn">
+        <span class="callout-icon">📊</span>
+        <div><strong>The Tamil Nadu GST Gap:</strong> Services are 53.6% of Tamil Nadu's economy (IT, hospitals, logistics, professionals) but contribute only 37.8% of GST collected. That 16 percentage point gap = roughly <strong>₹15,000 to ₹20,000 crore per year uncollected.</strong> Karnataka and Maharashtra close this gap through better enforcement - not higher rates.<br><br>
+        <span style="font-family:'Mukta',sans-serif; font-size:1.0em;">சேவைகள் தமிழ்நாட்டின் பொருளாதாரத்தில் 53.6% (IT, மருத்துவமனைகள், தளவாடங்கள், தொழில்வல்லுநர்கள்) ஆனால் வசூலிக்கப்படும் GST-யில் 37.8% மட்டுமே வருகிறது. அந்த 16 சதவீத புள்ளி இடைவெளி = வருடத்திற்கு சுமார் <strong>₹15,000 முதல் ₹20,000 கோடி வசூலிக்கப்படாத GST.</strong></span>
+        </div>
+      </div>
+
+      <h3 style="color:var(--red);font-size:1.0em;font-weight:700;margin:20px 0 12px;">The 4 Ways GST Leaks in Tamil Nadu</h3>
+      <div class="process-flow">
+        <div class="pf-item">
+          <div class="pf-num">1</div>
+          <div class="pf-content">
+            <div class="pf-title">Fake Invoicing and Ghost Businesses</div>
+            <div class="pf-text">A business creates invoices from non-existent suppliers, claims GST refund on fake "purchases," but the transaction never happened. Millions lost per case. The 2026 White Paper names Commercial Taxes Department officials as facilitating this through bribes.</div>
+            <div class="pf-text-ta">ஒரு தொழில் இல்லாத சப்ளையர்களிடமிருந்து இன்வாய்ஸ் உருவாக்கி, போலி "கொள்முதல்" மீது GST திரும்பப் பெறுகிறது, ஆனால் பரிவர்த்தனை நடக்கவே இல்லை. ஒவ்வொரு வழக்கிலும் மில்லியன்கள் இழக்கப்படுகின்றன. 2026 வெள்ளை அறிக்கை வணிகவரி துறை அதிகாரிகள் லஞ்சம் மூலம் இதை எளிதாக்குவதாக பெயரிட்டு குறிப்பிடுகிறது.</div>
+          </div>
+        </div>
+        <div class="pf-item">
+          <div class="pf-num">2</div>
+          <div class="pf-content">
+            <div class="pf-title">Under-Reporting of Sales Turnover</div>
+            <div class="pf-text">A restaurant earns ₹50,000 per day but shows only ₹20,000 in GST returns. The ₹30,000 difference - collected as cash - disappears from records. Extremely common in hotels, shops, construction, and small manufacturing.</div>
+            <div class="pf-text-ta">ஒரு உணவகம் தினமும் ₹50,000 சம்பாதிக்கிறது ஆனால் GST ரிட்டர்னில் ₹20,000 மட்டுமே காட்டுகிறது. ₹30,000 வித்தியாசம் - ரொக்கமாக வசூலிக்கப்பட்டது - பதிவுகளிலிருந்து மறைகிறது. ஹோட்டல்கள், கடைகள், கட்டுமானம், சிறு உற்பத்தியில் மிகவும் பொதுவானது.</div>
+          </div>
+        </div>
+        <div class="pf-item">
+          <div class="pf-num">3</div>
+          <div class="pf-content">
+            <div class="pf-title">Services Sector Enforcement Gap</div>
+            <div class="pf-text">IT companies, hospitals, logistics firms, and professionals under-declare service income. Services are harder to audit than goods - no physical movement to track. This is the largest single leak and almost entirely enforcement-solvable.</div>
+            <div class="pf-text-ta">IT நிறுவனங்கள், மருத்துவமனைகள், தளவாட நிறுவனங்கள் மற்றும் தொழில்வல்லுநர்கள் சேவை வருமானத்தை குறைவாக தெரிவிக்கிறார்கள். சேவைகளை பொருட்களை விட தணிக்கை செய்வது கடினம் - கண்காணிக்க எந்த உடல் இயக்கமும் இல்லை. இது மிகப்பெரிய ஒற்றை கசிவு மற்றும் கிட்டத்தட்ட முற்றிலும் அமலாக்கம் மூலம் தீர்க்கக்கூடியது.</div>
+          </div>
+        </div>
+        <div class="pf-item">
+          <div class="pf-num">4</div>
+          <div class="pf-content">
+            <div class="pf-title">Officer-Level Bribery and Collusion</div>
+            <div class="pf-text">GST auditors, in exchange for bribes, approve incorrect returns, ignore obvious mismatches, or indefinitely delay audits. The 2026 White Paper states this explicitly as a primary cause. It is a corruption problem - and corruption has known solutions.</div>
+            <div class="pf-text-ta">GST தணிக்கையாளர்கள், லஞ்சத்திற்கு ஈடாக, தவறான ரிட்டர்னை அங்கீகரிக்கிறார்கள், வெளிப்படையான முரண்பாடுகளை புறக்கணிக்கிறார்கள் அல்லது தணிக்கைகளை காலவரையின்றி தாமதப்படுத்துகிறார்கள். 2026 வெள்ளை அறிக்கை இதை முதன்மை காரணமாக வெளிப்படையாக கூறுகிறது.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HOW TO FIX GST ===== -->
+  <div class="section-divider" id="fix-gst"><span>Part 4 - How to Fix GST Without Burdening Citizens</span></div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-header-icon" style="background:#dcfce7;">✅</div>
+      <div>
+        <h2>5 Ways to Improve GST - Zero New Burden on Citizens</h2>
+        <div class="ch-sub">மக்களுக்கு புதிய சுமை இல்லாமல் GST-ஐ மேம்படுத்த 5 வழிகள்</div>
+      </div>
+    </div>
+    <div class="card-body">
+
+      <div class="callout success">
+        <span class="callout-icon">✅</span>
+        <div><strong>Critical Point:</strong> GST rates are set by the central GST Council - Tamil Nadu CANNOT raise or change them. The entire ₹15,000 to ₹20,000 crore gap is a collection and enforcement gap, NOT a rate gap. Every method below collects what is already legally owed. No new tax on any citizen.<br><br>
+        <span style="font-family:'Mukta',sans-serif; font-size:1.0em;"><strong>முக்கியமான புள்ளி:</strong> GST விகிதங்கள் மத்திய GST கவுன்சிலால் நிர்ணயிக்கப்படுகின்றன - தமிழ்நாடு அவற்றை உயர்த்தவோ மாற்றவோ முடியாது. கீழே உள்ள ஒவ்வொரு முறையும் சட்டப்படி ஏற்கனவே செலுத்த வேண்டியதை வசூலிக்கிறது. எந்த குடிமகனுக்கும் புதிய வரி இல்லை.</span>
+        </div>
+      </div>
+
+      <div class="analogy">
+        <div class="an-head">🏠 The Apartment Analogy / அபார்ட்மெண்ட் உதாரணம்</div>
+        <div class="an-en">Your apartment building has a maintenance fee of ₹2,000 per flat per month. Out of 50 flats, only 30 pay. The secretary borrows money to run the lift, water pump, and security guard. <strong>The solution is NOT to raise fees to ₹4,000 for the 30 honest payers.</strong> The solution is to collect the existing ₹2,000 from the 20 flats that are not paying. Tamil Nadu's GST problem is precisely this - honest payers already pay full rate, evaders pay nothing.</div>
+        <div class="an-ta">உங்கள் அபார்ட்மெண்ட் கட்டிடத்தில் மாதம் ₹2,000 பராமரிப்பு கட்டணம் உள்ளது. 50 ஃப்ளாட்களில் 30 மட்டுமே கட்டுகின்றன. <strong>தீர்வு 30 நேர்மையான செலுத்துவோருக்கு ₹4,000 ஆக கட்டணம் உயர்த்துவது அல்ல.</strong> செலுத்தாத 20 ஃப்ளாட்களிடமிருந்து ஏற்கனவே உள்ள ₹2,000 வசூலிப்பதே தீர்வு. தமிழ்நாட்டின் GST பிரச்சனை சரியாக இதுவே.</div>
+      </div>
+
+      <div class="method-grid">
+        <div class="method-card">
+          <div class="mc-icon">🔗</div>
+          <div class="mc-badge badge-noburd">Zero Burden on Citizens</div>
+          <div class="mc-title">1. Data Cross-Matching</div>
+          <div class="mc-en">Match GST returns with electricity bills, bank deposits, import data, and property registrations. If a factory's power bill shows ₹50 lakh usage but GST return shows ₹20 lakh turnover - automatic audit flag. Pure technology, no new tax.</div>
+          <div class="mc-ta">GST ரிட்டர்னை மின்சாரக் கட்டணம், வங்கி வைப்புகள், இறக்குமதி தரவுகளுடன் பொருத்துங்கள். ஒரு தொழிற்சாலையின் மின்சார பில் ₹50 லட்சம் காட்டி GST ரிட்டர்ன் ₹20 லட்சம் காட்டினால் - தானியங்கி தணிக்கை கொடி.</div>
+        </div>
+        <div class="method-card">
+          <div class="mc-icon">🚫</div>
+          <div class="mc-badge badge-noburd">Zero Burden on Citizens</div>
+          <div class="mc-title">2. Clean Up the Tax Department</div>
+          <div class="mc-en">Transfer officers with unexplained wealth. Implement random audit assignments - no business should be able to build a "relationship" with a specific officer. Whistleblower protection for staff who report corrupt colleagues.</div>
+          <div class="mc-ta">விவரிக்க முடியாத செல்வம் கொண்ட அதிகாரிகளை இடமாற்றுங்கள். சீரற்ற தணிக்கை நியமனங்களை செயல்படுத்துங்கள். ஊழல் சக பணியாளர்களை புகாரளிக்கும் ஊழியர்களுக்கு விசில்ப்ளோயர் பாதுகாப்பு.</div>
+        </div>
+        <div class="method-card">
+          <div class="mc-icon">📱</div>
+          <div class="mc-badge badge-light">Minimal Impact on Traders</div>
+          <div class="mc-title">3. Expand E-Invoice Mandate</div>
+          <div class="mc-en">Require e-invoicing for smaller businesses. Every digital invoice creates an audit trail. Karnataka did this systematically - it is a key reason their GST collection is significantly higher despite a smaller economy.</div>
+          <div class="mc-ta">சிறு தொழில்களுக்கும் e-இன்வாய்ஸை கட்டாயமாக்குங்கள். ஒவ்வொரு டிஜிட்டல் இன்வாய்ஸும் தணிக்கை தடத்தை உருவாக்குகிறது. கர்நாடகா இதை முறையாக செய்தது - சிறிய பொருளாதாரம் இருந்தும் அவர்களின் GST வசூல் கணிசமாக அதிகமாக இருப்பதற்கான முக்கிய காரணம்.</div>
+        </div>
+        <div class="method-card">
+          <div class="mc-icon">⛏️</div>
+          <div class="mc-badge badge-noburd">Zero Burden on Citizens</div>
+          <div class="mc-title">4. Mining and Stamp Duty Reform</div>
+          <div class="mc-en">Update property guideline values to match actual market prices - houses selling for ₹1 crore should not register at ₹40 lakh. Tighten mining royalty enforcement. Both require zero new legislation - only enforcement of existing rules.</div>
+          <div class="mc-ta">சொத்து வழிகாட்டி மதிப்புகளை சந்தை விலைகளுக்கு ஏற்ப புதுப்பியுங்கள். ₹1 கோடிக்கு விற்கும் வீடுகள் ₹40 லட்சத்தில் பதிவு செய்யப்படாமல் பார்த்துக்கொள்ளுங்கள். சுரங்க ராயல்டி அமலாக்கத்தை இறுக்குங்கள். புதிய சட்டம் தேவையில்லை.</div>
+        </div>
+        <div class="method-card" style="grid-column: 1 / -1;">
+          <div class="mc-icon">🏢</div>
+          <div class="mc-badge badge-noburd">Zero Burden on Citizens</div>
+          <div class="mc-title">5. Services Sector Audit Drive</div>
+          <div class="mc-en">Target IT parks, hospital chains, logistics hubs, and large professional firms for systematic GST audits. Services are 53.6% of GSDP but only 37.8% of GST. Closing even half that gap through enforcement would add ₹8,000 to ₹10,000 crore per year. This requires no new law - just consistent audit enforcement by trained officers who are rotated regularly to prevent relationships forming.</div>
+          <div class="mc-ta">IT பார்க்குகள், மருத்துவமனை சங்கிலிகள், தளவாட மையங்கள் மற்றும் பெரிய தொழில்வல்லுநர் நிறுவனங்களை முறையான GST தணிக்கைக்கு இலக்கு வையுங்கள். சேவைகள் GSDP-யின் 53.6% ஆனால் GST-யில் 37.8% மட்டுமே. அந்த இடைவெளியில் பாதியை மட்டும் மூடுவது வருடத்திற்கு ₹8,000 முதல் ₹10,000 கோடி கூடுதல் வருவாய் தரும்.</div>
+        </div>
+      </div>
+
+      <div class="callout success">
+        <span class="callout-icon">🟢</span>
+        <div>
+          <strong>Who actually bears any burden from better enforcement?</strong><br>
+          Only three groups face any impact: businesses currently evading GST, informal traders who should be registered but are not, and corrupt officials who lose bribe income. For <strong>every ordinary Tamil Nadu citizen who already pays GST honestly - absolutely zero new burden.</strong> In fact, better collection means the State borrows less, which means less debt for your children.<br><br>
+          <span style="font-family:'Mukta',sans-serif; font-size:1.0em; color:#14532d;">சிறந்த அமலாக்கத்தால் யாருக்கு சுமை? தற்போது GST ஏய்க்கும் தொழில்கள், பதிவு செய்யப்படாத முறைசாரா வர்த்தகர்கள், லஞ்ச வருமானம் இழக்கும் ஊழல் அதிகாரிகள். ஏற்கனவே நேர்மையாக GST செலுத்தும் <strong>ஒவ்வொரு சாதாரண தமிழ்நாட்டு குடிமகனுக்கும் - எந்த புதிய சுமையும் இல்லை.</strong></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="closing-box">
+    <h3>The Bottom Line / முடிவுரை</h3>
+    <p>Tamil Nadu does not have a tax rate problem. It has a <strong>tax collection problem.</strong> The economy is large enough to generate all the revenue the State needs - if existing laws are enforced honestly. The ₹15,000 to ₹20,000 crore annual GST gap is not a design flaw. It is a governance failure - and governance failures have governance solutions.</p>
+    <p>No citizen needs to pay a single rupee more. The State just needs to collect what is already legally owed by those who are currently not paying their fair share.</p>
+    <div class="ta-close">தமிழ்நாட்டிற்கு வரி விகித பிரச்சனை இல்லை. அதற்கு <strong>வரி வசூல் பிரச்சனை</strong> இருக்கிறது. ஏற்கனவே உள்ள சட்டங்கள் நேர்மையாக அமல்படுத்தப்பட்டால் மாநிலத்திற்கு தேவையான அனைத்து வருவாயையும் உருவாக்க பொருளாதாரம் போதுமானது. வருடாந்திர ₹15,000 முதல் ₹20,000 கோடி GST இடைவெளி ஒரு வடிவமைப்பு குறைபாடு அல்ல. இது ஒரு ஆட்சி தோல்வி - மற்றும் ஆட்சி தோல்விகளுக்கு ஆட்சி தீர்வுகள் உள்ளன. எந்த குடிமகனும் ஒரு ரூபாய் கூட கூடுதலாக செலுத்த வேண்டியதில்லை.</div>
+  </div>
+
+</div>
+
+<footer>
+  <p>Part of the Tamil Nadu White Paper Comparative Analysis Project - Evidence-based, politically neutral, independent research</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="TN_WhitePaper_Comparative_Analysis_v2.html">Full Report</a>
+    <a href="accountability.html">Accountability Gap</a>
+    <a href="glossary.html">Glossary</a>
+  </div>
+</footer>
+</body>
+</html>

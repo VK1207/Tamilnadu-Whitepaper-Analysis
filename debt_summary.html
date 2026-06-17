@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tamil Nadu Debt Story  -  What Happened, Why, and What Went Wrong</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700;800&family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+:root {
+  --primary: #0f2d52;
+  --red: #b91c1c;
+  --amber: #d97706;
+  --green: #15803d;
+  --text: #0f172a;
+  --border: #e2e8f0;
+  --surface: #f8fafc;
+  --radius: 14px;
+  --shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+body { font-family: 'Inter', sans-serif; background: #f0f4f8; color: var(--text); font-size: 15px; line-height: 1.7; }
+
+/* NAV */
+.nav { background: var(--primary); padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+.nav-links { display: flex; gap: 14px; flex-wrap: wrap; }
+.nav a { color: #94a3b8; text-decoration: none; font-size: 0.82em; transition: color 0.2s; }
+.nav a:hover { color: #fcd34d; }
+.nav-sep { color: #334155; }
+.lang-pill { background: rgba(252,211,77,0.15); border: 1px solid rgba(252,211,77,0.4); color: #fcd34d; font-size: 0.75em; font-weight: 700; padding: 4px 12px; border-radius: 20px; cursor: pointer; transition: all 0.2s; }
+.lang-pill:hover { background: rgba(252,211,77,0.25); }
+
+/* HERO */
+.hero { background: linear-gradient(135deg, #0f2d52 0%, #1a1a4e 60%, #0f2d52 100%); padding: 52px 24px 44px; text-align: center; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 35% 50%, rgba(185,28,28,0.12) 0%, transparent 55%), radial-gradient(ellipse at 65% 30%, rgba(217,119,6,0.1) 0%, transparent 50%); pointer-events: none; }
+.hero-badge { display: inline-block; background: rgba(185,28,28,0.2); border: 1px solid rgba(185,28,28,0.45); color: #fca5a5; font-size: 0.7em; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 5px 16px; border-radius: 20px; margin-bottom: 18px; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.6em, 4.5vw, 2.5em); color: #fff; line-height: 1.2; margin-bottom: 10px; }
+.hero h1 span { color: #fcd34d; }
+.hero-ta { font-family: 'Noto Sans Tamil', sans-serif; font-size: clamp(1.1em, 3vw, 1.6em); color: #94a3b8; margin-bottom: 16px; font-weight: 600; line-height: 1.4; }
+.hero-divider { width: 50px; height: 3px; background: linear-gradient(90deg, #b91c1c, #d97706); margin: 16px auto; border-radius: 2px; }
+.hero-sub { font-size: 0.9em; color: #94a3b8; max-width: 560px; margin: 0 auto; line-height: 1.75; }
+
+/* LANG TOGGLE */
+.lang-bar { background: #fff; border-bottom: 2px solid var(--border); padding: 10px 24px; display: flex; align-items: center; justify-content: center; gap: 12px; position: sticky; top: 45px; z-index: 99; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+.lang-bar span { font-size: 0.8em; color: #64748b; font-weight: 600; }
+.lang-btn-group { display: flex; background: #f1f5f9; border: 1px solid var(--border); border-radius: 50px; overflow: hidden; }
+.lang-btn { padding: 7px 18px; font-size: 0.82em; font-weight: 700; cursor: pointer; border: none; background: transparent; color: #64748b; font-family: 'Inter', sans-serif; transition: all 0.2s; }
+.lang-btn.active { background: var(--primary); color: #fff; }
+
+/* CONTENT WRAPPER */
+.page { max-width: 860px; margin: 0 auto; padding: 24px 16px 60px; }
+
+/* BLOCKS */
+.block { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); margin-bottom: 20px; overflow: hidden; }
+.block-header { padding: 20px 24px 16px; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 14px; }
+.bh-icon { width: 42px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.2em; flex-shrink: 0; }
+.bh-en { font-size: 1.1em; font-weight: 800; color: var(--primary); margin-bottom: 3px; }
+.bh-ta { font-family: 'Noto Sans Tamil', sans-serif; font-size: 0.95em; color: #64748b; font-weight: 600; }
+.block-body { padding: 22px 24px; }
+@media(max-width:480px) { .block-header { padding: 16px; } .block-body { padding: 16px; } }
+
+/* BILINGUAL ROWS */
+.en { display: block; }
+.ta { display: none; font-family: 'Noto Sans Tamil', sans-serif; line-height: 1.9; }
+body.tamil-mode .en { display: none; }
+body.tamil-mode .ta { display: block; }
+.en-inline { display: inline; }
+.ta-inline { display: none; font-family: 'Noto Sans Tamil', sans-serif; }
+body.tamil-mode .en-inline { display: none; }
+body.tamil-mode .ta-inline { display: inline; }
+
+/* DEBT JOURNEY TIMELINE */
+.journey { position: relative; padding-left: 30px; margin: 8px 0; }
+.journey::before { content: ''; position: absolute; left: 10px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #15803d, #d97706, #b91c1c); }
+.j-item { position: relative; margin-bottom: 22px; }
+.j-item:last-child { margin-bottom: 0; }
+.j-dot { position: absolute; left: -24px; top: 4px; width: 14px; height: 14px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 2px currentColor; }
+.j-dot.green { color: var(--green); background: var(--green); }
+.j-dot.amber { color: var(--amber); background: var(--amber); }
+.j-dot.red { color: var(--red); background: var(--red); }
+.j-year { font-size: 0.78em; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+.j-year.green { color: var(--green); }
+.j-year.amber { color: var(--amber); }
+.j-year.red { color: var(--red); }
+.j-text-en { font-size: 0.9em; color: #1e293b; line-height: 1.7; }
+.j-text-ta { font-family: 'Noto Sans Tamil', sans-serif; font-size: 0.92em; color: #1e293b; line-height: 1.85; }
+.j-number { font-size: 1.3em; font-weight: 800; margin: 4px 0; }
+.j-number.green { color: var(--green); }
+.j-number.amber { color: var(--amber); }
+.j-number.red { color: var(--red); }
+
+/* COMPARISON BOXES */
+.compare-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 14px 0; }
+@media(max-width:520px) { .compare-row { grid-template-columns: 1fr; } }
+.compare-box { border-radius: 12px; padding: 18px; }
+.compare-box.then { background: #eff6ff; border: 1.5px solid #93c5fd; }
+.compare-box.now { background: #fff1f2; border: 1.5px solid #fca5a5; }
+.cb-label { font-size: 0.7em; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+.compare-box.then .cb-label { color: #1e40af; }
+.compare-box.now .cb-label { color: var(--red); }
+.cb-num { font-size: 2em; font-weight: 800; margin-bottom: 4px; line-height: 1; }
+.compare-box.then .cb-num { color: #1e40af; }
+.compare-box.now .cb-num { color: var(--red); }
+.cb-sub { font-size: 0.82em; color: #475569; line-height: 1.5; }
+.cb-sub-ta { font-family: 'Noto Sans Tamil', sans-serif; font-size: 0.88em; color: #475569; line-height: 1.75; }
+
+/* FACTOR CARDS */
+.factor-list { display: flex; flex-direction: column; gap: 14px; margin: 8px 0; }
+.factor-item { display: flex; gap: 14px; align-items: flex-start; padding: 16px; background: var(--surface); border-radius: 12px; border: 1px solid var(--border); }
+.fi-num { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85em; font-weight: 800; color: #fff; flex-shrink: 0; margin-top: 1px; }
+.fi-content { flex: 1; }
+.fi-title-en { font-weight: 700; color: var(--primary); font-size: 0.95em; margin-bottom: 4px; }
+.fi-title-ta { font-family: 'Noto Sans Tamil', sans-serif; font-weight: 700; color: var(--primary); font-size: 0.98em; margin-bottom: 4px; }
+.fi-text-en { font-size: 0.87em; color: #334155; line-height: 1.65; }
+.fi-text-ta { font-family: 'Noto Sans Tamil', sans-serif; font-size: 0.9em; color: #334155; line-height: 1.8; }
+.fi-data { font-size: 0.8em; font-weight: 700; margin-top: 6px; padding: 4px 10px; border-radius: 6px; display: inline-block; }
+.fi-data.red { background: #fee2e2; color: var(--red); }
+.fi-data.amber { background: #fef3c7; color: #92400e; }
+
+/* PEER COMPARISON */
+.peer-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; margin: 14px 0; }
+.peer-card { border-radius: 12px; padding: 16px; text-align: center; border: 2px solid; }
+.peer-card.tn { background: #fff1f2; border-color: var(--red); }
+.peer-card.ka { background: #fffbeb; border-color: var(--amber); }
+.peer-card.mh { background: #f0fdf4; border-color: var(--green); }
+.peer-card.gj { background: #eff6ff; border-color: #3b82f6; }
+.pc-state { font-size: 0.72em; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+.peer-card.tn .pc-state { color: var(--red); }
+.peer-card.ka .pc-state { color: var(--amber); }
+.peer-card.mh .pc-state { color: var(--green); }
+.peer-card.gj .pc-state { color: #1d4ed8; }
+.pc-num { font-size: 1.6em; font-weight: 800; margin-bottom: 4px; }
+.peer-card.tn .pc-num { color: var(--red); }
+.peer-card.ka .pc-num { color: var(--amber); }
+.peer-card.mh .pc-num { color: var(--green); }
+.peer-card.gj .pc-num { color: #1d4ed8; }
+.pc-label { font-size: 0.75em; color: #64748b; line-height: 1.4; }
+.pc-label-ta { font-family: 'Noto Sans Tamil', sans-serif; font-size: 0.8em; color: #64748b; line-height: 1.5; }
+
+/* CALLOUTS */
+.callout { display: flex; gap: 12px; padding: 16px 20px; border-radius: 10px; margin: 14px 0; border: 1px solid; font-size: 0.9em; line-height: 1.75; }
+.callout-icon { font-size: 1.3em; flex-shrink: 0; margin-top: 1px; }
+.callout.danger { background: #fff1f2; border-color: #fca5a5; color: #7f1d1d; }
+.callout.info { background: #eff6ff; border-color: #93c5fd; color: #1e3a5f; }
+.callout.success { background: #f0fdf4; border-color: #86efac; color: #14532d; }
+.callout.warn { background: #fffbeb; border-color: #fcd34d; color: #78350f; }
+.callout strong { font-weight: 700; }
+.callout-ta { font-family: 'Noto Sans Tamil', sans-serif; font-size: 1.0em; line-height: 1.9; }
+
+/* STORY BOX */
+.story { background: linear-gradient(135deg, #0f2d52, #1e3a5f); border-radius: 12px; padding: 22px 24px; margin: 14px 0; }
+.story-en { font-size: 0.92em; color: #e2e8f0; line-height: 1.8; margin-bottom: 12px; }
+.story-ta { font-family: 'Noto Sans Tamil', sans-serif; font-size: 0.95em; color: #cbd5e1; line-height: 1.9; }
+.story strong { color: #fcd34d; font-weight: 700; }
+
+/* SOLUTION ITEMS */
+.solution-list { display: flex; flex-direction: column; gap: 12px; }
+.sol-item { display: flex; gap: 12px; padding: 14px 16px; background: #f0fdf4; border: 1px solid #86efac; border-radius: 10px; }
+.sol-icon { font-size: 1.3em; flex-shrink: 0; }
+.sol-en { font-size: 0.9em; color: #14532d; font-weight: 600; margin-bottom: 3px; }
+.sol-ta { font-family: 'Noto Sans Tamil', sans-serif; font-size: 0.92em; color: #166534; line-height: 1.8; }
+
+/* VERDICT */
+.verdict-strip { background: linear-gradient(135deg, #0f2d52, #1a1a4e); border-radius: var(--radius); padding: 28px 24px; margin: 20px 0; }
+.vs-title-en { font-family: 'Playfair Display', serif; font-size: 1.3em; color: #fcd34d; margin-bottom: 10px; }
+.vs-title-ta { font-family: 'Noto Sans Tamil', sans-serif; font-size: 1.15em; color: #fcd34d; margin-bottom: 14px; font-weight: 700; }
+.vs-text-en { font-size: 0.9em; color: #cbd5e1; line-height: 1.8; margin-bottom: 10px; }
+.vs-text-ta { font-family: 'Noto Sans Tamil', sans-serif; font-size: 0.93em; color: #94a3b8; line-height: 1.95; }
+.vs-text-en strong { color: #fef3c7; }
+.vs-text-ta strong { color: #fef3c7; }
+
+/* TABLE */
+table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.87em; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+thead tr { background: linear-gradient(90deg, var(--primary), #1a4a7a); }
+th { color: #fff; padding: 11px 13px; text-align: left; font-size: 0.82em; font-weight: 700; }
+td { padding: 10px 13px; border-bottom: 1px solid var(--border); color: #1e293b; background: #fff; vertical-align: top; line-height: 1.6; }
+tr:nth-child(even) td { background: var(--surface); }
+tr:hover td { background: #dbeafe !important; color: #0f172a !important; }
+td:first-child { font-weight: 700; color: var(--primary); }
+.rv { color: var(--red); font-weight: 700; }
+.gv { color: var(--green); font-weight: 700; }
+.av { color: var(--amber); font-weight: 700; }
+
+footer { background: var(--primary); color: #475569; padding: 24px; text-align: center; font-size: 0.8em; margin-top: 30px; }
+footer a { color: #64748b; text-decoration: none; }
+.footer-links { display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; margin-top: 10px; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-links">
+    <a href="index.html">🏠 Home</a>
+    <span class="nav-sep">|</span>
+    <a href="TN_WhitePaper_Comparative_Analysis_v2.html">📄 Full Report</a>
+    <span class="nav-sep">|</span>
+    <a href="full_report_tamil.html">🇮🇳 Tamil Report</a>
+    <span class="nav-sep">|</span>
+    <a href="glossary.html">📖 Glossary</a>
+  </div>
+  <span class="lang-pill" onclick="toggleLang()">🔄 Switch Language</span>
+</nav>
+
+<div class="hero">
+  <div class="hero-badge">Direct Summary - No Jargon</div>
+  <h1>Tamil Nadu's Debt Story  - <br><span>What Happened & Why</span></h1>
+  <div class="hero-ta">தமிழ்நாட்டின் கடன் கதை - என்ன நடந்தது, ஏன் நடந்தது</div>
+  <div class="hero-divider"></div>
+  <p class="hero-sub">A plain, direct summary of how Tamil Nadu went from surplus to ₹10 lakh crore debt  -  with exact numbers, root causes, and what went wrong. No complex terms.</p>
+</div>
+
+<div class="lang-bar">
+  <span class="en">Choose your language:</span>
+  <span class="ta">மொழியை தேர்வு செய்யுங்கள்:</span>
+  <div class="lang-btn-group">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">🇬🇧 English</button>
+    <button class="lang-btn" id="btn-ta" onclick="setLang('ta')">🇮🇳 தமிழ்</button>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- ===== SECTION 1: THE JOURNEY ===== -->
+  <div class="block">
+    <div class="block-header">
+      <div class="bh-icon" style="background:#dbeafe;">📈</div>
+      <div>
+        <div class="bh-en">The Debt Journey  -  From Surplus to ₹10 Lakh Crore</div>
+        <div class="bh-ta">கடன் பயணம் - உபரியிலிருந்து ₹10 லட்சம் கோடி வரை</div>
+      </div>
+    </div>
+    <div class="block-body">
+
+      <div class="journey">
+
+        <div class="j-item">
+          <div class="j-dot green"></div>
+          <div class="j-year green">2006 - 2013 | பொற்காலம்</div>
+          <div class="j-number green">Revenue SURPLUS</div>
+          <p class="j-text-en en">Tamil Nadu was actually earning MORE than it spent. 5 out of 7 years had a surplus. The economy was growing at 10% per year. Tax collection was 8.48% of the economy  -  the healthiest it has ever been. Debt was manageable at around ₹60,000 crore.</p>
+          <p class="j-text-ta ta">தமிழ்நாடு உண்மையில் செலவழிப்பதை விட அதிகமாக சம்பாதித்தது. 7 ஆண்டுகளில் 5-ல் உபரி இருந்தது. பொருளாதாரம் ஆண்டுக்கு 10% வளர்ந்தது. வரி வசூல் பொருளாதாரத்தின் 8.48% - இதுவரை மிகவும் ஆரோக்கியமான நிலை. கடன் ₹60,000 கோடி மட்டுமே.</p>
+        </div>
+
+        <div class="j-item">
+          <div class="j-dot amber"></div>
+          <div class="j-year amber">2013 - 2020 | சரிவு தொடங்கியது</div>
+          <div class="j-number amber">Revenue DEFICIT starts</div>
+          <p class="j-text-en en">From 2013-14, Tamil Nadu started spending more than it earned  -  every single year. The gap kept widening. Debt climbed from ₹60,000 crore to ₹4.85 lakh crore by 2020-21. PSU losses (TANGEDCO, buses) started mounting. This is across multiple governments  -  not just one party.</p>
+          <p class="j-text-ta ta">2013-14 முதல் தமிழ்நாடு சம்பாதிப்பதை விட அதிகமாக செலவழிக்க தொடங்கியது - ஒவ்வொரு ஆண்டும். இடைவெளி அதிகரித்தது. கடன் ₹60,000 கோடியிலிருந்து 2020-21 ஆம் ஆண்டில் ₹4.85 லட்சம் கோடியாக ஏறியது. PSU நஷ்டங்கள் (TANGEDCO, பேருந்துகள்) குவிய தொடங்கின. இது பல அரசுகளில் - ஒரு கட்சி மட்டுமல்ல.</p>
+        </div>
+
+        <div class="j-item">
+          <div class="j-dot red"></div>
+          <div class="j-year red">2020 - 21 | COVID ஆண்டு</div>
+          <div class="j-number red">₹4.85 லட்சம் கோடி கடன்</div>
+          <p class="j-text-en en">COVID hit hard. Revenue deficit reached ₹61,320 crore. Fiscal deficit hit ₹92,305 crore (4.43% of economy). This became the starting point of the DMK 2021 White Paper  -  calling it a crisis inherited from the previous government.</p>
+          <p class="j-text-ta ta">COVID கடுமையாக தாக்கியது. வருவாய் பற்றாக்குறை ₹61,320 கோடியை எட்டியது. நிதி பற்றாக்குறை ₹92,305 கோடி (பொருளாதாரத்தின் 4.43%). இது 2021 திமுக வெள்ளை அறிக்கையின் தொடக்கப் புள்ளியானது - முந்தைய அரசிடமிருந்து பெறப்பட்ட நெருக்கடி என்று அழைத்தது.</p>
+        </div>
+
+        <div class="j-item">
+          <div class="j-dot red"></div>
+          <div class="j-year red">ஜூன் 2021 | திமுக வெள்ளை அறிக்கை</div>
+          <div class="j-number red">₹5.13 லட்சம் கோடி கடன்</div>
+          <p class="j-text-en en">DMK released White Paper saying: "We inherited a broken fiscal house. Debt is at alarming levels. We will reform." They promised once-in-a-generation reforms. A global advisory council was formed. The COVID window for recovery was opening.</p>
+          <p class="j-text-ta ta">திமுக வெள்ளை அறிக்கை வெளியிட்டது: "உடைந்த நிதி நிலையை பெற்றுள்ளோம். கடன் அலாரமான அளவில் உள்ளது. சீர்திருத்துவோம்." தலைமுறை சீர்திருத்தங்களை வாக்குறுதியளித்தனர். உலகளாவிய ஆலோசனை குழு அமைக்கப்பட்டது. COVID-க்குப் பின் மீட்சி சாளரம் திறந்தது.</p>
+        </div>
+
+        <div class="j-item">
+          <div class="j-dot red"></div>
+          <div class="j-year red">2021 - 2026 | 5 ஆண்டுகள் திமுக ஆட்சி</div>
+          <div class="j-number red">₹9.99 லட்சம் கோடி கடன்</div>
+          <p class="j-text-en en">Instead of consolidation, debt nearly doubled. ₹4.87 lakh crore was added in just 5 years  -  more than all debt Tamil Nadu accumulated in its first 60 years combined. Welfare schemes were added without matching revenue. The recovery window was not used.</p>
+          <p class="j-text-ta ta">ஒருங்கிணைப்புக்கு பதில் கடன் கிட்டத்தட்ட இரட்டிப்பானது. வெறும் 5 ஆண்டுகளில் ₹4.87 லட்சம் கோடி சேர்க்கப்பட்டது - தமிழ்நாட்டின் முதல் 60 ஆண்டுகளில் திரட்டிய மொத்த கடனை விட அதிகம். நலத்திட்டங்கள் இணை வருவாயில்லாமல் சேர்க்கப்பட்டன. மீட்சி சாளரம் பயன்படுத்தப்படவில்லை.</p>
+        </div>
+
+        <div class="j-item">
+          <div class="j-dot red"></div>
+          <div class="j-year red">ஜூன் 2026 | திவிகா வெள்ளை அறிக்கை</div>
+          <div class="j-number red">₹13.18 லட்சம் கோடி மொத்த வெளிப்பாடு</div>
+          <p class="j-text-en en">TVK released White Paper saying: same story, different government. Revenue deficit at record ₹78,324 crore  -  even higher than COVID year. Interest payments now exceed capital spending. Total fiscal exposure including PSU debt: ₹13.18 lakh crore.</p>
+          <p class="j-text-ta ta">திவிகா வெள்ளை அறிக்கை வெளியிட்டது: அதே கதை, வேறு அரசு. வருவாய் பற்றாக்குறை சாதனை ₹78,324 கோடி - COVID ஆண்டை விடவும் அதிகம். வட்டி கட்டணங்கள் இப்போது மூலதன செலவை தாண்டுகின்றன. PSU கடன் உட்பட மொத்த நிதி வெளிப்பாடு: ₹13.18 லட்சம் கோடி.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 2: THEN VS NOW ===== -->
+  <div class="block">
+    <div class="block-header">
+      <div class="bh-icon" style="background:#fee2e2;">📊</div>
+      <div>
+        <div class="bh-en">Then vs Now  -  The Key Numbers</div>
+        <div class="bh-ta">அப்போது vs இப்போது - முக்கிய எண்கள்</div>
+      </div>
+    </div>
+    <div class="block-body">
+
+      <div class="compare-row">
+        <div class="compare-box then">
+          <div class="cb-label">🕰️ <span class="en-inline">2006-07 (Best Year)</span><span class="ta-inline">2006-07 (சிறந்த ஆண்டு)</span></div>
+          <div class="cb-num">₹60K cr</div>
+          <div class="cb-sub en">Total State debt. Revenue SURPLUS. Tax collection: 8.48% of economy. Capital spending: 1.82%. Interest paid: ~₹5,800 crore/yr.</div>
+          <div class="cb-sub-ta ta">மொத்த மாநில கடன். வருவாய் உபரி. வரி வசூல்: பொருளாதாரத்தின் 8.48%. மூலதன செலவு: 1.82%. வட்டி: ~₹5,800 கோடி/ஆண்டு.</div>
+        </div>
+        <div class="compare-box now">
+          <div class="cb-label">⏰ <span class="en-inline">2025-26 (Now)</span><span class="ta-inline">2025-26 (இப்போது)</span></div>
+          <div class="cb-num">₹10L cr</div>
+          <div class="cb-sub en">Total State debt. Revenue DEFICIT ₹78,324 crore (record). Tax collection: 5.45% (lowest ever). Capital spending: 1.44%. Interest paid: ₹67,050 crore/yr.</div>
+          <div class="cb-sub-ta ta">மொத்த மாநில கடன். வருவாய் பற்றாக்குறை ₹78,324 கோடி (சாதனை). வரி வசூல்: 5.45% (மிகக் குறைவு). மூலதன செலவு: 1.44%. வட்டி: ₹67,050 கோடி/ஆண்டு.</div>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th><span class="en-inline">Metric</span><span class="ta-inline">அளவீடு</span></th>
+            <th><span class="en-inline">2021 (Start)</span><span class="ta-inline">2021 (தொடக்கம்)</span></th>
+            <th><span class="en-inline">2026 (Now)</span><span class="ta-inline">2026 (இப்போது)</span></th>
+            <th><span class="en-inline">Change</span><span class="ta-inline">மாற்றம்</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="en-inline">Total Debt</span><span class="ta-inline">மொத்த கடன்</span></td>
+            <td>₹5.13 <span class="en-inline">lakh crore</span><span class="ta-inline">லட்சம் கோடி</span></td>
+            <td>₹10 <span class="en-inline">lakh crore</span><span class="ta-inline">லட்சம் கோடி</span></td>
+            <td class="rv">+94% ↑</td>
+          </tr>
+          <tr>
+            <td><span class="en-inline">Revenue Deficit</span><span class="ta-inline">வருவாய் பற்றாக்குறை</span></td>
+            <td>₹61,320 <span class="en-inline">crore</span><span class="ta-inline">கோடி</span></td>
+            <td>₹78,324 <span class="en-inline">crore</span><span class="ta-inline">கோடி</span></td>
+            <td class="rv">+28% ↑ <span class="en-inline">(Record)</span><span class="ta-inline">(சாதனை)</span></td>
+          </tr>
+          <tr>
+            <td><span class="en-inline">Interest Payments</span><span class="ta-inline">வட்டி கட்டணம்</span></td>
+            <td>₹41,564 <span class="en-inline">crore</span><span class="ta-inline">கோடி</span></td>
+            <td>₹67,050 <span class="en-inline">crore</span><span class="ta-inline">கோடி</span></td>
+            <td class="rv">+61% ↑</td>
+          </tr>
+          <tr>
+            <td><span class="en-inline">Tax Collection / Economy</span><span class="ta-inline">வரி வசூல் / பொருளாதாரம்</span></td>
+            <td>5.93%</td>
+            <td>5.45%</td>
+            <td class="rv">↓ <span class="en-inline">Lowest ever</span><span class="ta-inline">வரலாற்று குறைவு</span></td>
+          </tr>
+          <tr>
+            <td><span class="en-inline">Capital Spending</span><span class="ta-inline">மூலதன செலவு</span></td>
+            <td>1.79% <span class="en-inline">of economy</span><span class="ta-inline">பொருளாதாரத்தில்</span></td>
+            <td>1.44% <span class="en-inline">of economy</span><span class="ta-inline">பொருளாதாரத்தில்</span></td>
+            <td class="rv">↓ <span class="en-inline">Lowest in peer group</span><span class="ta-inline">ஒப்பிட்டு மாநிலங்களில் குறைவு</span></td>
+          </tr>
+          <tr>
+            <td><span class="en-inline">Debt per Person</span><span class="ta-inline">நபருக்கான கடன்</span></td>
+            <td>₹67,870</td>
+            <td>₹1,28,934</td>
+            <td class="rv">+90% ↑</td>
+          </tr>
+          <tr>
+            <td><span class="en-inline">PSU Losses (Power)</span><span class="ta-inline">PSU நஷ்டம் (மின்சாரம்)</span></td>
+            <td>₹1,11,084 <span class="en-inline">crore</span><span class="ta-inline">கோடி</span></td>
+            <td>₹1,82,361 <span class="en-inline">crore</span><span class="ta-inline">கோடி</span></td>
+            <td class="rv">+64% ↑</td>
+          </tr>
+          <tr>
+            <td><span class="en-inline">Bus Corp Losses</span><span class="ta-inline">பேருந்து நஷ்டம்</span></td>
+            <td>₹42,143 <span class="en-inline">crore</span><span class="ta-inline">கோடி</span></td>
+            <td>₹72,667 <span class="en-inline">crore</span><span class="ta-inline">கோடி</span></td>
+            <td class="rv">+72% ↑</td>
+          </tr>
+          <tr>
+            <td><span class="en-inline">Govt Guarantees</span><span class="ta-inline">அரசு உத்தரவாதங்கள்</span></td>
+            <td>₹91,818 <span class="en-inline">crore</span><span class="ta-inline">கோடி</span></td>
+            <td>₹1,79,782 <span class="en-inline">crore</span><span class="ta-inline">கோடி</span></td>
+            <td class="rv">+96% ↑</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+  <!-- ===== SECTION 3: HOW DID DEBT INCREASE ===== -->
+  <div class="block">
+    <div class="block-header">
+      <div class="bh-icon" style="background:#fef3c7;">🔍</div>
+      <div>
+        <div class="bh-en">How Did Debt Increase So Fast?  -  8 Direct Causes</div>
+        <div class="bh-ta">கடன் இவ்வளவு வேகமாக எப்படி அதிகரித்தது? - 8 நேரடி காரணங்கள்</div>
+      </div>
+    </div>
+    <div class="block-body">
+
+      <div class="story">
+        <div class="story-en en"><strong>The simple explanation:</strong> Imagine your family earns ₹50,000 per month but spends ₹65,000. Every month you borrow ₹15,000 just to cover daily expenses  -  food, rent, electricity. You are not buying a house or car. You are borrowing to survive. Then imagine you also bought a shop that loses ₹7,000 every month. And your relative borrowed money with your signature as guarantor. After 5 years, your debt is enormous. That is exactly what happened to Tamil Nadu.</div>
+        <div class="story-ta ta"><strong>எளிய விளக்கம்:</strong> உங்கள் குடும்பம் மாதம் ₹50,000 சம்பாதிக்கிறது ஆனால் ₹65,000 செலவழிக்கிறது என்று கற்பனை செய்யுங்கள். மாதம் ₹15,000 தினசரி செலவுகளை - உணவு, வாடகை, மின்சாரம் - ஈடு செய்ய கடன் வாங்குகிறீர்கள். வீடு அல்லது கார் வாங்கவில்லை. வாழ்வதற்காகவே கடன் வாங்குகிறீர்கள். பிறகு மாதம் ₹7,000 நஷ்டம் ஆகும் ஒரு கடையும் வாங்கினீர்கள் என்று வையுங்கள். உங்கள் கையெழுத்துடன் உறவினர் கடன் வாங்கினார். 5 ஆண்டுகளில் உங்கள் கடன் மிகப்பெரியதாகி விட்டது. தமிழ்நாட்டில் சரியாக இதுவே நடந்தது.</div>
+      </div>
+
+      <div class="factor-list">
+
+        <div class="factor-item">
+          <div class="fi-num" style="background:#b91c1c;">1</div>
+          <div class="fi-content">
+            <div class="fi-title-en en">Borrowing to pay daily bills  -  not to build anything</div>
+            <div class="fi-title-ta ta">கட்டிட ஒன்றும் உருவாக்காமல் தினசரி பில்களுக்காகவே கடன் வாங்குவது</div>
+            <div class="fi-text-en en">The single biggest cause. When a government borrows to pay salaries, pensions, and subsidies (not roads and hospitals), it is called a revenue deficit. Tamil Nadu has had this every single year since 2013-14. You are spending borrowed money on things that leave nothing behind.</div>
+            <div class="fi-text-ta ta">மிக முக்கியமான ஒரே காரணம். ஒரு அரசு சம்பளம், ஓய்வூதியம், மானியங்களுக்கு (சாலைகள் மற்றும் மருத்துவமனைகள் அல்ல) கடன் வாங்கும்போது, அதை வருவாய் பற்றாக்குறை என்று அழைக்கிறார்கள். 2013-14 முதல் தமிழ்நாட்டில் ஒவ்வொரு ஆண்டும் இது நடந்துள்ளது. கடன் பணத்தை எதுவும் மிஞ்சாத விஷயங்களுக்கு செலவழிக்கிறீர்கள்.</div>
+            <div class="fi-data red">Revenue deficit: ₹78,324 cr in 2025-26  -  higher than COVID year</div>
+          </div>
+        </div>
+
+        <div class="factor-item">
+          <div class="fi-num" style="background:#b91c1c;">2</div>
+          <div class="fi-content">
+            <div class="fi-title-en en">Welfare schemes added without finding new revenue</div>
+            <div class="fi-title-ta ta">புதிய வருவாய் கண்டுபிடிக்காமல் நலத்திட்டங்கள் சேர்க்கப்பட்டன</div>
+            <div class="fi-text-en en">Between 2023-25, DMK added ₹20,000+ crore in new annual commitments: Kalaignar Magalir Urimai (direct cash to women), free bus travel for women, DBT to students, enhanced Pongal gifts. All genuinely beneficial schemes  -  but funded entirely through borrowing, with no new revenue source identified to pay for them.</div>
+            <div class="fi-text-ta ta">2023-25 க்கிடையே, திமுக ₹20,000+ கோடி புதிய ஆண்டு கடமைகளை சேர்த்தது: கலைஞர் மகளிர் உரிமை (பெண்களுக்கு நேரடி பணம்), பெண்களுக்கு இலவச பேருந்து, மாணவர்களுக்கு DBT, மேம்பட்ட பொங்கல் பரிசுகள். அனைத்தும் உண்மையான நலத்திட்டங்கள் - ஆனால் முழுவதும் கடன் மூலம் நிதியளிக்கப்பட்டன, செலவுக்கு பணம் கொடுக்க புதிய வருவாய் ஆதாரம் எதுவும் கண்டுபிடிக்கப்படவில்லை.</div>
+            <div class="fi-data red">New annual recurring cost: ₹20,000+ crore with no revenue offset</div>
+          </div>
+        </div>
+
+        <div class="factor-item">
+          <div class="fi-num" style="background:#b91c1c;">3</div>
+          <div class="fi-content">
+            <div class="fi-title-en en">Tax revenue leaking through corruption  -  not being collected</div>
+            <div class="fi-title-ta ta">ஊழல் மூலம் வரி வருவாய் கசிகிறது - வசூலிக்கப்படவில்லை</div>
+            <div class="fi-text-en en">The 2026 White Paper explicitly states: Tamil Nadu collects LESS GST than Karnataka and Gujarat in absolute terms  -  even though TN has a bigger economy. The reason: Commercial Taxes Department officers take bribes to pass incorrect returns. Stamp Registration: properties sold for ₹1 crore are registered at ₹40 lakh  -  stamp duty is lost. TASMAC (liquor): revenue that should reach the treasury goes into private pockets. Mining: quarry royalties collected informally, not deposited in government accounts. Estimated leakage: ₹15,000-20,000 crore per year.</div>
+            <div class="fi-text-ta ta">2026 வெள்ளை அறிக்கை வெளிப்படையாக கூறுகிறது: TN ஒரு பெரிய பொருளாதாரம் இருந்தாலும் தனிப்பட்ட தொகையில் கர்நாடகா மற்றும் குஜராத்தை விட குறைவான GST வசூலிக்கிறது. காரணம்: வணிக வரி துறை அதிகாரிகள் தவறான ரிட்டர்னை நிறைவேற்ற லஞ்சம் வாங்குகிறார்கள். பத்திர பதிவு: ₹1 கோடிக்கு விற்கப்படும் சொத்துகள் ₹40 லட்சத்தில் பதிவு செய்யப்படுகின்றன - பத்திர கட்டணம் இழக்கப்படுகிறது. TASMAC (மது): கோசானாவிற்கு வர வேண்டிய வருமானம் தனிநபர் பாக்கெட்டுக்கு போகிறது. சுரங்கம்: கல்குவாரி ராயல்டிகள் தனிப்பட்ட முறையில் வசூலிக்கப்படுகின்றன, அரசு கணக்கில் போடப்படுவதில்லை. மதிப்பிடப்பட்ட கசிவு: ஆண்டுக்கு ₹15,000-20,000 கோடி.</div>
+            <div class="fi-data red">3 departments named explicitly: Commercial Taxes, Registration, Mining, TASMAC</div>
+          </div>
+        </div>
+
+        <div class="factor-item">
+          <div class="fi-num" style="background:#b91c1c;">4</div>
+          <div class="fi-content">
+            <div class="fi-title-en en">TANGEDCO (Electricity Board)  -  a loss machine funded by tax money</div>
+            <div class="fi-title-ta ta">TANGEDCO (மின்சார வாரியம்) - வரி பணத்தால் நிதியளிக்கப்படும் நஷ்ட இயந்திரம்</div>
+            <div class="fi-text-en en">TANGEDCO costs more to produce electricity than it charges consumers. In 2021 the accumulated loss was ₹1.11 lakh crore. By 2026 it reached ₹1.82 lakh crore. In 5 years, the government pumped ₹1,45,185 crore of taxpayer money to keep it running  -  more than the entire capital spending in those 5 years. The board was split into 4 companies (restructuring) but losses continue. Free electricity (first 100 units), free agricultural power, and below-cost tariffs all contributed  -  while procurement corruption added to costs.</div>
+            <div class="fi-text-ta ta">TANGEDCO மின்சாரம் உற்பத்தி செய்ய நுகர்வோரிடம் வசூலிப்பதை விட அதிகம் செலவாகிறது. 2021-ல் குவிந்த நஷ்டம் ₹1.11 லட்சம் கோடி இருந்தது. 2026 ஆம் ஆண்டில் ₹1.82 லட்சம் கோடியை எட்டியது. 5 ஆண்டுகளில், அரசு அதை இயக்க ₹1,45,185 கோடி வரி பணம் ஊற்றியது - அந்த 5 ஆண்டுகளில் மொத்த மூலதன செலவை விட அதிகம். வாரியம் 4 நிறுவனங்களாக பிரிக்கப்பட்டது (மறுகட்டமைப்பு) ஆனால் நஷ்டங்கள் தொடர்கின்றன.</div>
+            <div class="fi-data red">GoTN pumped ₹1,45,185 cr into TANGEDCO in 5 years  -  still loss-making</div>
+          </div>
+        </div>
+
+        <div class="factor-item">
+          <div class="fi-num" style="background:#b91c1c;">5</div>
+          <div class="fi-content">
+            <div class="fi-title-en en">Bus corporations  -  running at ₹52 loss per kilometre</div>
+            <div class="fi-title-ta ta">பேருந்து கழகங்கள் - கிலோமீட்டருக்கு ₹52 நஷ்டத்தில் இயங்குகின்றன</div>
+            <div class="fi-text-en en">As explained in the YouTube video: every km a bus runs costs ₹78 but earns only ₹23-24 in fare revenue. The government pays the gap. Free travel for women is part of the cause  -  but the 2026 White Paper also notes procurement corruption: tyres, spare parts, fuel purchases inflated. Bus revenue in 2025-26 (₹7,852 crore) is lower than 2019-20 (₹9,028 crore) in nominal terms. Accumulated bus corporation losses: ₹72,667 crore by 2026.</div>
+            <div class="fi-text-ta ta">YouTube வீடியோவில் விளக்கியபடி: ஒரு பேருந்து ஓடும் ஒவ்வொரு கிமீக்கும் ₹78 செலவாகிறது ஆனால் கட்டணமாக ₹23-24 மட்டுமே வருகிறது. அரசு இடைவெளியை செலுத்துகிறது. பெண்களுக்கு இலவச பயணம் ஒரு காரணம் - ஆனால் 2026 வெள்ளை அறிக்கை கொள்முதல் ஊழலையும் குறிப்பிடுகிறது: டயர்கள், உதிரி பாகங்கள், எரிபொருள் கொள்முதல் உயர்வு. 2025-26 இல் பேருந்து வருவாய் (₹7,852 கோடி) 2019-20 (₹9,028 கோடி) ஐ விட குறைவு. குவிந்த பேருந்து கழக நஷ்டங்கள்: 2026 ஆம் ஆண்டில் ₹72,667 கோடி.</div>
+            <div class="fi-data red">₹78 cost per km  -  ₹23 revenue per km  -  ₹52 gap paid by tax money</div>
+          </div>
+        </div>
+
+        <div class="factor-item">
+          <div class="fi-num" style="background:#d97706;">6</div>
+          <div class="fi-content">
+            <div class="fi-title-en en">TAPS  -  reversing the pension reform of 2003</div>
+            <div class="fi-title-ta ta">TAPS - 2003 ஆம் ஆண்டின் ஓய்வூதிய சீர்திருத்தத்தை திரும்பப் பெறுவது</div>
+            <div class="fi-text-en en">In 2003, Tamil Nadu introduced the New Pension Scheme (NPS/CPS) specifically to REDUCE future pension burden. Employees and government both contributed during service. In January 2026, DMK replaced this with TAPS  -  guaranteeing 50% of last salary as pension for life for government employees. This adds ₹5,000 crore per year immediately (growing 10% per year) plus a one-time ₹13,000 crore bridge payment. It is a genuinely popular move for employees  -  but creates a permanent new fiscal liability.</div>
+            <div class="fi-text-ta ta">2003-ல், தமிழ்நாடு எதிர்கால ஓய்வூதிய சுமையை குறைக்கவே NPS/CPS அறிமுகப்படுத்தியது. ஊழியர்களும் அரசும் சேவையின் போது பங்களித்தனர். ஜனவரி 2026-ல், திமுக இதை TAPS-ஆல் மாற்றியது - அரசு ஊழியர்களுக்கு ஆயுள் முழுவதும் கடைசி சம்பளத்தில் 50% ஓய்வூதியம் உத்தரவாதம். இது உடனடியாக ஆண்டுக்கு ₹5,000 கோடி சேர்க்கிறது (ஆண்டுக்கு 10% வளர்கிறது) மற்றும் ஒரு முறை ₹13,000 கோடி இடைப்பாலம் கட்டணம். ஊழியர்களுக்கு உண்மையிலேயே பிரபலமான நடவடிக்கை - ஆனால் நிரந்தர புதிய நிதி கடமையை உருவாக்குகிறது.</div>
+            <div class="fi-data amber">₹5,000 cr new annual liability + ₹13,000 cr one-time  -  growing 10%/year</div>
+          </div>
+        </div>
+
+        <div class="factor-item">
+          <div class="fi-num" style="background:#d97706;">7</div>
+          <div class="fi-content">
+            <div class="fi-title-en en">GST compensation ended  -  revenue gap not filled</div>
+            <div class="fi-title-ta ta">GST இழப்பீடு முடிந்தது - வருவாய் இடைவெளி நிரப்பப்படவில்லை</div>
+            <div class="fi-text-en en">When GST was introduced in 2017, the Centre guaranteed States their revenue for 5 years. Tamil Nadu received ₹66,185 crore total in compensation over 5 years. This ended in June 2022. The key question: Did Tamil Nadu use those 5 years to build its own revenue base to replace this compensation? The 2026 White Paper answers clearly: No. Own tax revenue as % of economy actually FELL further after compensation ended  -  from 6.33% in 2022-23 to 5.45% in 2025-26.</div>
+            <div class="fi-text-ta ta">2017-ல் GST அறிமுகப்படுத்தப்பட்டபோது, மத்திய அரசு மாநிலங்களுக்கு 5 ஆண்டுகளுக்கு வருவாயை உத்தரவாதம் அளித்தது. தமிழ்நாடு மொத்தம் ₹66,185 கோடி இழப்பீடாக 5 ஆண்டுகளில் பெற்றது. இது ஜூன் 2022-ல் முடிந்தது. முக்கிய கேள்வி: இந்த இழப்பீட்டை மாற்றுவதற்காக தமிழ்நாடு அந்த 5 ஆண்டுகளை தனது சொந்த வருவாய் தளத்தை கட்டியெழுப்ப பயன்படுத்திதா? 2026 வெள்ளை அறிக்கை தெளிவாக பதிலளிக்கிறது: இல்லை. பொருளாதாரத்தில் சொந்த வரி வருவாய் சதவீதம் இழப்பீடு முடிந்த பிறகு 2022-23 இல் 6.33% இலிருந்து 2025-26 இல் 5.45%-க்கு மேலும் குறைந்தது.</div>
+            <div class="fi-data amber">GST compensation ₹66,185 cr received over 5 years  -  window not used for own revenue reform</div>
+          </div>
+        </div>
+
+        <div class="factor-item">
+          <div class="fi-num" style="background:#d97706;">8</div>
+          <div class="fi-content">
+            <div class="fi-title-en en">Tamil Nadu's Finance Commission share fell  -  structural disadvantage</div>
+            <div class="fi-title-ta ta">தமிழ்நாட்டின் நிதிக் குழு பங்கு குறைந்தது - கட்டமைப்பு பாதகம்</div>
+            <div class="fi-text-en en">Every 5 years, the Finance Commission decides how Central tax money is shared among States. Tamil Nadu's share fell from 6.64% (10th Finance Commission, 1990s) to 4.023% (15th Finance Commission, current). This means hundreds of thousands of crores less received over the years from the Centre  -  because the formula rewards high population and low income (which doesn't favour TN's development track record).</div>
+            <div class="fi-text-ta ta">ஒவ்வொரு 5 ஆண்டுகளும், நிதிக் குழு மத்திய வரி பணம் மாநிலங்களிடையே எவ்வாறு பகிரப்படுகிறது என்று தீர்மானிக்கிறது. தமிழ்நாட்டின் பங்கு 6.64% (10வது நிதிக் குழு, 1990கள்) இலிருந்து 4.023% (15வது நிதிக் குழு, தற்போது) ஆக குறைந்தது. இதன் பொருள்: வருடங்களில் மத்திய அரசிடமிருந்து பல லட்சம் கோடிகள் குறைவாக பெறப்பட்டன - ஏனென்றால் சூத்திரம் அதிக மக்கள்தொகை மற்றும் குறைந்த வருமானத்திற்கு பரிசளிக்கிறது (TN-யின் வளர்ச்சி சாதனையை ஆதரிக்கவில்லை).</div>
+            <div class="fi-data amber">Share fell from 6.64% → 4.023%  -  despite TN contributing 9.16% of national GDP</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 4: PEER COMPARISON ===== -->
+  <div class="block">
+    <div class="block-header">
+      <div class="bh-icon" style="background:#dcfce7;">🗺️</div>
+      <div>
+        <div class="bh-en">How Tamil Nadu Compares to Neighbours</div>
+        <div class="bh-ta">தமிழ்நாடு அண்டை மாநிலங்களுடன் எப்படி ஒப்பிடுகிறது</div>
+      </div>
+    </div>
+    <div class="block-body">
+
+      <p class="en" style="font-size:0.9em; color:#334155; margin-bottom:14px;">These are the States that recovered and consolidated after COVID. Tamil Nadu did not.</p>
+      <p class="ta" style="font-family:'Noto Sans Tamil',sans-serif; font-size:0.92em; color:#334155; margin-bottom:14px;">இவை COVID-க்குப் பின் மீட்சி அடைந்து ஒருங்கிணைந்த மாநிலங்கள். தமிழ்நாடு செய்யவில்லை.</p>
+
+      <h3 style="font-size:0.9em; font-weight:700; color:var(--primary); margin-bottom:10px;">
+        <span class="en-inline">Debt as % of Economy (Lower is Better)</span>
+        <span class="ta-inline">பொருளாதாரத்தில் கடன் % (குறைவே சிறந்தது)</span>
+      </h3>
+      <div class="peer-grid">
+        <div class="peer-card tn">
+          <div class="pc-state">Tamil Nadu தமிழ்நாடு</div>
+          <div class="pc-num">28.3%</div>
+          <div class="pc-label en">Highest. Above legal limit of 25.2%</div>
+          <div class="pc-label-ta ta">மிகவும் அதிகம். 25.2% சட்ட வரம்பை மீறியது</div>
+        </div>
+        <div class="peer-card ka">
+          <div class="pc-state">Karnataka கர்நாடகா</div>
+          <div class="pc-num">23.4%</div>
+          <div class="pc-label en">Within limits. Consolidated post-COVID.</div>
+          <div class="pc-label-ta ta">வரம்பிற்குள். COVID-க்குப் பின் ஒருங்கிணைந்தது.</div>
+        </div>
+        <div class="peer-card mh">
+          <div class="pc-state">Maharashtra மகாராஷ்டிரா</div>
+          <div class="pc-num">19.7%</div>
+          <div class="pc-label en">Well managed. Falling trend.</div>
+          <div class="pc-label-ta ta">நன்றாக மேலாண்மை. குறையும் போக்கு.</div>
+        </div>
+        <div class="peer-card gj">
+          <div class="pc-state">Gujarat குஜராத்</div>
+          <div class="pc-num">17.6%</div>
+          <div class="pc-label en">Lowest. Revenue SURPLUS maintained.</div>
+          <div class="pc-label-ta ta">மிகக் குறைவு. வருவாய் உபரி பராமரிக்கப்படுகிறது.</div>
+        </div>
+      </div>
+
+      <h3 style="font-size:0.9em; font-weight:700; color:var(--primary); margin:18px 0 10px;">
+        <span class="en-inline">Interest Paid as % of Revenue (Lower is Better)</span>
+        <span class="ta-inline">வருவாயில் வட்டி % (குறைவே சிறந்தது)</span>
+      </h3>
+      <div class="peer-grid">
+        <div class="peer-card tn"><div class="pc-state">Tamil Nadu</div><div class="pc-num">22.8%</div><div class="pc-label en">₹22.80 of every ₹100 = only interest</div><div class="pc-label-ta ta">ஒவ்வொரு ₹100-லும் ₹22.80 = வட்டி மட்டும்</div></div>
+        <div class="peer-card ka"><div class="pc-state">Karnataka</div><div class="pc-num">16.4%</div><div class="pc-label en">₹16.40 in every ₹100 to interest</div><div class="pc-label-ta ta">ஒவ்வொரு ₹100-லும் ₹16.40 வட்டிக்கு</div></div>
+        <div class="peer-card mh"><div class="pc-state">Maharashtra</div><div class="pc-num">10.3%</div><div class="pc-label en">₹10.30 in every ₹100 to interest</div><div class="pc-label-ta ta">ஒவ்வொரு ₹100-லும் ₹10.30 வட்டிக்கு</div></div>
+        <div class="peer-card gj"><div class="pc-state">Gujarat</div><div class="pc-num">12.0%</div><div class="pc-label en">₹12 in every ₹100 to interest</div><div class="pc-label-ta ta">ஒவ்வொரு ₹100-லும் ₹12 வட்டிக்கு</div></div>
+      </div>
+
+      <div class="callout danger" style="margin-top:16px;">
+        <span class="callout-icon">⚠️</span>
+        <div>
+          <span class="en"><strong>The Key Point:</strong> All three peer states had similar problems after COVID. They chose to consolidate  -  cut spending, improve revenue, reduce borrowing. Tamil Nadu chose to expand welfare and borrow more. That is a CHOICE, not a circumstance. The same economic conditions produced very different outcomes.</span>
+          <span class="ta callout-ta"><strong>முக்கிய புள்ளி:</strong> மூன்று ஒப்பிட்டு மாநிலங்களும் COVID-க்குப் பின் இதே மாதிரி பிரச்சனைகளை கொண்டிருந்தன. அவர்கள் ஒருங்கிணைக்க தேர்வு செய்தனர் - செலவு குறைத்தனர், வருவாய் மேம்படுத்தினர், கடன் வாங்குவதை குறைத்தனர். தமிழ்நாடு நலனை விரிவாக்கி அதிகமாக கடன் வாங்கத் தேர்வு செய்தது. இது சூழ்நிலை அல்ல - <strong>தேர்வு.</strong></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== SECTION 5: WHAT WENT WRONG ===== -->
+  <div class="block">
+    <div class="block-header">
+      <div class="bh-icon" style="background:#fee2e2;">❌</div>
+      <div>
+        <div class="bh-en">What Exactly Went Wrong  -  Direct Points</div>
+        <div class="bh-ta">சரியாக என்ன தவறு நடந்தது - நேரடி புள்ளிகள்</div>
+      </div>
+    </div>
+    <div class="block-body">
+
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th><span class="en-inline">What Went Wrong</span><span class="ta-inline">என்ன தவறு நடந்தது</span></th>
+            <th><span class="en-inline">Evidence</span><span class="ta-inline">சான்று</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><span class="en">Welfare expanded, revenue was not. New schemes added without finding money to pay for them.</span><span class="ta" style="font-family:'Noto Sans Tamil',sans-serif;">நலன் விரிவாக்கப்பட்டது, வருவாய் இல்லை. திட்டங்களுக்கு பணம் கண்டுபிடிக்காமல் சேர்க்கப்பட்டன.</span></td>
+            <td><span class="rv">₹20,000+ cr/yr new commitments 2023-25</span></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><span class="en">Post-COVID window (2021-23) was not used for fiscal consolidation. Every peer state improved; TN did not.</span><span class="ta" style="font-family:'Noto Sans Tamil',sans-serif;">COVID-க்குப் பின் சாளரம் (2021-23) நிதி ஒருங்கிணைப்புக்கு பயன்படுத்தப்படவில்லை.</span></td>
+            <td><span class="rv">All 4 peer states consolidated; TN worsened</span></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><span class="en">Tax leakage not plugged. GST, excise, stamp duty, mining revenue going to private pockets for years.</span><span class="ta" style="font-family:'Noto Sans Tamil',sans-serif;">வரி கசிவு அடைக்கப்படவில்லை. GST, கலால், பத்திர கட்டணம், சுரங்க வருவாய் ஆண்டுகளாக தனிநபர் பாக்கெட்டுக்கு போகிறது.</span></td>
+            <td><span class="rv">TN collects less GST than Karnataka despite larger economy</span></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><span class="en">TANGEDCO not reformed. ₹1.45 lakh crore pumped in 5 years with no structural turnaround achieved.</span><span class="ta" style="font-family:'Noto Sans Tamil',sans-serif;">TANGEDCO சீர்திருத்தப்படவில்லை. 5 ஆண்டுகளில் ₹1.45 லட்சம் கோடி ஊற்றியும் கட்டமைப்பு திரும்பல் இல்லை.</span></td>
+            <td><span class="rv">Losses grew from ₹1.11L cr to ₹1.82L cr despite ₹1.45L cr funding</span></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><span class="en">Capital spending (roads, hospitals, schools) was cut further while borrowing went up. Building future was sacrificed for current consumption.</span><span class="ta" style="font-family:'Noto Sans Tamil',sans-serif;">மூலதன செலவு (சாலைகள், மருத்துவமனைகள், பள்ளிகள்) குறைக்கப்பட்டது, கடன் உயர்ந்தது. தற்போதைய நுகர்வுக்காக எதிர்காலம் தியாகம் செய்யப்பட்டது.</span></td>
+            <td><span class="rv">CapEx: 1.79% → 1.44% of economy. Lowest in peer group.</span></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td><span class="en">Budget estimates were consistently over-optimistic. Revenue was over-projected, expenditure was under-provided  -  every year. CAG flagged this.</span><span class="ta" style="font-family:'Noto Sans Tamil',sans-serif;">பட்ஜெட் மதிப்பீடுகள் தொடர்ந்து அதிக நம்பிக்கையுடன் இருந்தன. வருவாய் அதிக திட்டமிடல், செலவு குறைவான வழங்கல் - ஒவ்வொரு ஆண்டும். CAG கொடியிட்டது.</span></td>
+            <td><span class="rv">CAG-flagged systematic BE vs Actuals gap every year 2021-26</span></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td><span class="en">TAPS reversal added a large permanent pension liability right when finances needed repair  -  not new obligations.</span><span class="ta" style="font-family:'Noto Sans Tamil',sans-serif;">நிதிக்கு சீர்திருத்தம் தேவைப்பட்டபோது TAPS திரும்பல் பெரிய நிரந்தர ஓய்வூதிய பொறுப்பை சேர்த்தது.</span></td>
+            <td><span class="rv">+₹5,000 cr/yr from Jan 2026, growing 10% annually</span></td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td><span class="en">GST compensation ended in 2022  -  ₹66,185 crore safety net gone. No replacement revenue strategy was prepared in the 5 years of lead time.</span><span class="ta" style="font-family:'Noto Sans Tamil',sans-serif;">GST இழப்பீடு 2022-ல் முடிந்தது - ₹66,185 கோடி பாதுகாப்பு வலை போனது. 5 ஆண்டு தயாரிப்பு காலத்தில் மாற்று வருவாய் உத்தி தயாரிக்கப்படவில்லை.</span></td>
+            <td><span class="rv">SOTR/GSDP fell further after compensation ended, from 6.33% to 5.45%</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+  <!-- ===== SECTION 6: THE SOLUTION ===== -->
+  <div class="block">
+    <div class="block-header">
+      <div class="bh-icon" style="background:#dcfce7;">✅</div>
+      <div>
+        <div class="bh-en">What the TVK Government Says It Will Do  -  And Is It Realistic?</div>
+        <div class="bh-ta">திவிகா அரசு என்ன செய்வதாக சொல்கிறது - இது யதார்த்தமா?</div>
+      </div>
+    </div>
+    <div class="block-body">
+
+      <div class="solution-list">
+
+        <div class="sol-item">
+          <span class="sol-icon">🔍</span>
+          <div>
+            <div class="sol-en en">Stop revenue leakage  -  Stamp Registration, TASMAC, Mining. Estimated ₹15,000-20,000 crore/year recoverable WITHOUT any new tax.</div>
+            <div class="sol-ta ta">வருவாய் கசிவை நிறுத்துங்கள் - பத்திர பதிவு, TASMAC, சுரங்கம். புதிய வரி எதுவுமின்றி மதிப்பிடப்பட்ட ₹15,000-20,000 கோடி/ஆண்டு திரும்பப் பெறலாம்.</div>
+          </div>
+        </div>
+
+        <div class="sol-item">
+          <span class="sol-icon">📋</span>
+          <div>
+            <div class="sol-en en">Fix government procurement  -  Urban Development, Rural Development, and Public Works tenders under direct CM/senior minister oversight. No commission to middlemen.</div>
+            <div class="sol-ta ta">அரசு கொள்முதலை சரி செய்யுங்கள் - நகர்ப்புற வளர்ச்சி, ஊரக வளர்ச்சி, பொதுப்பணித்துறை டெண்டர்கள் நேரடி CM/மூத்த அமைச்சர் மேற்பார்வையில். இடைத்தரகர்களுக்கு கமிஷன் இல்லை.</div>
+          </div>
+        </div>
+
+        <div class="sol-item">
+          <span class="sol-icon">🏭</span>
+          <div>
+            <div class="sol-en en">Make PSUs profitable  -  like Mysore Sandal Soap (Karnataka) or Amul (Gujarat). Government-owned companies should earn for the State, not drain it.</div>
+            <div class="sol-ta ta">PSUகளை லாபகரமாக்குங்கள் - மைசூர் சாண்டல் சோப் (கர்நாடகா) அல்லது அமுல் (குஜராத்) போல. அரசு நிறுவனங்கள் மாநிலத்திற்கு சம்பாதிக்க வேண்டும், அல்ல சுரண்ட.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="callout warn" style="margin-top:16px;">
+        <span class="callout-icon">❓</span>
+        <div>
+          <span class="en"><strong>Is it realistic?</strong> The 2021 White Paper said the same things  -  and fiscal performance got worse, not better. The 2026 White Paper is right to identify these solutions. The difference will be in execution. The real test: Does the 2026-31 data show lower borrowing, higher tax collection, and improved PSU performance? That answer comes only in 2031.</span>
+          <span class="ta callout-ta"><strong>இது யதார்த்தமா?</strong> 2021 வெள்ளை அறிக்கை இதே விஷயங்களை சொன்னது - நிதி செயல்திறன் சிறந்ததற்கு பதில் மோசமடைந்தது. 2026 வெள்ளை அறிக்கை இந்த தீர்வுகளை அடையாளப்படுத்துவதில் சரியானது. வித்தியாசம் செயல்படுத்தலில் இருக்கும். உண்மையான சோதனை: 2026-31 தரவு குறைந்த கடன் வாங்குவது, அதிக வரி வசூல், மேம்பட்ட PSU செயல்திறன் காட்டுகிறதா? அந்த பதில் 2031-ல் மட்டுமே வரும்.</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== FINAL VERDICT ===== -->
+  <div class="verdict-strip">
+    <div class="vs-title-en en">The Bottom Line  -  In Plain Language</div>
+    <div class="vs-title-ta ta">இறுதி சுருக்கம் - எளிய மொழியில்</div>
+
+    <div class="vs-text-en en">
+      <strong>Tamil Nadu is not poor.</strong> It has the 2nd largest economy in India  -  bigger than Denmark, Singapore, Malaysia. The problem is not the size of the economy. The problem is that the government is not collecting enough of what it is legally owed (corruption and enforcement failures), it is spending more than it earns every year (revenue deficit), it borrowed massively for daily expenses rather than productive investment, its loss-making PSUs drain resources that could build roads and hospitals, and it missed the post-COVID window when it could have fixed all of this.<br><br>
+      The result: <strong>₹10 lakh crore direct debt + ₹3.18 lakh crore PSU debt + ₹1.8 lakh crore guarantees = ₹13.18 lakh crore total exposure.</strong> That is ₹1,28,934 for every single person in Tamil Nadu  -  including newborns.<br><br>
+      Both the 2021 and 2026 White Papers correctly diagnosed the disease. <strong>Neither prescribed the medicine. Neither named the specific people responsible.</strong> The White Paper cycle will continue in 2031  -  unless the new government actually does what it says.
+    </div>
+
+    <div class="vs-text-ta ta">
+      <strong>தமிழ்நாடு ஏழையல்ல.</strong> இந்தியாவில் 2வது பெரிய பொருளாதாரம் - டென்மார்க், சிங்கப்பூர், மலேசியாவை விட பெரியது. பிரச்சனை பொருளாதாரத்தின் அளவு அல்ல. பிரச்சனை என்னவென்றால் அரசு சட்டப்படி செலுத்த வேண்டியதை போதுமான அளவு வசூலிக்கவில்லை (ஊழல் மற்றும் அமலாக்க தோல்விகள்), ஒவ்வொரு ஆண்டும் சம்பாதிப்பதை விட அதிகமாக செலவழிக்கிறது (வருவாய் பற்றாக்குறை), உற்பத்தி முதலீட்டிற்கு பதில் தினசரி செலவுகளுக்காக மிகவும் கடன் வாங்கியது, நஷ்டத்தில் இயங்கும் PSUகள் சாலைகள் மற்றும் மருத்துவமனைகள் கட்ட முடிந்த வளங்களை சுரண்டுகின்றன, COVID-க்குப் பின் சாளரத்தை தவறவிட்டது.<br><br>
+      முடிவு: <strong>₹10 லட்சம் கோடி நேரடி கடன் + ₹3.18 லட்சம் கோடி PSU கடன் + ₹1.8 லட்சம் கோடி உத்தரவாதங்கள் = ₹13.18 லட்சம் கோடி மொத்த வெளிப்பாடு.</strong> தமிழ்நாட்டில் ஒவ்வொரு நபருக்கும் - புதிதாக பிறந்த குழந்தை உட்பட - ₹1,28,934.<br><br>
+      2021 மற்றும் 2026 வெள்ளை அறிக்கைகள் இரண்டும் நோயை சரியாக கண்டறிந்தன. <strong>எதுவும் மருந்தை பரிந்துரைக்கவில்லை. எதுவும் பொறுப்பான குறிப்பிட்ட நபர்களை பெயரிடவில்லை.</strong> 2031-ல் வெள்ளை அறிக்கை சுழற்சி தொடரும் - புதிய அரசு சொல்வதை உண்மையில் செய்யாவிட்டால்.
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>Part of the Tamil Nadu White Paper Comparative Analysis Project. All figures sourced directly from the 2021 and 2026 White Papers.</p>
+  <div class="footer-links">
+    <a href="index.html">🏠 Home</a>
+    <a href="TN_WhitePaper_Comparative_Analysis_v2.html">📄 Full English Report</a>
+    <a href="full_report_tamil.html">🇮🇳 Full Tamil Report</a>
+    <a href="accountability.html">⚖️ Accountability</a>
+    <a href="glossary.html">📖 Glossary</a>
+  </div>
+</footer>
+
+<script>
+function setLang(lang) {
+  const body = document.body;
+  const btnEn = document.getElementById('btn-en');
+  const btnTa = document.getElementById('btn-ta');
+  if (lang === 'ta') {
+    body.classList.add('tamil-mode');
+    btnTa.classList.add('active');
+    btnEn.classList.remove('active');
+    localStorage.setItem('debt_lang', 'ta');
+  } else {
+    body.classList.remove('tamil-mode');
+    btnEn.classList.add('active');
+    btnTa.classList.remove('active');
+    localStorage.setItem('debt_lang', 'en');
+  }
+}
+function toggleLang() {
+  const isTamil = document.body.classList.contains('tamil-mode');
+  setLang(isTamil ? 'en' : 'ta');
+}
+window.addEventListener('DOMContentLoaded', function() {
+  const saved = localStorage.getItem('debt_lang');
+  if (saved === 'ta') setLang('ta');
+  // Set btn refs
+  window.btn2021 = document.getElementById('btn-en');
+  window.btn2026 = document.getElementById('btn-ta');
+});
+</script>
+</body>
+</html>
