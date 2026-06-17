@@ -1,0 +1,1767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<title>Tamil Nadu White Papers: Comparative Analysis 2021 vs 2026</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&family=Source+Sans+3:wght@400;600&display=swap');
+
+:root {
+ --primary: #0f2d52;
+ --primary-light: #1a4a7a;
+ --secondary: #b91c1c;
+ --accent: #d97706;
+ --accent-light: #fef3c7;
+ --green: #15803d;
+ --green-light: #dcfce7;
+ --red: #b91c1c;
+ --red-light: #fee2e2;
+ --amber: #b45309;
+ --amber-light: #fef3c7;
+ --blue-light: #dbeafe;
+ --surface: #f8fafc;
+ --surface2: #f1f5f9;
+ --border: #cbd5e1;
+ --border-light: #e2e8f0;
+ --text: #0f172a;
+ --text-mid: #334155;
+ --muted: #64748b;
+ --white: #ffffff;
+ --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.05);
+ --shadow-md: 0 4px 12px rgba(0,0,0,0.10), 0 2px 4px rgba(0,0,0,0.06);
+ --shadow-lg: 0 10px 30px rgba(0,0,0,0.12), 0 4px 8px rgba(0,0,0,0.06);
+ --radius: 12px;
+ --radius-sm: 6px;
+ --radius-lg: 16px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+ font-family: 'Source Sans 3', 'Segoe UI', Arial, sans-serif;
+ color: var(--text);
+ background: #f0f4f8;
+ font-size: 14.5px;
+ line-height: 1.65;
+}
+
+/* ---- COVER ---- */
+.cover {
+ background: linear-gradient(135deg, #0f2d52 0%, #1a1a4e 50%, #0f2d52 100%);
+ color: #fff;
+ padding: 70px 40px 60px;
+ text-align: center;
+ position: relative;
+ overflow: hidden;
+}
+.cover::before {
+ content: '';
+ position: absolute;
+ top: 0; left: 0; right: 0; bottom: 0;
+ background: radial-gradient(ellipse at 30% 50%, rgba(217,119,6,0.15) 0%, transparent 60%),
+ radial-gradient(ellipse at 70% 30%, rgba(185,28,28,0.1) 0%, transparent 50%);
+ pointer-events: none;
+}
+.cover-badge {
+ display: inline-block;
+ background: rgba(217,119,6,0.2);
+ border: 1px solid rgba(217,119,6,0.5);
+ color: #fcd34d;
+ font-size: 0.72em;
+ font-weight: 700;
+ letter-spacing: 2px;
+ text-transform: uppercase;
+ padding: 5px 16px;
+ border-radius: 20px;
+ margin-bottom: 20px;
+}
+.cover h1 {
+ font-family: 'Playfair Display', Georgia, serif;
+ font-size: 2.6em;
+ font-weight: 800;
+ letter-spacing: 0.5px;
+ margin-bottom: 14px;
+ line-height: 1.2;
+ text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.cover h2 {
+ font-size: 1.15em;
+ font-weight: 400;
+ color: #fcd34d;
+ margin-bottom: 8px;
+}
+.cover .subtitle {
+ font-size: 0.92em;
+ color: #94a3b8;
+ margin-bottom: 36px;
+}
+.cover .meta {
+ display: flex;
+ justify-content: center;
+ gap: 14px;
+ margin-top: 36px;
+ flex-wrap: wrap;
+}
+.cover .meta-item {
+ background: rgba(255,255,255,0.08);
+ border: 1px solid rgba(255,255,255,0.15);
+ backdrop-filter: blur(8px);
+ padding: 14px 22px;
+ border-radius: var(--radius);
+}
+.cover .meta-item .label {
+ font-size: 0.68em;
+ color: #94a3b8;
+ text-transform: uppercase;
+ letter-spacing: 1.5px;
+ margin-bottom: 4px;
+}
+.cover .meta-item .value {
+ font-size: 1.05em;
+ font-weight: 700;
+ color: #fcd34d;
+}
+.cover-divider {
+ width: 60px;
+ height: 3px;
+ background: linear-gradient(90deg, var(--accent), var(--secondary));
+ margin: 20px auto;
+ border-radius: 2px;
+}
+
+/* ---- TOC ---- */
+.toc {
+ background: var(--primary);
+ padding: 32px 40px;
+ border-bottom: 4px solid var(--accent);
+}
+.toc h3 {
+ color: #fcd34d;
+ font-size: 0.78em;
+ margin-bottom: 18px;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ font-weight: 700;
+}
+.toc-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+ gap: 6px;
+}
+.toc a {
+ color: #cbd5e1;
+ text-decoration: none;
+ font-size: 0.88em;
+ display: flex;
+ align-items: center;
+ gap: 6px;
+ padding: 4px 0;
+ transition: color 0.2s;
+}
+.toc a:hover { color: #fcd34d; }
+.toc .stage {
+ font-weight: 700;
+ color: #fcd34d;
+ font-size: 0.72em;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ margin-top: 14px;
+ margin-bottom: 4px;
+ padding: 3px 10px;
+ background: rgba(255,255,255,0.05);
+ border-radius: 4px;
+ display: inline-block;
+}
+
+/* ---- LAYOUT ---- */
+.container { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+.section {
+ background: var(--white);
+ margin: 24px auto;
+ max-width: 1120px;
+ border-radius: var(--radius-lg);
+ box-shadow: var(--shadow-md);
+ padding: 40px 40px;
+ overflow: hidden;
+}
+@media(max-width:768px) { .section { padding: 24px 16px; margin: 12px; } }
+
+/* ---- HEADINGS ---- */
+h1.sec-title {
+ font-family: 'Playfair Display', Georgia, serif;
+ font-size: 1.75em;
+ color: var(--primary);
+ margin-bottom: 28px;
+ position: relative;
+ padding-bottom: 14px;
+}
+h1.sec-title::after {
+ content: '';
+ position: absolute;
+ bottom: 0; left: 0;
+ width: 60px; height: 4px;
+ background: linear-gradient(90deg, var(--accent), var(--secondary));
+ border-radius: 2px;
+}
+
+h2.sec-subtitle {
+ font-size: 1.15em;
+ color: var(--primary-light);
+ margin: 32px 0 16px;
+ padding: 10px 16px;
+ background: linear-gradient(90deg, var(--blue-light), transparent);
+ border-left: 4px solid var(--primary);
+ border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+ font-weight: 700;
+}
+
+h3.sec-h3 {
+ font-size: 1.0em;
+ color: var(--secondary);
+ margin: 20px 0 10px;
+ font-weight: 700;
+ display: flex;
+ align-items: center;
+ gap: 8px;
+}
+
+/* ---- SPECIAL: COMMON MAN SECTION ---- */
+.cm-section {
+ background: linear-gradient(135deg, #0f2d52 0%, #1e3a5f 100%);
+ color: #fff;
+ border-radius: var(--radius-lg);
+ box-shadow: var(--shadow-lg);
+ margin: 24px auto;
+ max-width: 1120px;
+ overflow: hidden;
+}
+.cm-header {
+ background: linear-gradient(90deg, #d97706, #b45309);
+ padding: 24px 40px;
+}
+.cm-header h1 {
+ font-family: 'Playfair Display', Georgia, serif;
+ font-size: 1.8em;
+ color: #fff;
+ margin-bottom: 6px;
+}
+.cm-header p { color: rgba(255,255,255,0.85); font-size: 0.95em; }
+.cm-body { padding: 32px 40px; }
+@media(max-width:768px) { .cm-body { padding: 20px 16px; } .cm-header { padding: 20px 16px; } }
+
+.analogy-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+ gap: 18px;
+ margin: 20px 0;
+}
+.analogy-card {
+ background: rgba(255,255,255,0.07);
+ border: 1px solid rgba(255,255,255,0.15);
+ border-radius: var(--radius);
+ padding: 20px;
+ transition: background 0.2s;
+}
+.analogy-card:hover { background: rgba(255,255,255,0.12); }
+.analogy-card .ac-icon { font-size: 2em; margin-bottom: 10px; }
+.analogy-card .ac-title { font-size: 1.0em; font-weight: 700; color: #fcd34d; margin-bottom: 8px; }
+.analogy-card .ac-term { font-size: 0.78em; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+.analogy-card .ac-body { font-size: 0.88em; color: #cbd5e1; line-height: 1.6; }
+.analogy-card .ac-number { font-size: 1.6em; font-weight: 800; color: #fbbf24; margin: 8px 0 4px; }
+
+.house-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+.house-table th { background: rgba(217,119,6,0.3); color: #fcd34d; padding: 11px 14px; text-align: left; font-size: 0.82em; text-transform: uppercase; letter-spacing: 0.5px; }
+.house-table td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 0.88em; color: #e2e8f0; }
+.house-table tr:hover td { background: rgba(255,255,255,0.05); }
+.house-table .good { color: #4ade80; font-weight: 600; }
+.house-table .bad { color: #f87171; font-weight: 600; }
+.house-table .warn { color: #fbbf24; font-weight: 600; }
+
+.cm-callout {
+ background: rgba(217,119,6,0.15);
+ border: 1px solid rgba(217,119,6,0.4);
+ border-radius: var(--radius);
+ padding: 18px 22px;
+ margin: 16px 0;
+ font-size: 0.92em;
+ color: #fef3c7;
+}
+.cm-callout strong { color: #fcd34d; }
+
+.cm-story {
+ background: rgba(255,255,255,0.05);
+ border-left: 4px solid #fbbf24;
+ border-radius: 0 var(--radius) var(--radius) 0;
+ padding: 18px 22px;
+ margin: 16px 0;
+ font-size: 0.92em;
+ color: #e2e8f0;
+ line-height: 1.7;
+}
+
+.cm-verdict-row {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 14px;
+ margin: 18px 0;
+}
+@media(max-width:600px) { .cm-verdict-row { grid-template-columns: 1fr; } }
+.cm-verdict-card {
+ background: rgba(255,255,255,0.06);
+ border: 1px solid rgba(255,255,255,0.12);
+ border-radius: var(--radius);
+ padding: 18px;
+}
+.cm-verdict-card .cvt { font-size: 0.72em; text-transform: uppercase; letter-spacing: 1px; color: #94a3b8; margin-bottom: 6px; }
+.cm-verdict-card .cvv { font-size: 0.95em; font-weight: 600; color: #f0f9ff; }
+
+/* ---- DASHBOARD CARDS ---- */
+.dashboard { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
+@media(max-width:700px) { .dashboard { grid-template-columns: 1fr; } }
+
+.dashboard-card {
+ background: var(--surface);
+ border: 1px solid var(--border-light);
+ border-radius: var(--radius);
+ padding: 22px;
+ box-shadow: var(--shadow-sm);
+ transition: box-shadow 0.2s;
+}
+.dashboard-card:hover { box-shadow: var(--shadow-md); }
+.dashboard-card .card-title {
+ font-size: 0.72em;
+ text-transform: uppercase;
+ letter-spacing: 1.5px;
+ color: #475569;
+ margin-bottom: 14px;
+ font-weight: 700;
+ display: flex;
+ align-items: center;
+ gap: 6px;
+}
+.dashboard-card .card-body { font-size: 0.9em; color: #1e293b; }
+.dashboard-card.primary { border-top: 4px solid var(--primary); }
+.dashboard-card.secondary { border-top: 4px solid var(--secondary); }
+.dashboard-card.accent { border-top: 4px solid var(--accent); }
+.dashboard-card.green { border-top: 4px solid var(--green); }
+
+.dashboard-card p { margin-bottom: 7px; color: #1e293b; }
+.dashboard-card strong { color: var(--primary); }
+
+/* ---- TABLES ---- */
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.87em; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
+thead tr { background: linear-gradient(90deg, var(--primary), var(--primary-light)); }
+th { color: #ffffff; padding: 12px 14px; text-align: left; font-size: 0.82em; font-weight: 600; letter-spacing: 0.3px; }
+td { padding: 11px 14px; border-bottom: 1px solid #e2e8f0; vertical-align: top; line-height: 1.6; color: #0f172a; background: #ffffff; font-size: 0.88em; }
+tr:nth-child(even) td { background: #f1f5f9; color: #0f172a; }
+tr:hover td { background: #dbeafe !important; color: #0f172a !important; }
+td:first-child { font-weight: 700; color: #0f2d52; }
+td:nth-child(2), td:nth-child(3), td:nth-child(4), td:nth-child(5) { color: #1e293b; font-weight: 400; }
+.num { font-weight: 700; color: #b91c1c !important; }
+/* Force all inline elements inside table cells to be readable */
+tbody td span, tbody td p, tbody td strong, tbody td em, tbody td small { color: inherit; }
+tbody td strong { font-weight: 700; }
+tbody { color: #0f172a; }
+
+/* ---- SCORECARDS ---- */
+.scorecard { display: grid; grid-template-columns: repeat(auto-fill, minmax(195px, 1fr)); gap: 14px; margin: 20px 0; }
+.score-item {
+ background: var(--surface);
+ border: 1px solid var(--border-light);
+ border-radius: var(--radius);
+ padding: 16px;
+ text-align: center;
+ box-shadow: var(--shadow-sm);
+ position: relative;
+ overflow: hidden;
+}
+.score-item::before {
+ content: '';
+ position: absolute;
+ top: 0; left: 0; right: 0;
+ height: 3px;
+}
+.score-item.red::before { background: var(--red); }
+.score-item.green::before { background: var(--green); }
+.score-item.amber::before { background: var(--amber); }
+.score-item.blue::before { background: var(--primary); }
+.score-item .label { font-size: 0.72em; text-transform: uppercase; color: #475569; letter-spacing: 0.5px; margin-bottom: 8px; font-weight: 600; }
+.score-item .value { font-size: 1.7em; font-weight: 800; margin: 6px 0; }
+.score-item .sub { font-size: 0.75em; color: #475569; }
+.score-item.red .value { color: var(--red); }
+.score-item.green .value { color: var(--green); }
+.score-item.amber .value { color: var(--amber); }
+.score-item.blue .value { color: var(--primary); }
+
+/* ---- CALLOUTS ---- */
+.callout {
+ display: flex;
+ gap: 14px;
+ padding: 16px 20px;
+ border-radius: var(--radius);
+ margin: 16px 0;
+ font-size: 0.91em;
+ line-height: 1.6;
+ border: 1px solid;
+}
+.callout-icon { font-size: 1.4em; flex-shrink: 0; margin-top: 1px; }
+.callout.danger { background: var(--red-light); border-color: #fca5a5; color: #7f1d1d; }
+.callout.info { background: var(--blue-light); border-color: #93c5fd; color: #1e3a5f; }
+.callout.success { background: var(--green-light); border-color: #86efac; color: #14532d; }
+.callout.warn { background: var(--amber-light); border-color: #fcd34d; color: #78350f; }
+.callout strong { font-weight: 700; }
+
+/* ---- SWOT ---- */
+.swot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; border-radius: var(--radius); overflow: hidden; margin: 16px 0; box-shadow: var(--shadow-md); }
+.swot-cell { padding: 20px; }
+.swot-cell h4 { font-size: 0.8em; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px; font-weight: 700; display: flex; align-items: center; gap: 6px; }
+.swot-cell ul { list-style: none; }
+.swot-cell ul li { font-size: 0.86em; margin-bottom: 6px; padding-left: 16px; position: relative; line-height: 1.5; color: #1e293b; }
+.swot-cell ul li::before { content: 'o'; position: absolute; left: 0; font-weight: 900; font-size: 0.7em; top: 3px; }
+.swot-s { background: #f0fdf4; } .swot-s h4 { color: var(--green); } .swot-s li::before { color: var(--green); }
+.swot-w { background: #fff1f2; } .swot-w h4 { color: var(--red); } .swot-w li::before { color: var(--red); }
+.swot-o { background: #eff6ff; } .swot-o h4 { color: var(--primary); } .swot-o li::before { color: var(--primary); }
+.swot-t { background: #fffbeb; } .swot-t h4 { color: var(--amber); } .swot-t li::before { color: var(--amber); }
+
+/* ---- RADAR BARS ---- */
+.radar { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 16px 0; }
+@media(max-width:600px) { .radar { grid-template-columns: 1fr; } }
+.radar-item { background: var(--surface); border: 1px solid var(--border-light); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow-sm); }
+.radar-item h4 { font-size: 0.78em; text-transform: uppercase; color: #334155; margin-bottom: 14px; font-weight: 700; letter-spacing: 0.5px; }
+.bar-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 0.8em; }
+.bar-label { width: 130px; text-align: right; color: #334155; flex-shrink: 0; font-size: 0.82em; }
+.bar-track { flex: 1; background: var(--border); border-radius: 4px; height: 11px; overflow: hidden; }
+.bar-fill { height: 11px; border-radius: 4px; transition: width 0.6s ease; }
+.bar-2021 { background: linear-gradient(90deg, #1a4a7a, #0f2d52); }
+.bar-2026 { background: linear-gradient(90deg, #dc2626, #991b1b); }
+.bar-val { font-size: 0.8em; color: #334155; width: 28px; font-weight: 700; }
+
+/* ---- FLOW ---- */
+.flow { display: flex; align-items: stretch; gap: 0; margin: 20px 0; flex-wrap: wrap; }
+.flow-item { flex: 1; min-width: 130px; padding: 14px 12px; background: var(--surface); border: 1px solid var(--border-light); text-align: center; font-size: 0.8em; position: relative; color: #1e293b; }
+.flow-item:first-child { border-radius: var(--radius-sm) 0 0 var(--radius-sm); }
+.flow-item:last-child { border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+.flow-arrow { display: flex; align-items: center; font-size: 1.4em; color: var(--accent); padding: 0 4px; background: #fff; }
+.flow-item .fi-label { font-weight: 700; font-size: 0.95em; color: var(--primary); margin-bottom: 4px; }
+
+/* ---- HEATMAP ---- */
+.heatmap { display: grid; grid-template-columns: 210px repeat(5, 1fr); gap: 3px; margin: 16px 0; font-size: 0.78em; }
+.hm-header { background: var(--primary); color: #fff; padding: 9px 8px; text-align: center; font-size: 0.78em; border-radius: 4px; font-weight: 600; }
+.hm-label { padding: 9px 10px; background: var(--surface); border-radius: 4px; font-weight: 600; color: #0f2d52; font-size: 0.82em; display: flex; align-items: center; }
+.hm-cell { padding: 9px 6px; text-align: center; border-radius: 4px; display: flex; align-items: center; justify-content: center; }
+.hm-high { background: #15803d; color: #fff; font-weight: 600; }
+.hm-med { background: #d97706; color: #fff; font-weight: 600; }
+.hm-low { background: #b91c1c; color: #fff; font-weight: 600; }
+.hm-na { background: var(--surface2); color: #334155; font-weight: 500; }
+
+/* ---- TIMELINE ---- */
+.timeline { margin: 20px 0; }
+.tl-item { display: flex; gap: 16px; margin-bottom: 20px; }
+.tl-line { display: flex; flex-direction: column; align-items: center; }
+.tl-dot { width: 14px; height: 14px; border-radius: 50%; background: var(--accent); flex-shrink: 0; margin-top: 4px; box-shadow: 0 0 0 3px rgba(217,119,6,0.2); }
+.tl-bar { width: 2px; flex: 1; background: var(--border); margin-top: 6px; }
+.tl-content { flex: 1; padding-bottom: 4px; }
+.tl-year { font-weight: 800; color: var(--primary); font-size: 0.9em; margin-bottom: 3px; }
+.tl-text { font-size: 0.87em; color: #334155; line-height: 1.55; }
+
+/* ---- TWO COL ---- */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 16px 0; }
+@media(max-width:600px) { .two-col { grid-template-columns: 1fr; } }
+
+/* ---- KEY INSIGHTS ---- */
+.key-insights {
+ background: linear-gradient(135deg, var(--primary) 0%, #0f2040 100%);
+ color: #fff;
+ padding: 24px 28px;
+ border-radius: var(--radius);
+ margin: 28px 0 8px;
+ box-shadow: var(--shadow-md);
+}
+.key-insights h4 {
+ color: #fcd34d;
+ font-size: 0.78em;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ margin-bottom: 14px;
+ font-weight: 700;
+ display: flex;
+ align-items: center;
+ gap: 8px;
+}
+.key-insights ul { list-style: none; }
+.key-insights ul li {
+ font-size: 0.88em;
+ margin-bottom: 8px;
+ padding-left: 20px;
+ position: relative;
+ color: #cbd5e1;
+ line-height: 1.6;
+}
+.key-insights ul li::before {
+ content: '';
+ position: absolute;
+ left: 0;
+ top: 8px;
+ width: 8px;
+ height: 8px;
+ border-radius: 50%;
+ background: #fcd34d;
+}
+
+/* ---- VERDICT GRID ---- */
+.verdict-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 20px 0; }
+.verdict-item {
+ background: var(--surface);
+ border: 1px solid var(--border-light);
+ border-radius: var(--radius);
+ padding: 18px;
+ box-shadow: var(--shadow-sm);
+ transition: box-shadow 0.2s;
+}
+.verdict-item:hover { box-shadow: var(--shadow-md); }
+.verdict-item .vi-label { font-size: 0.72em; text-transform: uppercase; color: #475569; margin-bottom: 8px; font-weight: 700; letter-spacing: 0.5px; }
+.verdict-item .vi-winner { font-size: 1.0em; font-weight: 700; margin-bottom: 6px; }
+.verdict-item .vi-note { font-size: 0.82em; color: #334155; line-height: 1.55; }
+.verdict-item.win2021 { border-top: 4px solid var(--primary); } .verdict-item.win2021 .vi-winner { color: var(--primary); }
+.verdict-item.win2026 { border-top: 4px solid var(--secondary); } .verdict-item.win2026 .vi-winner { color: var(--secondary); }
+.verdict-item.tie { border-top: 4px solid var(--amber); } .verdict-item.tie .vi-winner { color: var(--amber); }
+
+/* ---- MISC ---- */
+/* .num defined in table section above */
+p { margin-bottom: 9px; color: #1e293b; }
+ul.plain { list-style: none; }
+ul.plain li { padding-left: 18px; position: relative; margin-bottom: 6px; font-size: 0.9em; line-height: 1.6; color: #1e293b; }
+ul.plain li::before { content: ''; position: absolute; left: 4px; top: 9px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+
+.badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 0.72em; font-weight: 700; letter-spacing: 0.3px; }
+.badge-2021 { background: var(--primary); color: #fff; }
+.badge-2026 { background: var(--secondary); color: #fff; }
+.badge-common { background: var(--green); color: #fff; }
+.badge-warn { background: var(--amber); color: #fff; }
+
+.section-divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); margin: 28px 0; }
+
+/* ---- FOOTER ---- */
+footer {
+ background: var(--primary);
+ color: #64748b;
+ padding: 28px 40px;
+ text-align: center;
+ font-size: 0.82em;
+ margin-top: 30px;
+}
+footer strong { color: #94a3b8; }
+
+/* ---- PRINT ---- */
+@media print {
+ body { background: #fff; }
+ .section { box-shadow: none; border: 1px solid #ddd; margin: 10px 0; page-break-inside: avoid; }
+ .cover { background: #0f2d52 !important; -webkit-print-color-adjust: exact; }
+}
+
+
+  html { scroll-behavior: smooth; }
+  ::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: #f1f5f9; } ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div style="background:#f0f4f8; min-height:100vh; padding-bottom:40px;">
+
+<!-- COVER -->
+<div class="cover">
+ <div class="container">
+ <div class="cover-badge">Independent Policy Analysis · June 2026</div>
+ <h1>📊 Tamil Nadu White Papers: Comparative Analysis</h1>
+ <h2>2021 (DMK) vs. 2026 (TVK) - A Complete Evidence-Based Review</h2>
+ <div class="cover-divider"></div>
+ <p class="subtitle">Professional Policy Analysis | Finance | Governance | Public Impact</p>
+ <div class="meta">
+ <div class="meta-item"><div class="label">White Paper 1</div><div class="value">2021 - DMK Govt.</div></div>
+ <div class="meta-item"><div class="label">White Paper 2</div><div class="value">June 2026 - TVK Govt.</div></div>
+ <div class="meta-item"><div class="label">Period Examined</div><div class="value">2006-07 to 2025-26</div></div>
+ <div class="meta-item"><div class="label">Scope</div><div class="value">7 Stages | 30+ Domains</div></div>
+ </div>
+ </div>
+</div>
+
+<!-- TOC -->
+<div class="toc">
+ <div class="container">
+ <h3>📋 Table of Contents</h3>
+ <div class="toc-grid">
+ <div><div class="stage">Common People's Guide</div><a href="#common-man">🏠 The Common Person's Guide</a>
+ <a href="glossary.html" target="_blank">📖 Financial Terms Glossary (English & Tamil)</a></div>
+ <div>
+ <div class="stage">Stage 1</div>
+ <a href="#s1">Executive Summary & Dashboard</a>
+ <a href="#s1-swot">SWOT Matrix</a>
+ <a href="#s1-radar">Radar Comparison</a>
+ </div>
+ <div>
+ <div class="stage">Stage 2</div>
+ <a href="#s2-fiscal">Fiscal Position</a>
+ <a href="#s2-debt">Debt & Guarantees</a>
+ <a href="#s2-revenue">Revenue Receipts</a>
+ <a href="#s2-expenditure">Expenditure Trends</a>
+ <a href="#s2-psus">PSU Performance</a>
+ </div>
+ <div>
+ <div class="stage">Stage 3</div>
+ <a href="#s3">Financial Deep-Dive & Numbers</a>
+ </div>
+ <div>
+ <div class="stage">Stage 4</div>
+ <a href="#s4">Promise Tracking & Policy Shifts</a>
+ </div>
+ <div>
+ <div class="stage">Stage 5</div>
+ <a href="#s5">Citizen Impact by Group</a>
+ </div>
+ <div>
+ <div class="stage">Stage 6</div>
+ <a href="#s6">Independent Assessment</a>
+ </div>
+ <div>
+ <div class="stage">Stage 7</div>
+ <a href="#s7">Final Verdict & Scores</a>
+ </div>
+ </div>
+ </div>
+</div>
+
+
+<!-- ============================================================ -->
+<!-- COMMON MAN'S GUIDE -->
+<!-- ============================================================ -->
+<div class="cm-section" id="common-man">
+ <div class="cm-header">
+ <h1>🏠 The Common Person's Guide</h1>
+ <p>Understanding Tamil Nadu's finances using everyday language and your own household budget as a mirror</p>
+ </div>
+ <div class="cm-body">
+
+ <h2 style="color:#fcd34d; font-size:1.2em; margin-bottom:16px; font-family:'Playfair Display',serif;">What Is a White Paper, and Why Should I Care?</h2>
+ <div class="cm-story">
+ Imagine every few years, a new family moves into a rented house. Before they move in, they check the previous tenant's electricity bills, water bills, and how much unpaid rent was left behind. A <strong>White Paper</strong> is exactly that check. When a new government comes to power in Tamil Nadu, they publish a report saying: "Look at the mess the previous government left in our finances." The 2021 White Paper was released by the DMK government blaming the AIADMK era. The 2026 White Paper was released by the TVK government, pointing at the DMK's 5 years. Both say the same thing: the house finances are in very bad shape.
+ </div>
+
+ <h2 style="color:#fcd34d; font-size:1.2em; margin:24px 0 16px; font-family:'Playfair Display',serif;">Your Household vs. Tamil Nadu Government - A Direct Comparison</h2>
+ <p style="color:#cbd5e1; font-size:0.9em; margin-bottom:14px;">Think of Tamil Nadu's government like a large joint family. Here is how the same financial concepts work in both worlds:</p>
+
+ <table class="house-table">
+ <thead>
+ <tr>
+ <th>Government Term</th>
+ <th>What It Means for Your Home</th>
+ <th>Tamil Nadu Situation</th>
+ <th>Status</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>Revenue Receipts (Income)</td>
+ <td>Your monthly salary, rent income, and interest from fixed deposits</td>
+ <td>Taxes collected from people and businesses + money from central government. In 2025-26, government collected about ₹2.94 lakh crore.</td>
+ <td class="warn">Growing slowly, falling behind expenses</td>
+ </tr>
+ <tr>
+ <td>Revenue Expenditure (Monthly Bills)</td>
+ <td>Your rent, groceries, school fees, electricity bill, mobile bill - things you pay every month just to live</td>
+ <td>Salaries to 10 lakh+ employees, pensions, interest on loans, food subsidy, power subsidy, bus subsidy. These are unavoidable every month.</td>
+ <td class="bad">Growing much faster than income</td>
+ </tr>
+ <tr>
+ <td>Revenue Deficit</td>
+ <td>Your monthly salary is ₹50,000 but monthly bills are ₹65,000. You are spending ₹15,000 MORE than you earn every single month - and borrowing to cover it.</td>
+ <td>In 2025-26, the government spent ₹78,324 crore MORE than it earned in regular income. This is the highest ever - even higher than the COVID year.</td>
+ <td class="bad">Crisis level - borrowing for daily expenses</td>
+ </tr>
+ <tr>
+ <td>Capital Expenditure (Building Assets)</td>
+ <td>Buying a house, buying land, home renovation, buying a vehicle - things that build your wealth and last for years</td>
+ <td>Roads, bridges, dams, hospitals, schools, water projects - things that benefit people for decades. This is the GOOD type of spending.</td>
+ <td class="bad">Lowest in 5 years - fell to 1.44% of GSDP</td>
+ </tr>
+ <tr>
+ <td>Fiscal Deficit</td>
+ <td>Total new debt taken in one year - both for monthly bills AND for buying assets</td>
+ <td>In 2025-26 the government borrowed ₹1,33,208 crore in one single year. This breaks all previous records.</td>
+ <td class="bad">Record high - above legal limit every year</td>
+ </tr>
+ <tr>
+ <td>Outstanding Debt</td>
+ <td>Your total home loan + car loan + personal loan remaining to be repaid</td>
+ <td>Tamil Nadu's total debt is now ₹10 lakh crore - nearly doubled in just 5 years. Each resident (including your newborn child) owes ₹1,28,934 as their share.</td>
+ <td class="bad">Near doubled - highest in State's history</td>
+ </tr>
+ <tr>
+ <td>Interest Payments</td>
+ <td>The EMI interest you pay on your home loan, car loan, personal loan - money gone with zero benefit to you</td>
+ <td>₹67,050 crore paid JUST as interest in 2025-26. That is ₹22.80 out of every ₹100 earned - gone before any hospital, school, or road is funded.</td>
+ <td class="bad">1 out of every 4 rupees goes to interest</td>
+ </tr>
+ <tr>
+ <td>Government Guarantees</td>
+ <td>You signed as guarantor for a relative's loan. If they cannot pay, the bank comes to YOU.</td>
+ <td>Government signed as guarantor for TANGEDCO, buses, civil supplies dept. If they default, government must pay ₹1,79,782 crore extra from its pocket.</td>
+ <td class="bad">Hidden debt that is not counted in main numbers</td>
+ </tr>
+ <tr>
+ <td>PSU Losses (TANGEDCO, STUs)</td>
+ <td>You run a small shop that loses money every month. You keep it open by borrowing. The losses keep piling up.</td>
+ <td>The electricity company (TNEB group) has losses of ₹1,82,361 crore. Bus companies lose ₹72,667 crore. Government must keep funding them from YOUR tax money.</td>
+ <td class="bad">Getting worse every year despite funding</td>
+ </tr>
+ <tr>
+ <td>Committed Expenditure (64% of TRR)</td>
+ <td>Out of your ₹50,000 salary, ₹32,000 is already committed to EMIs, rent, school fees before the month even begins. You only have ₹18,000 for everything else.</td>
+ <td>64 out of every 100 rupees the government earns is already committed to salaries, pensions, and interest - before a single new school, hospital, or road can be considered.</td>
+ <td class="bad">Leaves very little for development</td>
+ </tr>
+ <tr>
+ <td>SOTR / GSDP (Tax Effort)</td>
+ <td>You earn ₹10 lakh per year but you could earn ₹15 lakh if you worked harder or collected dues better. You are leaving money on the table.</td>
+ <td>Tamil Nadu collects only 5.45% of its economy as taxes - the lowest in the State's history and lower than Karnataka, Maharashtra, and Gujarat. Billions in tax go uncollected due to corruption.</td>
+ <td class="bad">Worst tax collection ratio in decades</td>
+ </tr>
+ <tr>
+ <td>Demographic Risk (Ageing)</td>
+ <td>You are in your 40s. Your children will earn, but your elderly parents need more care. In a few years, your expenses will balloon but earning members may not increase.</td>
+ <td>Tamil Nadu's population is ageing the fastest among all large States - 71.7% growth in elderly by 2031. Fewer working people, more pension/healthcare costs. The clock is ticking.</td>
+ <td class="bad">Urgent - window for correction is closing</td>
+ </tr>
+ </tbody>
+ </table>
+
+ <h2 style="color:#fcd34d; font-size:1.2em; margin:28px 0 16px; font-family:'Playfair Display',serif;">The Story in Simple Numbers - If Tamil Nadu Were a Family of 4</h2>
+
+ <div class="analogy-grid">
+ <div class="analogy-card">
+ <div class="ac-icon">💰</div>
+ <div class="ac-term">Monthly Income (Tax Revenue)</div>
+ <div class="ac-title">Family earns ₹50,000/month</div>
+ <div class="ac-body">But out of this, ₹11,400 goes straight to loan interest before anything else is paid. That is like your EMI eating up nearly a quarter of your salary.</div>
+ </div>
+ <div class="analogy-card">
+ <div class="ac-icon">🏦</div>
+ <div class="ac-term">Total Family Debt</div>
+ <div class="ac-title">Family owes ₹2.7 crore</div>
+ <div class="ac-number">₹2.7 Cr</div>
+ <div class="ac-body">Tamil Nadu's debt per family of 4 works out to roughly this. And it doubled in just 5 years. A child born today already carries this burden.</div>
+ </div>
+ <div class="analogy-card">
+ <div class="ac-icon">🔴</div>
+ <div class="ac-term">Monthly Shortfall</div>
+ <div class="ac-title">Spends ₹67,000 but earns ₹50,000</div>
+ <div class="ac-body">Every month the family borrows ₹17,000 just to cover regular bills - groceries, utilities, school fees. This is not for buying a house or car. Just survival borrowing. This is the revenue deficit.</div>
+ </div>
+ <div class="analogy-card">
+ <div class="ac-icon">🏠</div>
+ <div class="ac-term">House Maintenance (CapEx)</div>
+ <div class="ac-title">Spends only ₹720/month on the house itself</div>
+ <div class="ac-body">Out of ₹50,000 income, only ₹720 goes to actually fixing the house, painting walls, or building a room. The rest goes to bills and loan repayment. The house is slowly falling apart.</div>
+ </div>
+ <div class="analogy-card">
+ <div class="ac-icon">⚡</div>
+ <div class="ac-term">Electricity Board (TANGEDCO)</div>
+ <div class="ac-title">Running a loss-making shop for 5 years</div>
+ <div class="ac-body">The family runs a local shop that loses ₹7,000 every month. They have pumped ₹1,45,185 crore equivalent into it over 5 years. The shop is still losing money. They cannot close it either.</div>
+ </div>
+ <div class="analogy-card">
+ <div class="ac-icon">👴</div>
+ <div class="ac-term">Ageing (Demographic Risk)</div>
+ <div class="ac-title">Grandparents moving in faster than expected</div>
+ <div class="ac-body">More elderly family members are moving in (needing care, medicines, food). Fewer young earners are joining. The ratio of earners to dependents is worsening - fastest in Tamil Nadu among all large States.</div>
+ </div>
+ </div>
+
+ <h2 style="color:#fcd34d; font-size:1.2em; margin:28px 0 16px; font-family:'Playfair Display',serif;">What Actually Changed Between 2021 and 2026? (In Plain Language)</h2>
+
+ <div class="cm-story">
+ <strong style="color:#fcd34d;">Imagine you had a house where the plumbing was leaking badly. The 2021 report said: "The pipes are broken - we will fix them." Five years later, the 2026 report says: "The pipes are STILL broken, we added more rooms (new welfare schemes), the water bill is even higher (more subsidies), we borrowed even more to pay the water bill, and we did not actually repair the pipes (no structural reform was done)."</strong>
+ </div>
+
+ <table class="house-table">
+ <thead>
+ <tr>
+ <th>What the 2021 Report Said Would Be Fixed</th>
+ <th>What the 2026 Report Found</th>
+ <th>Result</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>Tax collection will be improved</td>
+ <td>Tax as % of economy hit ALL-TIME LOW in 2025-26 (5.45%). Karnataka and Gujarat collect MORE tax despite having smaller economies.</td>
+ <td class="bad">Not fixed - got worse</td>
+ </tr>
+ <tr>
+ <td>Government deficit will be reduced</td>
+ <td>Revenue deficit in 2025-26 is HIGHER than even the COVID year. That was supposed to be the worst year ever.</td>
+ <td class="bad">Not fixed - got worse</td>
+ </tr>
+ <tr>
+ <td>TANGEDCO (electricity company) will be reformed</td>
+ <td>Government spent ₹1,45,185 crore bailing it out over 5 years. The company still makes losses. Now split into 4 companies.</td>
+ <td class="warn">Partially restructured - losses continue</td>
+ </tr>
+ <tr>
+ <td>Debt will be controlled</td>
+ <td>Debt went from ₹5.7 lakh crore to ₹10 lakh crore - almost doubled. Debt added in 5 years is more than ALL debt added in Tamil Nadu's first 60 years combined.</td>
+ <td class="bad">Not fixed - dramatically worse</td>
+ </tr>
+ <tr>
+ <td>Capital investment (roads, hospitals) will increase</td>
+ <td>Capital spending FELL from 1.79% to 1.44% of economy. Tamil Nadu now spends less on building things than all 3 comparable states (Karnataka, Maharashtra, Gujarat).</td>
+ <td class="bad">Not fixed - got worse</td>
+ </tr>
+ <tr>
+ <td>Bus tariff reform (STU losses)</td>
+ <td>Bus company revenue in 2025-26 (₹7,852 cr) is LOWER than 2019-20 (₹9,028 cr) in nominal terms. Fares not revised. Losses ballooned by 74%.</td>
+ <td class="bad">Not fixed - revenue declining</td>
+ </tr>
+ <tr>
+ <td>Power tariff revision</td>
+ <td>Multi-Year Tariff (MYT) introduced in 2022. This IS a genuine improvement. The electricity price is now adjusted every year to control losses.</td>
+ <td class="good">Fixed - one genuine success</td>
+ </tr>
+ <tr>
+ <td>Motor vehicle tax revision</td>
+ <td>Done in November 2023 after a 2-year delay. Better late than never - raised some revenue.</td>
+ <td class="warn">Partially done - late but positive</td>
+ </tr>
+ </tbody>
+ </table>
+
+ <h2 style="color:#fcd34d; font-size:1.2em; margin:28px 0 16px; font-family:'Playfair Display',serif;">What Welfare Benefits Were Added (and What Did They Cost)?</h2>
+
+ <div class="cm-story">
+ Between 2021 and 2026, the DMK government added significant new welfare schemes. These are genuine benefits for many people - but the 2026 White Paper points out they were added WITHOUT finding new ways to pay for them. It is like giving your whole family a salary raise (government employees got TAPS pension) AND buying gifts for everyone (welfare schemes) while your income stayed flat and your loan EMI kept rising.
+ </div>
+
+ <table class="house-table">
+ <thead>
+ <tr><th>New Benefit</th><th>Who Benefits</th><th>What It Costs the State</th></tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>Kalaignar Magalir Urimai Thittam</td>
+ <td>Women from eligible households - direct cash transfer</td>
+ <td class="warn">Part of ₹20,000+ crore per year in new recurring commitments</td>
+ </tr>
+ <tr>
+ <td>Free bus travel for women</td>
+ <td>All women - significant mobility benefit</td>
+ <td class="warn">Adds to STU losses which already lose ₹52 per km operated</td>
+ </tr>
+ <tr>
+ <td>DBT to college students (male + female)</td>
+ <td>Higher education students - direct support</td>
+ <td class="warn">Part of ₹20,000+ crore annual block of new commitments</td>
+ </tr>
+ <tr>
+ <td>TAPS (Assured Pension for Govt Employees)</td>
+ <td>Government employees - 50% of last salary as pension guaranteed</td>
+ <td class="bad">₹13,000 crore one-time + ₹5,000 crore every year thereafter, growing at 10% annually</td>
+ </tr>
+ <tr>
+ <td>Pongal gift hampers / cash</td>
+ <td>Ration card holders - festival support</td>
+ <td class="bad">₹6,688 crore in 2026 alone. Highly variable - makes budget planning impossible</td>
+ </tr>
+ <tr>
+ <td>Free rice (continuing PDS)</td>
+ <td>Ration card holders - essential food security</td>
+ <td class="warn">₹20,957 crore food subsidy in 2025-26 (up from ₹17,583 crore in 2021-22)</td>
+ </tr>
+ </tbody>
+ </table>
+
+ <div class="cm-callout">
+ <strong>The Honest Truth:</strong> All these schemes have real benefits for real people - especially the poor and women. The 2026 White Paper is NOT saying welfare is bad. It is saying: when you add ₹20,000 crore in new expenses every year WITHOUT collecting more taxes or cutting wasteful spending, you end up borrowing more and more. Your children pay for your current generosity through higher taxes and worse public services in the future.
+ </div>
+
+ <h2 style="color:#fcd34d; font-size:1.2em; margin:28px 0 16px; font-family:'Playfair Display',serif;">What Does This Mean for YOU Personally?</h2>
+
+ <div class="cm-verdict-row">
+ <div class="cm-verdict-card">
+ <div class="cvt">If you are a low-income family</div>
+ <div class="cvv">Short term: FREE rice, subsidised electricity, free bus, cash transfers are real benefits you are receiving. Long term: roads near your village, local hospital quality, and job opportunities depend on the State investing in infrastructure - which is being cut.</div>
+ </div>
+ <div class="cm-verdict-card">
+ <div class="cvt">If you are a middle-class family</div>
+ <div class="cvv">You pay taxes (GST on everything you buy). That money is going 23 paise out of every rupee to JUST pay interest on old loans - before any road, hospital, or school gets funded. Your services are getting worse while the bill is getting bigger.</div>
+ </div>
+ <div class="cm-verdict-card">
+ <div class="cvt">If you have children</div>
+ <div class="cvv">Every child born in Tamil Nadu today already "owes" ₹1,28,934 as their share of government debt. This is the highest among comparable States. They will either pay higher taxes or receive worse services - or both.</div>
+ </div>
+ <div class="cm-verdict-card">
+ <div class="cvt">If you are a government employee</div>
+ <div class="cvv">TAPS pension (assured 50% of last salary) is a WIN for you in the short run. But the State's fiscal stress means future pay revisions may be delayed, vacancies may remain unfilled, and your pension fund depends on a State that is already borrowing beyond its limits.</div>
+ </div>
+ <div class="cm-verdict-card">
+ <div class="cvt">If you are a farmer</div>
+ <div class="cvv">TNCSC is procuring more paddy - good for you. But water supply infrastructure (TWAD Board) is chronically underfunded. The State has less money for irrigation. And the same fiscal squeeze means agricultural investment may lag.</div>
+ </div>
+ <div class="cm-verdict-card">
+ <div class="cvt">If you run a small business</div>
+ <div class="cvv">Electricity from TANGEDCO costs you more than it costs businesses in other States because of how losses are cross-subsidised through industrial tariffs. Poor roads and water supply increase your operating costs. Tamil Nadu is becoming less competitive for business investment.</div>
+ </div>
+ </div>
+
+ <h2 style="color:#fcd34d; font-size:1.2em; margin:28px 0 16px; font-family:'Playfair Display',serif;">The Two Key Numbers Every Citizen Should Remember</h2>
+
+ <div class="analogy-grid">
+ <div class="analogy-card" style="border: 2px solid #ef4444; background: rgba(239,68,68,0.1);">
+ <div class="ac-icon">💸</div>
+ <div class="ac-title" style="color:#f87171;">₹22.80 out of every ₹100</div>
+ <div class="ac-body">This is how much of every rupee the Tamil Nadu government earns goes ONLY to pay interest on past debt - before a single teacher, doctor, road, or scheme. In Karnataka it is ₹16.40. In Maharashtra it is ₹10.30. In Gujarat it is ₹12.00. Tamil Nadu is paying the MOST.</div>
+ </div>
+ <div class="analogy-card" style="border: 2px solid #ef4444; background: rgba(239,68,68,0.1);">
+ <div class="ac-icon">👶</div>
+ <div class="ac-title" style="color:#f87171;">₹1,28,934 - your child's share</div>
+ <div class="ac-body">This is the per-person debt burden of Tamil Nadu in 2025-26 - the highest in the peer group. A newborn baby in Gujarat carries ₹70,798. In Maharashtra ₹77,569. In Karnataka ₹1,11,375. Tamil Nadu's child carries the most. And this number is still growing.</div>
+ </div>
+ </div>
+
+ <h2 style="color:#fcd34d; font-size:1.2em; margin:28px 0 16px; font-family:'Playfair Display',serif;">Is There Any Hope? What Can Fix This?</h2>
+
+ <div class="cm-story">
+ Both white papers end on a hopeful note - Tamil Nadu has a large, diverse economy and intelligent, capable people. The problem is NOT that Tamil Nadu is poor. It is that the government is not collecting the taxes it is legally owed (because of corruption and leakages), spending more than it earns on day-to-day expenses, and borrowing heavily to cover the gap. The 2026 report specifically says: the GST and excise and stamp duty departments are collecting FAR LESS than they should because of systemic corruption. Fixing THIS alone could add tens of thousands of crores in honest revenue - without raising any tax rate on ordinary citizens.
+ </div>
+
+ <table class="house-table">
+ <thead>
+ <tr><th>What Can Be Done</th><th>What This Means in Simple Terms</th><th>Difficulty</th></tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>Crack down on tax department corruption</td>
+ <td>Make sure the ₹72,000 crore GST that should be collected actually reaches the government treasury instead of someone's pocket. Karnataka collects ₹87,000 crore with a smaller economy.</td>
+ <td class="warn">Medium - needs political will</td>
+ </tr>
+ <tr>
+ <td>Fix stamp duty guideline values</td>
+ <td>When a house sells for ₹1 crore, it is registered as ₹40 lakh to avoid tax. The government loses stamp duty revenue. Update the rates to match real market prices.</td>
+ <td class="warn">Medium - affects real estate</td>
+ </tr>
+ <tr>
+ <td>Rationalise State Excise (liquor revenue)</td>
+ <td>Tamil Nadu collects ₹11,836 crore in liquor tax. Karnataka collects ₹41,000 crore. Even accounting for differences, TN is leaving over ₹20,000 crore on the table - partly through an unofficial parallel collection system.</td>
+ <td class="bad">Hard - politically sensitive</td>
+ </tr>
+ <tr>
+ <td>Make TNPDCL (electricity) operationally efficient</td>
+ <td>The electricity company should be able to recover its costs from consumers through proper tariffs - not from the State treasury every year. MYT is a step. Full recovery is the goal.</td>
+ <td class="bad">Hard - requires consistent tariff policy</td>
+ </tr>
+ <tr>
+ <td>Bus fare revision for STUs</td>
+ <td>Bus fares have not kept up with diesel prices, employee costs, or inflation. The State gives ₹52 subsidy for every km buses run. Fares need to be revised gradually to reduce this.</td>
+ <td class="bad">Hard - affects common people directly</td>
+ </tr>
+ <tr>
+ <td>Increase capital spending on productive assets</td>
+ <td>Spend more on roads, water supply, ports, hospitals - these attract businesses, create jobs, and generate future tax revenue. Stop letting interest payments crowd out this investment.</td>
+ <td class="warn">Medium - needs revenue to grow first</td>
+ </tr>
+ </tbody>
+ </table>
+
+ <div class="cm-callout">
+ <strong>The Bottom Line for Every Tamil Nadu Citizen:</strong> Tamil Nadu is not broke - it is badly managed. The State has the 2nd largest economy in India. But its government spends more than it earns, borrows to cover the gap, lets taxes go uncollected due to corruption, and has not invested enough in future-building infrastructure. Both the 2021 and 2026 White Papers describe the same problems - they just blame different governments for creating them. The real question is: which government will actually FIX them, not just write about them?
+ </div>
+
+ </div>
+</div>
+
+
+
+
+<div class="container">
+
+<!-- ============================================================ -->
+<!-- STAGE 1: EXECUTIVE SUMMARY -->
+<!-- ============================================================ -->
+<div class="section" id="s1">
+ <h1 class="sec-title">🏛️ STAGE 1 - Executive Summary</h1>
+
+ <h2 class="sec-subtitle">📌 Document Identity & Purpose</h2>
+ <div class="dashboard">
+ <div class="dashboard-card primary">
+ <div class="card-title">🗓️ White Paper 2021 - DMK Government</div>
+ <div class="card-body">
+ <p><strong>Full Title:</strong> White Paper on Tamil Nadu Government's Finances</p>
+ <p><strong>Presented by:</strong> Palanivel Thiaga Rajan, Finance Minister</p>
+ <p><strong>Occasion:</strong> Governor's Address to the 16th Legislative Assembly, June 2021</p>
+ <p><strong>Pages:</strong> 122 | Period Covered: 2006-07 to 2020-21</p>
+ <p><strong>Core Purpose:</strong> Expose the fiscal mismanagement of the previous AIADMK regime; establish baseline for DMK governance; call for structural reform.</p>
+ <p><strong>Tone:</strong> Alarming, detailed, reform-oriented, politically charged (implicitly).</p>
+ </div>
+ </div>
+ <div class="dashboard-card secondary">
+ <div class="card-title">🗓️ White Paper 2026 - TVK Government</div>
+ <div class="card-body">
+ <p><strong>Full Title:</strong> White Paper on the Fiscal Management of Tamil Nadu - An Examination of Public Finances, 2021-22 to 2025-26</p>
+ <p><strong>Presented by:</strong> N. Marie Wilson, Finance Minister</p>
+ <p><strong>Occasion:</strong> New government taking charge, June 2026</p>
+ <p><strong>Pages:</strong> 121 | Period Covered: 2021-22 to 2025-26</p>
+ <p><strong>Core Purpose:</strong> Expose fiscal deterioration under the outgoing DMK government; document a post-COVID consolidation failure; set expectations for fiscal correction.</p>
+ <p><strong>Tone:</strong> Academic, data-rich, methodologically structured, politically neutral in language.</p>
+ </div>
+ </div>
+ </div>
+
+ <h2 class="sec-subtitle" id="s1-exec">✅ Executive Dashboard</h2>
+
+ <h3 class="sec-h3">Key Headline Numbers Compared</h3>
+ <table>
+ <thead><tr><th>Indicator</th><th>2021 WP Baseline (2020-21)</th><th>2026 WP Baseline (2025-26 Pre-AC)</th><th>Change</th></tr></thead>
+ <tbody>
+ <tr><td>Revenue Deficit</td><td>₹61,320 cr (3.16% GSDP)</td><td>₹78,324 cr (2.22% GSDP)</td><td class="num">↑ Worsened in absolute terms</td></tr>
+ <tr><td>Fiscal Deficit</td><td>₹92,305 cr (4.43% GSDP)</td><td>₹1,33,208 cr (3.77% GSDP)</td><td class="num">↑ Highest absolute ever</td></tr>
+ <tr><td>Outstanding Debt</td><td>₹5,70,189 cr (26.69% GSDP IBE)</td><td>₹9,99,832 cr (28.3% GSDP)</td><td class="num">↑ Near doubling in 5 years</td></tr>
+ <tr><td>Interest Payments</td><td>Not specifically isolated at year-end; rising trend noted</td><td>₹67,050 cr (22.8% of TRR)</td><td class="num">↑ Exceeds CapEx</td></tr>
+ <tr><td>SoTR / GSDP</td><td>5.46% (declining from 8.48% in 2006-07)</td><td>5.45% (lowest ever recorded)</td><td class="num">→ Continued decline, stagnated</td></tr>
+ <tr><td>Capital Expenditure</td><td>1.67% of GSDP (RE 2020-21)</td><td>1.44% of GSDP</td><td class="num">↓ Further decline</td></tr>
+ <tr><td>Govt. Guarantees</td><td>₹91,818 cr (4.72% GSDP)</td><td>₹1,79,782 cr (5.1% GSDP)</td><td class="num">↑ Near doubling</td></tr>
+ <tr><td>TANGEDCO/Power PSU Debt</td><td>₹1,34,119 cr</td><td>₹2,47,130 cr (TNEB Group)</td><td class="num">↑ 84% increase</td></tr>
+ <tr><td>STU Accumulated Losses</td><td>₹42,143 cr (2020-21)</td><td>₹72,667 cr (2025-26)</td><td class="num">↑ 73% increase</td></tr>
+ <tr><td>Committed Exp. / TRR</td><td>Not stated in same metric</td><td>64.4% of TRR</td><td class="num">Rising unsustainably</td></tr>
+ </tbody>
+ </table>
+
+ <h2 class="sec-subtitle">🃏 Comparison Scorecards</h2>
+ <div class="scorecard">
+ <div class="score-item red"><div class="label">Revenue Deficit (2020-21)</div><div class="value">₹61K cr</div><div class="sub">3.16% GSDP - 2021 WP</div></div>
+ <div class="score-item red"><div class="label">Revenue Deficit (2025-26)</div><div class="value">₹78K cr</div><div class="sub">2.22% GSDP - 2026 WP</div></div>
+ <div class="score-item amber"><div class="label">Outstanding Debt 2021</div><div class="value">₹5.7L cr</div><div class="sub">26.69% GSDP</div></div>
+ <div class="score-item red"><div class="label">Outstanding Debt 2026</div><div class="value">₹10L cr</div><div class="sub">28.3% GSDP - doubled</div></div>
+ <div class="score-item amber"><div class="label">PSU Guarantees 2021</div><div class="value">₹91K cr</div><div class="sub">4.72% GSDP</div></div>
+ <div class="score-item red"><div class="label">PSU Guarantees 2026</div><div class="value">₹1.8L cr</div><div class="sub">5.1% GSDP</div></div>
+ <div class="score-item amber"><div class="label">Capital Expenditure 2021</div><div class="value">1.67%</div><div class="sub">of GSDP</div></div>
+ <div class="score-item red"><div class="label">Capital Expenditure 2026</div><div class="value">1.44%</div><div class="sub">of GSDP - lowest among peers</div></div>
+ <div class="score-item amber"><div class="label">SoTR / GSDP 2021</div><div class="value">5.46%</div><div class="sub">Declining trend</div></div>
+ <div class="score-item red"><div class="label">SoTR / GSDP 2026</div><div class="value">5.45%</div><div class="sub">Lowest in State history</div></div>
+ <div class="score-item amber"><div class="label">Interest / TRR 2021</div><div class="value">~15%</div><div class="sub">Estimated from data</div></div>
+ <div class="score-item red"><div class="label">Interest / TRR 2026</div><div class="value">22.8%</div><div class="sub">2× Maharashtra</div></div>
+ </div>
+
+ <h2 class="sec-subtitle">🚦 Traffic-Light Summary of Core Fiscal Health</h2>
+ <table>
+ <thead><tr><th>Parameter</th><th>2021 WP Assessment</th><th>2026 WP Assessment</th><th>Direction</th></tr></thead>
+ <tbody>
+ <tr><td>Overall Fiscal Health</td><td>🔴 Alarming - post-COVID crisis</td><td>🔴 Critical - structural deterioration</td><td>↓ Worsened</td></tr>
+ <tr><td>Revenue Mobilisation</td><td>🔴 Declining SOTR/GSDP</td><td>🔴 Lowest in State's history</td><td>↓ Continued decline</td></tr>
+ <tr><td>Capital Investment</td><td>🟡 Low but recovering (1.67%)</td><td>🔴 Lowest among peers (1.44%)</td><td>↓ Further squeeze</td></tr>
+ <tr><td>Debt Sustainability</td><td>🔴 Near-limit, rising fast</td><td>🔴 Near-doubled, above 28%</td><td>↓ Worse</td></tr>
+ <tr><td>PSU Financial Health</td><td>🔴 26 of 60 PSUs loss-making</td><td>🔴 Power PSU losses ₹1.82L cr</td><td>↓ Much worse</td></tr>
+ <tr><td>Fiscal Rule Compliance</td><td>🟡 Mostly complied pre-COVID</td><td>🔴 Breached FD ceiling every year 2021-26</td><td>↓ Structural breach</td></tr>
+ <tr><td>Committed Expenditure Ratio</td><td>🟡 High but not explicitly quantified</td><td>🔴 64.4% of TRR - well above peers</td><td>↓ Crowding out investment</td></tr>
+ <tr><td>Budget Credibility</td><td>🟡 Some concerns flagged</td><td>🔴 Systematic BE-vs-Actuals gap, CAG-flagged</td><td>↓ Worse</td></tr>
+ <tr><td>Inter-State Competitiveness</td><td>🟡 Slipping from rank 3 to rank 11</td><td>🔴 Worst fiscal position in peer group</td><td>↓ Further decline</td></tr>
+ <tr><td>Central Transfers</td><td>🔴 Share falling with each FC</td><td>🔴 GST compensation ended; share still declining</td><td>↓ Structural concern</td></tr>
+ </tbody>
+ </table>
+
+ <h2 class="sec-subtitle" id="s1-swot">🔲 SWOT Matrix - White Paper 2021</h2>
+ <div class="swot-grid">
+ <div class="swot-cell swot-s"><h4>💪 Strengths (2021 WP)</h4><ul>
+ <li>Transparent acknowledgment of fiscal crisis</li>
+ <li>First-ever comprehensive fiscal audit in public domain</li>
+ <li>Global Expert Advisory Council (Rajan, Duflo, etc.) engaged</li>
+ <li>Strong political will signalled ("once in a generation reforms")</li>
+ <li>Detailed historical data - 15 years of granular analysis</li>
+ <li>Tamil Nadu's strong economic base and human capital highlighted</li>
+ </ul></div>
+ <div class="swot-cell swot-w"><h4>⚠️ Weaknesses (2021 WP)</h4><ul>
+ <li>Heavy on diagnosis, light on remedies - no concrete action roadmap</li>
+ <li>Does not model forward fiscal scenarios</li>
+ <li>Does not quantify the fiscal cost of election promises</li>
+ <li>No explicit mention of welfare scheme rationalisation</li>
+ <li>PSU reform section lacks specific turnaround plans</li>
+ <li>Does not examine demographic pressure (ageing)</li>
+ </ul></div>
+ <div class="swot-cell swot-o"><h4>🌱 Opportunities (2021 WP Context)</h4><ul>
+ <li>Post-COVID recovery window opening</li>
+ <li>Centre's relaxed borrowing norms post-pandemic</li>
+ <li>Investment sentiment strong (GIM 2019 follow-up)</li>
+ <li>Digital governance modernisation possible</li>
+ <li>Strong property tax reform potential identified</li>
+ </ul></div>
+ <div class="swot-cell swot-t"><h4>🚨 Threats (2021 WP Context)</h4><ul>
+ <li>GST compensation set to end by June 2022</li>
+ <li>Finance Commission allocation shrinking each cycle</li>
+ <li>TANGEDCO/STU losses at systemic-risk levels</li>
+ <li>Rising central cess &amp; surcharges reducing state share</li>
+ <li>Rising debt-service crowding out capital investment</li>
+ </ul></div>
+ </div>
+
+ <h2 class="sec-subtitle">🔲 SWOT Matrix - White Paper 2026</h2>
+ <div class="swot-grid">
+ <div class="swot-cell swot-s"><h4>💪 Strengths (2026 WP)</h4><ul>
+ <li>More rigorous methodology - peer comparison, CAGR, multiple metrics</li>
+ <li>Clear attribution of causes (policy choice vs. exogenous)</li>
+ <li>Forward projection for 2026-27 (revenue, expenditure, fiscal deficit)</li>
+ <li>Identifies specific corruption/leakage in revenue departments by name</li>
+ <li>Demographic data incorporated (ageing population fiscal impact)</li>
+ <li>References CAG, RBI, MoSPI - credible external sourcing</li>
+ </ul></div>
+ <div class="swot-cell swot-w"><h4>⚠️ Weaknesses (2026 WP)</h4><ul>
+ <li>No concrete corrective action plan presented</li>
+ <li>New government's own schemes not quantified or costed</li>
+ <li>Does not examine non-fiscal sectors (education, health, infrastructure)</li>
+ <li>Lacks inter-district or rural-urban disaggregation</li>
+ <li>Uses 2025-26 Pre-AC data (not final audited - noted with caveat)</li>
+ <li>Fiscal road map for correction absent</li>
+ </ul></div>
+ <div class="swot-cell swot-o"><h4>🌱 Opportunities (2026 WP Context)</h4><ul>
+ <li>16th Finance Commission cycle - chance to improve TN's share</li>
+ <li>Revenue mobilisation potential: GST enforcement, excise, guideline values</li>
+ <li>Anti-corruption drive in commercial taxes, mining, registration</li>
+ <li>PSU restructuring (TNEB trifurcation, MYT tariff regime)</li>
+ <li>Central infrastructure funding (SASCI, PM Gati Shakti)</li>
+ </ul></div>
+ <div class="swot-cell swot-t"><h4>🚨 Threats (2026 WP Context)</h4><ul>
+ <li>Demographic dividend closing fastest of any large State</li>
+ <li>Interest exceeds CapEx - debt spiral beginning</li>
+ <li>TNPDCL regulatory asset liability (₹11,800 cr/yr, SC order)</li>
+ <li>TAPS pension scheme adds ₹5,000 cr/yr structural commitment</li>
+ <li>Maximum borrowing ceiling limits response space</li>
+ <li>New welfare commitments further burden constrained budget</li>
+ </ul></div>
+ </div>
+
+ <h2 class="sec-subtitle" id="s1-radar">📡 Radar Chart (Text Version) - Fiscal Philosophy Comparison</h2>
+ <div class="radar">
+ <div class="radar-item">
+ <h4>🔵 2021 WP Focus Areas (out of 10)</h4>
+ <div class="bar-row"><span class="bar-label">Fiscal Diagnosis</span><div class="bar-track"><div class="bar-fill bar-2021" style="width:95%"></div></div><span class="bar-val">9.5</span></div>
+ <div class="bar-row"><span class="bar-label">Revenue Analysis</span><div class="bar-track"><div class="bar-fill bar-2021" style="width:85%"></div></div><span class="bar-val">8.5</span></div>
+ <div class="bar-row"><span class="bar-label">Expenditure Detail</span><div class="bar-track"><div class="bar-fill bar-2021" style="width:80%"></div></div><span class="bar-val">8.0</span></div>
+ <div class="bar-row"><span class="bar-label">PSU Analysis</span><div class="bar-track"><div class="bar-fill bar-2021" style="width:90%"></div></div><span class="bar-val">9.0</span></div>
+ <div class="bar-row"><span class="bar-label">Economic Growth</span><div class="bar-track"><div class="bar-fill bar-2021" style="width:85%"></div></div><span class="bar-val">8.5</span></div>
+ <div class="bar-row"><span class="bar-label">Peer Comparison</span><div class="bar-track"><div class="bar-fill bar-2021" style="width:65%"></div></div><span class="bar-val">6.5</span></div>
+ <div class="bar-row"><span class="bar-label">Forward Projection</span><div class="bar-track"><div class="bar-fill bar-2021" style="width:30%"></div></div><span class="bar-val">3.0</span></div>
+ <div class="bar-row"><span class="bar-label">Corrective Roadmap</span><div class="bar-track"><div class="bar-fill bar-2021" style="width:25%"></div></div><span class="bar-val">2.5</span></div>
+ <div class="bar-row"><span class="bar-label">Demographic Analysis</span><div class="bar-track"><div class="bar-fill bar-2021" style="width:10%"></div></div><span class="bar-val">1.0</span></div>
+ </div>
+ <div class="radar-item">
+ <h4>🔴 2026 WP Focus Areas (out of 10)</h4>
+ <div class="bar-row"><span class="bar-label">Fiscal Diagnosis</span><div class="bar-track"><div class="bar-fill bar-2026" style="width:98%"></div></div><span class="bar-val">9.8</span></div>
+ <div class="bar-row"><span class="bar-label">Revenue Analysis</span><div class="bar-track"><div class="bar-fill bar-2026" style="width:95%"></div></div><span class="bar-val">9.5</span></div>
+ <div class="bar-row"><span class="bar-label">Expenditure Detail</span><div class="bar-track"><div class="bar-fill bar-2026" style="width:90%"></div></div><span class="bar-val">9.0</span></div>
+ <div class="bar-row"><span class="bar-label">PSU Analysis</span><div class="bar-track"><div class="bar-fill bar-2026" style="width:88%"></div></div><span class="bar-val">8.8</span></div>
+ <div class="bar-row"><span class="bar-label">Economic Growth</span><div class="bar-track"><div class="bar-fill bar-2026" style="width:40%"></div></div><span class="bar-val">4.0</span></div>
+ <div class="bar-row"><span class="bar-label">Peer Comparison</span><div class="bar-track"><div class="bar-fill bar-2026" style="width:98%"></div></div><span class="bar-val">9.8</span></div>
+ <div class="bar-row"><span class="bar-label">Forward Projection</span><div class="bar-track"><div class="bar-fill bar-2026" style="width:80%"></div></div><span class="bar-val">8.0</span></div>
+ <div class="bar-row"><span class="bar-label">Corrective Roadmap</span><div class="bar-track"><div class="bar-fill bar-2026" style="width:30%"></div></div><span class="bar-val">3.0</span></div>
+ <div class="bar-row"><span class="bar-label">Demographic Analysis</span><div class="bar-track"><div class="bar-fill bar-2026" style="width:90%"></div></div><span class="bar-val">9.0</span></div>
+ </div>
+ </div>
+
+ <h2 class="sec-subtitle">📅 Policy Timeline</h2>
+ <div class="timeline">
+ <div class="tl-item"><div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+ <div class="tl-content"><div class="tl-year">2003</div><div class="tl-text">TNFR Act enacted - targeted Revenue Deficit elimination by 2007-08.</div></div></div>
+ <div class="tl-item"><div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+ <div class="tl-content"><div class="tl-year">2006-2013</div><div class="tl-text">Golden period: Revenue surpluses in 5 of 7 years. GSDP growth at 10.15% CAGR. SOTR/GSDP at 8%+.</div></div></div>
+ <div class="tl-item"><div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+ <div class="tl-content"><div class="tl-year">2013-2020</div><div class="tl-text">Continuous revenue deficit since 2013-14. SOTR declining. Development exp. falling below 60%. TANGEDCO losses mount.</div></div></div>
+ <div class="tl-item"><div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+ <div class="tl-content"><div class="tl-year">2020-21</div><div class="tl-text">COVID year: Revenue Deficit ₹61,320 cr (3.16%). Fiscal Deficit ₹92,305 cr (4.43%). Govt Guarantees double to ₹91,818 cr.</div></div></div>
+ <div class="tl-item"><div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+ <div class="tl-content"><div class="tl-year">June 2021</div><div class="tl-text">🔵 <strong>DMK White Paper released</strong>: Fiscal alarm bell. Advisory Council formed. Reform promises made.</div></div></div>
+ <div class="tl-item"><div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+ <div class="tl-content"><div class="tl-year">2021-22</div><div class="tl-text">Post-COVID recovery - transitional improvement (Revenue Deficit narrows to ₹46,538 cr). GST comp. still active.</div></div></div>
+ <div class="tl-item"><div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+ <div class="tl-content"><div class="tl-year">June 2022</div><div class="tl-text">GST Compensation ceases (₹66,185 cr total received over 5 years). Critical structural shift in state revenues.</div></div></div>
+ <div class="tl-item"><div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+ <div class="tl-content"><div class="tl-year">2022-23</div><div class="tl-text">Transient revenue peak (SOTR/GSDP: 6.33%). Revenue deficit narrows to ₹36,215 cr - post-pandemic deferred transactions recover.</div></div></div>
+ <div class="tl-item"><div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+ <div class="tl-content"><div class="tl-year">2023-26</div><div class="tl-text">Renewed deterioration: New welfare schemes (Kalaignar Magalir Urimai, ₹20,000+ cr/yr), SOTR declines, CapEx falls, interest exceeds CapEx.</div></div></div>
+ <div class="tl-item"><div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+ <div class="tl-content"><div class="tl-year">Jan 2026</div><div class="tl-text">TAPS (Tamil Nadu Assured Pension Scheme) replaces CPS - adds ₹5,000 cr/yr structural commitment.</div></div></div>
+ <div class="tl-item"><div class="tl-line"><div class="tl-dot"></div><div class="tl-bar"></div></div>
+ <div class="tl-content"><div class="tl-year">June 2026</div><div class="tl-text">🔴 <strong>TVK White Paper released</strong>: Revenue Deficit ₹78,324 cr - highest ever. Debt ₹10 lakh crore. Total fiscal exposure: ₹13.18L cr.</div></div></div>
+ </div>
+
+ <h2 class="sec-subtitle">🔄 Policy Shift Flowchart</h2>
+ <div class="callout info"><span class="callout-icon">ℹ️</span><div>
+ <strong>Key Observation:</strong> Both white papers are diagnostics from newly elected governments targeting the fiscal legacy of their predecessors. The pattern is consistent: the 2021 WP targets 2016-21 DMK-absent period (AIADMK); the 2026 WP targets 2021-26 DMK administration. Both reveal structural, not merely cyclical, fiscal deterioration.
+ </div></div>
+ <div class="flow">
+ <div class="flow-item"><div class="fi-label">Pre-2013</div>Revenue Surpluses, SOTR growth, manageable debt</div>
+ <div class="flow-arrow">→</div>
+ <div class="flow-item"><div class="fi-label">2013-2020</div>Revenue deficits begin, SOTR declining, PSUs stressed</div>
+ <div class="flow-arrow">→</div>
+ <div class="flow-item"><div class="fi-label">2020-21</div>COVID shock - all parameters hit bottom (2021 WP baseline)</div>
+ <div class="flow-arrow">→</div>
+ <div class="flow-item"><div class="fi-label">2021-22</div>Recovery window opens - peers consolidate, TN does not</div>
+ <div class="flow-arrow">→</div>
+ <div class="flow-item"><div class="fi-label">2022-26</div>Welfare expansion without revenue mobilisation - CapEx declines, interest surpasses CapEx</div>
+ <div class="flow-arrow">→</div>
+ <div class="flow-item"><div class="fi-label">2026</div>New WP: Highest-ever absolute deficits, near-doubled debt</div>
+ </div>
+
+ <h2 class="sec-subtitle">🌡️ Priority Heatmap - Emphasis in Each Document</h2>
+ <div class="heatmap">
+ <div class="hm-header">Topic</div><div class="hm-header">2021 WP</div><div class="hm-header">2026 WP</div><div class="hm-header">Worsened?</div><div class="hm-header">In Both?</div><div class="hm-header">New in 2026?</div>
+ <div class="hm-label">Revenue Deficit</div><div class="hm-cell hm-high">🔴 High</div><div class="hm-cell hm-high">🔴 High</div><div class="hm-cell hm-high">YES</div><div class="hm-cell hm-high">YES</div><div class="hm-cell"> - </div>
+ <div class="hm-label">Debt Trajectory</div><div class="hm-cell hm-high">🔴 High</div><div class="hm-cell hm-high">🔴 High</div><div class="hm-cell hm-high">YES</div><div class="hm-cell hm-high">YES</div><div class="hm-cell"> - </div>
+ <div class="hm-label">SOTR Decline</div><div class="hm-cell hm-high">🔴 High</div><div class="hm-cell hm-high">🔴 High</div><div class="hm-cell hm-high">YES</div><div class="hm-cell hm-high">YES</div><div class="hm-cell"> - </div>
+ <div class="hm-label">PSU Health</div><div class="hm-cell hm-high">🔴 High</div><div class="hm-cell hm-high">🔴 High</div><div class="hm-cell hm-high">YES</div><div class="hm-cell hm-high">YES</div><div class="hm-cell"> - </div>
+ <div class="hm-label">Capital Expenditure</div><div class="hm-cell hm-med">🟡 Med</div><div class="hm-cell hm-high">🔴 High</div><div class="hm-cell hm-high">YES</div><div class="hm-cell hm-high">YES</div><div class="hm-cell"> - </div>
+ <div class="hm-label">Fiscal Rule Breach</div><div class="hm-cell hm-med">🟡 Med</div><div class="hm-cell hm-high">🔴 High</div><div class="hm-cell hm-high">YES</div><div class="hm-cell hm-high">YES</div><div class="hm-cell"> - </div>
+ <div class="hm-label">Peer Comparison</div><div class="hm-cell hm-low">🟢 Low</div><div class="hm-cell hm-high">🔴 High</div><div class="hm-cell"> - </div><div class="hm-cell"> - </div><div class="hm-cell hm-high">YES (2026)</div>
+ <div class="hm-label">Demography / Ageing</div><div class="hm-cell hm-low">🟢 None</div><div class="hm-cell hm-high">🔴 High</div><div class="hm-cell"> - </div><div class="hm-cell"> - </div><div class="hm-cell hm-high">YES (2026)</div>
+ <div class="hm-label">Committed Exp. Ratio</div><div class="hm-cell hm-med">🟡 Implicit</div><div class="hm-cell hm-high">🔴 High</div><div class="hm-cell hm-high">YES</div><div class="hm-cell"> - </div><div class="hm-cell"> - </div>
+ <div class="hm-label">Budget Credibility</div><div class="hm-cell hm-low">🟢 Low</div><div class="hm-cell hm-high">🔴 High</div><div class="hm-cell"> - </div><div class="hm-cell"> - </div><div class="hm-cell hm-high">YES (2026)</div>
+ <div class="hm-label">Corruption in Tax Depts</div><div class="hm-cell hm-low">🟢 Implied</div><div class="hm-cell hm-high">🔴 Explicit</div><div class="hm-cell"> - </div><div class="hm-cell"> - </div><div class="hm-cell hm-high">YES (2026)</div>
+ <div class="hm-label">Economic Growth Story</div><div class="hm-cell hm-high">🔴 High</div><div class="hm-cell hm-low">🟢 Minimal</div><div class="hm-cell"> - </div><div class="hm-cell"> - </div><div class="hm-cell"> - </div>
+ <div class="hm-label">Welfare Scheme Critique</div><div class="hm-cell hm-low">🟢 None</div><div class="hm-cell hm-med">🟡 Implicit</div><div class="hm-cell"> - </div><div class="hm-cell"> - </div><div class="hm-cell"> - </div>
+ <div class="hm-label">Forward Budget Projection</div><div class="hm-cell hm-low">🟢 None</div><div class="hm-cell hm-high">🔴 High (2026-27)</div><div class="hm-cell"> - </div><div class="hm-cell"> - </div><div class="hm-cell hm-high">YES (2026)</div>
+ </div>
+
+ <div class="key-insights">
+ <h4>🔑 Key Insights - Stage 1</h4>
+ <ul>
+ <li>Both documents are political instruments as much as fiscal ones - each new government uses a white paper to establish a crisis narrative about its predecessor.</li>
+ <li>The underlying fiscal trajectory described in 2021 has NOT reversed; on every major metric it has worsened by 2026, making the 2021 document's predictions accurate.</li>
+ <li>The 2026 WP is analytically superior - more rigorous peer comparisons, demographic analysis, forward projections, and corruption attribution - but like its 2021 predecessor, contains no corrective action roadmap.</li>
+ <li>The "once in a generation reform" promised in 2021 did not materialise - the post-COVID window for fiscal consolidation (2021-23) was not used.</li>
+ <li>Tamil Nadu has been in structural revenue deficit since 2013-14 - across three governments - suggesting deep institutional issues beyond any single party.</li>
+ </ul>
+ </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- STAGE 2: SIDE BY SIDE COMPARISON -->
+<!-- ============================================================ -->
+<div class="section" id="s2-fiscal">
+ <h1 class="sec-title">📊 STAGE 2 - Side-by-Side Domain Comparison</h1>
+
+ <h2 class="sec-subtitle" id="s2-fiscal">1. Fiscal Position Overview</h2>
+ <table>
+ <thead><tr><th>Sub-Topic</th><th><span class="badge badge-2021">2021 WP</span></th><th><span class="badge badge-2026">2026 WP</span></th></tr></thead>
+ <tbody>
+ <tr><td>Revenue Deficit</td><td>₹61,320 cr in 2020-21 (3.16% GSDP). Called "unsustainable." Had been in deficit every year since 2013-14.</td><td>₹78,324 cr in 2025-26 Pre-AC (2.22% GSDP). Called "highest ever recorded" - exceeds even COVID year in absolute terms.</td></tr>
+ <tr><td>Fiscal Deficit</td><td>₹92,305 cr in 2020-21 (4.43% GSDP). Breached 3% cap due to COVID and UDAY scheme.</td><td>₹1,33,208 cr in 2025-26 Pre-AC (3.77% GSDP). 3% cap breached every single year 2021-26.</td></tr>
+ <tr><td>Fiscal Deficit Trend</td><td>Breached 3% ceiling in 2016-17 (UDAY) and 2020-21 (COVID). Otherwise within limits historically.</td><td>No single year in 2021-26 was within the 3% GSDP ceiling. Highest absolute deficit in State history.</td></tr>
+ <tr><td>Revenue Deficit as % of Fiscal Deficit</td><td>66.43% in 2020-21. Was just 14.94% in 2011-16. Government borrowing increasingly for current consumption.</td><td>Borrowing-for-consumption pattern entrenched. Revenue deficit of 2.22% = structural, not cyclical.</td></tr>
+ <tr><td>FRBM Act Compliance</td><td>Notes repeated target extensions. Act amended multiple times from 2003.</td><td>Act amended 13 times. Revenue deficit target extended to 2026-27 (from original 2007-08). Pattern = "retrospective legitimation" of breaches.</td></tr>
+ <tr><td>Budget Credibility</td><td>Not specifically addressed beyond noting hidden expenditure.</td><td>Explicit: Budget Estimates systematically more optimistic than Revised Estimates and Actuals every year. CAG has flagged this.</td></tr>
+ </tbody>
+ </table>
+
+ <h2 class="sec-subtitle" id="s2-debt">2. Debt & Government Guarantees</h2>
+ <table>
+ <thead><tr><th>Sub-Topic</th><th><span class="badge badge-2021">2021 WP</span></th><th><span class="badge badge-2026">2026 WP</span></th></tr></thead>
+ <tbody>
+ <tr><td>Outstanding Debt</td><td>₹5,70,189 cr (IBE 2021-22) = 26.69% GSDP. Called "dubious distinction of being largest borrower in open market."</td><td>₹9,99,832 cr (2025-26 Pre-AC) = 28.3% GSDP. Debt grew at CAGR of 14.3% - faster than nominal GSDP in most years.</td></tr>
+ <tr><td>Debt Added in 5 Years</td><td>Not applicable (2021 was starting point).</td><td>₹4.87 lakh crore added 2021-26 - larger than TN's entire accumulated debt in its first six decades of existence.</td></tr>
+ <tr><td>Per-Capita Liability</td><td>₹2,63,976 per family (2021-22 IBE), not per capita.</td><td>₹1,28,934 per person (2025-26) - highest in peer group. Gujarat: ₹70,798. Maharashtra: ₹77,569.</td></tr>
+ <tr><td>Peer Comparison - Debt</td><td>TN higher than Gujarat, Karnataka, Maharashtra in 2019.</td><td>TN at 28.3%, Karnataka 23.4%, Maharashtra 19.7%, Gujarat 17.6%. All peers consolidated; TN did not.</td></tr>
+ <tr><td>Government Guarantees</td><td>₹91,818 cr (2020-21) = 4.72% GSDP. Power sector: 90%. Doubles in one year due to TANGEDCO + transport stress.</td><td>₹1,79,782 cr (March 2026) = 5.1% GSDP. Near-tripled from ₹65,659 cr in April 2021. Power sector: 79%. TNCSC: 15%.</td></tr>
+ <tr><td>Total Fiscal Exposure</td><td>₹5.24 lakh cr direct + ₹39,071 cr public account = ~₹5.6L cr approximate true liability.</td><td>Direct debt ₹10L cr + PSU debt ₹3.18L cr + Guarantees ₹1.8L cr = aggregate risk ~₹13.18 lakh crore.</td></tr>
+ <tr><td>Statutory Debt Limit</td><td>14th FC recommended 25% ceiling. TN already at 24.98% (2020-21).</td><td>TNFRA mandates 25.2% ceiling. TN at 28.3% - in breach since 2020-21.</td></tr>
+ </tbody>
+ </table>
+
+ <h2 class="sec-subtitle" id="s2-revenue">3. Revenue Receipts</h2>
+ <table>
+ <thead><tr><th>Component</th><th><span class="badge badge-2021">2021 WP</span></th><th><span class="badge badge-2026">2026 WP</span></th><th>Status</th></tr></thead>
+ <tbody>
+ <tr><td>Total Revenue Receipts / GSDP</td><td>12.49% (2006-07) → 8.70% (2020-21). Steady fall over 15 years.</td><td>10.01% (2021-22) → 8.32% (2025-26). Continued decline; lowest in peer group.</td><td>🔴 Worsening</td></tr>
+ <tr><td>SOTR / GSDP</td><td>8.48% (2006-07) → 5.46% (2020-21). "Source of grave concern."</td><td>5.93% (2021-22) → 5.45% (2025-26). "Lowest in State's recent fiscal history."</td><td>🔴 Worsening</td></tr>
+ <tr><td>Commercial Taxes / GST</td><td>Fell from 5.83% to 4.19% of GSDP (2006-21). GST transition cited as a factor.</td><td>GST/GSDP: 2.04% vs. Karnataka 2.66%, Gujarat 2.71%, Maharashtra 3.83%. Lowest in peer group. Corruption in Commercial Taxes Dept. explicitly named.</td><td>🔴 Critical</td></tr>
+ <tr><td>VAT on Petroleum</td><td>Fluctuating; decline noted.</td><td>0.96% → 0.71% of GSDP. Structural: EV adoption, fuel efficiency trends.</td><td>🔴 Declining</td></tr>
+ <tr><td>State Excise</td><td>Collapsed from 1.42% to 0.52% GSDP after 2013 vend fee abolition.</td><td>₹11,836 cr - lowest absolute among peers. Karnataka: ₹41,000 cr. "Parallel system of revenue collection not accruing to treasury."</td><td>🔴 Critical</td></tr>
+ <tr><td>Stamp Duty</td><td>Declining trend. Property tax revision pending since 2008.</td><td>0.69% → 0.72% GSDP. Stagnant vs. Maharashtra's improvement (+0.20 pp). Guideline values far below market values.</td><td>🟡 Stagnant</td></tr>
+ <tr><td>Motor Vehicle Tax</td><td>Rates not revised in 15 years. Lower revenue per vehicle than Karnataka, Kerala.</td><td>MVT revised Nov 2023 after prolonged gap. Improved to 0.35% GSDP from 0.27%.</td><td>🟢 Slight improvement</td></tr>
+ <tr><td>Non-Tax Revenue</td><td>0.47% GSDP (2020-21) - historically under-exploited.</td><td>Mining revenue stagnant at ~₹4,433 cr. "Foregoing significant own-source revenue from assets it owns." Corruption named.</td><td>🔴 Under-mobilised</td></tr>
+ <tr><td>Central Tax Devolution</td><td>Share fell from 6.64% (10th FC) to 4.08% (15th FC). "Concessions on levy... resulted in lower flows."</td><td>CAGR of central tax devolution 10.98% - lowest in peer group. Share has stagnated since 15th FC calamitous cut.</td><td>🔴 Structural loss</td></tr>
+ <tr><td>GST Compensation</td><td>₹20,033 cr outstanding as of March 2022. Warned of cessation by June 2022.</td><td>Compensation ended June 2022 (₹66,185 cr total received). Revenue gap emerged - not compensated by own-source reform.</td><td>🔴 Critical gap realised</td></tr>
+ </tbody>
+ </table>
+
+ <h2 class="sec-subtitle" id="s2-expenditure">4. Expenditure Trends</h2>
+ <table>
+ <thead><tr><th>Component</th><th><span class="badge badge-2021">2021 WP</span></th><th><span class="badge badge-2026">2026 WP</span></th><th>Status</th></tr></thead>
+ <tbody>
+ <tr><td>Revenue Expenditure Growth</td><td>CAGR 8.5% (2015-21). Faster than revenue receipt growth of 3.8%.</td><td>Committed expenditure ₹1.25L cr → ₹1.89L cr (51% rise). Crowding out all discretionary spending.</td><td>🔴 Accelerating</td></tr>
+ <tr><td>Salaries</td><td>24-33% of revenue expenditure historically. Noted non-filling of vacancies saved some cost.</td><td>₹60,630 cr → ₹83,320 cr (+37%). Per capita salary: 2nd highest among large States (₹10,141, after Maharashtra).</td><td>🔴 Rising structurally</td></tr>
+ <tr><td>Pensions</td><td>12-15% of total expenditure. Noted CPS introduced 2003 for new recruits.</td><td>₹23,185 cr → ₹38,745 cr (+67%). TAPS replaces CPS (Jan 2026) - adds ₹5,000 cr/yr + ₹13,000 cr one-time bridge.</td><td>🔴 Major new liability</td></tr>
+ <tr><td>Interest Payments</td><td>Rising trend. In 2018-19 interest first approached 15% of TRR.</td><td>₹41,564 cr → ₹67,050 cr (+61%). 22.8% of TRR, 34.8% of SOTR. Exceeds CapEx since 2017-18 - gap widening.</td><td>🔴 Critical structural problem</td></tr>
+ <tr><td>Subsidies</td><td>Rose from 12.65% to 27.06% of revenue expenditure (2006-21). Power subsidy most alarming at 1.10% GSDP.</td><td>₹16,951 cr tariff subsidy to TNPDCL alone in 2025-26. Food subsidy ₹20,957 cr. Total GoTN support to TNEB: ₹1,45,185 cr over 5 years.</td><td>🔴 Expanding, not rationalised</td></tr>
+ <tr><td>Capital Expenditure</td><td>Averaged 1.97% (2006-11) → 1.50% (2016-21). Called "first area where cuts imposed."</td><td>1.79% (2021-22) → 1.44% (2025-26). Lowest among four peer States. Debt-to-CapEx CAGR ratio: debt grew 14.3% vs CapEx 8.3%.</td><td>🔴 Shrinking</td></tr>
+ <tr><td>Committed Exp. / TRR</td><td>Not explicitly quantified in this metric.</td><td>60.4% (2021-22) → 64.4% (2025-26). Adding inflexible obligations: 87% of TRR pre-committed.</td><td>🔴 Near-fiscal paralysis</td></tr>
+ <tr><td>Development Expenditure</td><td>Fell from 62.9% to 57.5% of aggregate disbursement (2012-19).</td><td>7.5% of GSDP vs. peers above 8%. Development crowded out by committed expenditure.</td><td>🔴 Declining</td></tr>
+ <tr><td>New Welfare Commitments</td><td>Called for targeting and reorientation of subsidies.</td><td>Kalaignar Magalir Urimai, free bus travel for women, DBT to students = ₹20,000+ cr/yr new recurring cost (2023-25).</td><td>🟡 Public benefit; fiscal cost uncompensated</td></tr>
+ <tr><td>Local Body Devolution</td><td>10% of net SOTR devolved to LBs. Local bodies owe ₹1,259 cr to TANGEDCO, ₹484 cr to TWAD.</td><td>Statutory transfers maintained. Power and water arrears from local bodies noted (TWAD alone: ₹4,270 cr from TNPDCL receivables).</td><td>🟡 Unchanged framework, growing arrears</td></tr>
+ </tbody>
+ </table>
+
+ <h2 class="sec-subtitle" id="s2-psus">5. PSU Performance</h2>
+ <table>
+ <thead><tr><th>Entity</th><th><span class="badge badge-2021">2021 WP (2020-21)</span></th><th><span class="badge badge-2026">2026 WP (2025-26)</span></th><th>Change</th></tr></thead>
+ <tbody>
+ <tr><td>TANGEDCO / TNEB Group</td><td>Debt: ₹1,34,119 cr. Accumulated loss: ₹1,11,084 cr. ACS-ARR gap: ₹2.36/unit. No tariff revision for 7 years.</td><td>TNEB Group (now trifurcated) debt: ₹2,47,130 cr. Accumulated losses: ₹1,82,361 cr. ACS-ARR gap narrowed to +₹0.04/unit (2025-26) ONLY through loss funding, not operational efficiency. GoTN gave ₹1,45,185 cr in 5 years.</td><td>🔴 Far worse in absolute terms</td></tr>
+ <tr><td>STUs (Transport Corps)</td><td>Accumulated loss: ₹42,143 cr. Loss per km: ₹59.15. Employee cost highest factor.</td><td>Accumulated loss: ₹72,667 cr (+73%). Outstanding liabilities: ₹61,642 cr (+86%). Loss per km: ₹52.84. Revenue declined 13% vs 2019-20 in nominal terms.</td><td>🔴 Worse</td></tr>
+ <tr><td>TWAD Board</td><td>Accumulated deficit: ₹2,700.80 cr. Liabilities: ₹2,890.26 cr.</td><td>Accumulated losses: ₹2,815 cr (stable but unresolved). Cost recovery still ~44%.</td><td>🟡 Marginally stable</td></tr>
+ <tr><td>CMWSSB</td><td>Accumulated deficit: ₹2,581.77 cr. Recovery: 38% of operational cost.</td><td>Accumulated losses: ₹4,961 cr (92% increase). Under-recovery continues.</td><td>🔴 Much worse</td></tr>
+ <tr><td>TNCSC</td><td>Not separately profiled in 2021 WP.</td><td>Working capital debt: ₹27,181 cr. Subsidy receivable from GoTN: ₹24,000 cr (projected). Monthly structural deficit: managed through bank borrowings with State guarantee.</td><td>🔴 New risk profiled</td></tr>
+ <tr><td>Number of PSUs</td><td>60 PSUs + 9 Statutory Boards. 26 of 60 loss-making.</td><td>78 operational PSUs, ~2.54 lakh employees. Losses concentrated in power, transport, civil supplies.</td><td>🟡 Expanded universe, same structural issues</td></tr>
+ <tr><td>Return on Equity from PSUs</td><td>Average return: 0.45% on ₹33,579 cr investment (C&AG 2018). Paltry.</td><td>Not separately quantified but GoTN support exceeds returns by orders of magnitude.</td><td>🔴 Unchanged poor return</td></tr>
+ </tbody>
+ </table>
+
+ <h2 class="sec-subtitle">6. Economic Growth Scenario</h2>
+ <table>
+ <thead><tr><th>Parameter</th><th><span class="badge badge-2021">2021 WP</span></th><th><span class="badge badge-2026">2026 WP</span></th></tr></thead>
+ <tbody>
+ <tr><td>GSDP Growth</td><td>10.15% CAGR (2006-11), 6.70% (2011-16), 7.22% (2016-19). Slowdown alarming. TN slid from rank 3 to rank 11 in 2012-19.</td><td>Not specifically covered - focused solely on fiscal metrics. Implicit context: TN aspires to $1.5T economy by 2036.</td></tr>
+ <tr><td>Per Capita Income</td><td>TN at rank 4 (2011-14), slid to rank 5 (2016-19). Losing ground to Karnataka, Kerala.</td><td>Not quantified but noted per-capita liability rose to ₹1,28,934 - highest in peer group.</td></tr>
+ <tr><td>Sectoral Analysis</td><td>Detailed: Agriculture, Industry, Services growth rates across three periods. Services share at 51%.</td><td>Not covered. The 2026 WP stays strictly on fiscal management.</td></tr>
+ <tr><td>External Shocks Attribution</td><td>Demonetisation (2016), hurried GST, COVID lockdown cited as national-level disruptors.</td><td>COVID 2020-21 acknowledged as legitimate one-time shock. Post-2021 deterioration attributed to State's own policy choices.</td></tr>
+ </tbody>
+ </table>
+
+ <h2 class="sec-subtitle">7. Centre-State Fiscal Relations</h2>
+ <table>
+ <thead><tr><th>Issue</th><th><span class="badge badge-2021">2021 WP</span></th><th><span class="badge badge-2026">2026 WP</span></th></tr></thead>
+ <tbody>
+ <tr><td>Finance Commission Devolution</td><td>TN share fell 6.64% (10th FC) → 4.08% (15th FC). Use of 2011 Census and per-capita income criteria penalises performing States.</td><td>Share declined from 4.969% (13th FC) to 4.023% (14th FC) - catastrophic cut. 16th FC an opportunity to argue for higher share.</td></tr>
+ <tr><td>Cess & Surcharges</td><td>Grew from 10.4% to 20.2% of gross tax revenues (2011-19). Not shareable with States. Petrol levy up 216% since 2014.</td><td>Continued concern. CAGR of devolution lowest among peers.</td></tr>
+ <tr><td>GST Compensation</td><td>₹20,033 cr outstanding. Warned compensation ending June 2022 would create fiscal risk.</td><td>Compensation ended. This was the biggest structural revenue event. TN received ₹66,185 cr over 5 years without building own-revenue base in parallel.</td></tr>
+ <tr><td>Grants-in-Aid</td><td>Growing as % of TRR (17.1% in 2020-21) but discretionary - undermines federalism.</td><td>CAGR of Grants-in-Aid: -15.26% (TN, 2021-26) - the worst among peer group. Maharashtra: +15.09%.</td></tr>
+ </tbody>
+ </table>
+
+ <div class="key-insights">
+ <h4>🔑 Key Insights - Stage 2</h4>
+ <ul>
+ <li>The fiscal deterioration documented in 2021 continued unabated through 2026 - no domain shows meaningful structural improvement.</li>
+ <li>The 2026 WP adds important new lenses: peer comparison (making TN's relative position clear) and corruption attribution (naming specific departments).</li>
+ <li>The power sector remains the single biggest structural fiscal risk across both documents - 5 years of loss funding (₹1.45L cr) have not produced operational turnaround.</li>
+ <li>Capital expenditure - the only metric that produces future economic capacity - has declined in both windows, from 2% to 1.44% of GSDP.</li>
+ <li>The 2021 WP highlighted SOTR decline but attributed some to GST architecture; the 2026 WP identifies corruption in Commercial Taxes Department as a key cause - a qualitatively different and more actionable diagnosis.</li>
+ </ul>
+ </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- STAGE 3: FINANCIAL ANALYSIS -->
+<!-- ============================================================ -->
+<div class="section" id="s3">
+ <h1 class="sec-title">💰 STAGE 3 - Financial Deep-Dive</h1>
+
+ <h2 class="sec-subtitle">Revenue Numbers - Then vs Now</h2>
+ <table>
+ <thead><tr><th>Metric</th><th>2006-07</th><th>2012-13 (Peak)</th><th>2020-21 (2021 WP End)</th><th>2025-26 (2026 WP End)</th></tr></thead>
+ <tbody>
+ <tr><td>Total Revenue Receipts</td><td>₹40,913 cr</td><td>₹98,827 cr</td><td>₹1,69,012 cr</td><td>₹2,93,763 cr</td></tr>
+ <tr><td>TRR / GSDP</td><td>12.49%</td><td>11.56%</td><td>8.70%</td><td>8.32%</td></tr>
+ <tr><td>SOTR / GSDP</td><td>8.48%</td><td>8.34%</td><td>5.46%</td><td>5.45%</td></tr>
+ <tr><td>Revenue Deficit</td><td>(+) Surplus</td><td>₹1,760 cr surplus</td><td>₹61,320 cr deficit</td><td>₹78,324 cr deficit</td></tr>
+ <tr><td>Fiscal Deficit / GSDP</td><td>1.21%</td><td>1.93%</td><td>4.43%</td><td>3.77%</td></tr>
+ <tr><td>Outstanding Debt</td><td>₹60,170 cr</td><td>₹1,32,951 cr</td><td>₹4,85,502 cr</td><td>₹9,99,832 cr</td></tr>
+ <tr><td>Govt. Guarantees</td><td>₹3,960 cr</td><td>₹24,070 cr</td><td>₹91,818 cr</td><td>₹1,79,782 cr</td></tr>
+ <tr><td>Capital Expenditure / GSDP</td><td>1.82%</td><td>1.70%</td><td>1.67%</td><td>1.44%</td></tr>
+ <tr><td>Interest Payments</td><td>~₹5,800 cr (est.)</td><td>~₹14,000 cr (est.)</td><td>~₹28,000 cr (est.)</td><td>₹67,050 cr</td></tr>
+ <tr><td>TANGEDCO Accumulated Loss</td><td> - </td><td>₹53,696 cr (2011-12)</td><td>₹1,11,084 cr</td><td>₹1,82,361 cr (TNEB Group)</td></tr>
+ </tbody>
+ </table>
+
+ <h2 class="sec-subtitle">Expenditure Composition - Revenue Account (as % of Total Revenue Expenditure)</h2>
+ <table>
+ <thead><tr><th>Component</th><th>2006-07</th><th>2020-21</th><th>2025-26 (Pre-AC est.)</th><th>Trend</th></tr></thead>
+ <tbody>
+ <tr><td>Salaries & Wages</td><td>27.95%</td><td>24.92%</td><td>~28% (₹83,320 cr)</td><td>🟡 Fluctuating high</td></tr>
+ <tr><td>Pensions</td><td>14.22%</td><td>10.50%</td><td>~13% (₹38,745 cr)</td><td>🔴 Rising with TAPS</td></tr>
+ <tr><td>Interest Payments</td><td>15.27%</td><td>13.83%</td><td>~22% of TRR (₹67,050 cr)</td><td>🔴 Fastest growing</td></tr>
+ <tr><td>Subsidies</td><td>12.65%</td><td>27.06%</td><td>Continues to expand</td><td>🔴 Major structural expansion</td></tr>
+ <tr><td>Capital Expenditure</td><td>1.82% of GSDP</td><td>1.67% of GSDP</td><td>1.44% of GSDP</td><td>🔴 Declining</td></tr>
+ </tbody>
+ </table>
+
+ <h2 class="sec-subtitle">PSU Financial Summary - 2020-21 vs 2025-26</h2>
+ <table>
+ <thead><tr><th>Entity</th><th>Metric</th><th>2020-21</th><th>2025-26</th><th>Change</th></tr></thead>
+ <tbody>
+ <tr><td>Power Sector</td><td>Accumulated Loss</td><td>₹1,45,439 cr</td><td>₹1,82,361 cr</td><td class="num">+₹36,922 cr (+25%)</td></tr>
+ <tr><td>Power Sector</td><td>Outstanding Debt</td><td>₹1,67,860 cr</td><td>₹2,47,130 cr</td><td class="num">+₹79,270 cr (+47%)</td></tr>
+ <tr><td>STUs</td><td>Accumulated Loss</td><td>₹41,826 cr</td><td>₹72,667 cr</td><td class="num">+₹30,841 cr (+74%)</td></tr>
+ <tr><td>STUs</td><td>Outstanding Liabilities</td><td>₹33,190 cr</td><td>₹61,642 cr</td><td class="num">+₹28,452 cr (+86%)</td></tr>
+ <tr><td>TWAD</td><td>Accumulated Deficit</td><td>₹2,700 cr</td><td>₹2,815 cr</td><td class="num">+₹115 cr (4%)</td></tr>
+ <tr><td>CMWSSB</td><td>Accumulated Deficit</td><td>₹2,581 cr</td><td>₹4,961 cr</td><td class="num">+₹2,380 cr (+92%)</td></tr>
+ <tr><td>TNCSC</td><td>Working Capital Debt</td><td>~₹15,000 cr</td><td>₹27,181 cr</td><td class="num">+₹12,181 cr (+81%)</td></tr>
+ </tbody>
+ </table>
+
+ <h2 class="sec-subtitle">2026-27 Forward Projections (from 2026 WP)</h2>
+ <div class="callout danger"><span class="callout-icon">⚠️</span><div>
+ <strong>🚨 The 2026-27 Fiscal Warning:</strong> The Interim Budget for 2026-27 projects Revenue Deficit at ₹48,696 cr and Fiscal Deficit at ₹1,22,000 cr. The 2026 WP calculates, under a Business-As-Usual scenario, Revenue Deficit will reach ₹90,500 cr and Fiscal Deficit ₹1,63,750 cr - ₹41,800 cr higher than budgeted. Revenue is over-projected by ₹14,000-21,000 cr; Expenditure is under-provided by ₹27,800 cr (loss-funding and SC regulatory asset obligations omitted). Maximum borrowing capacity: ₹1,52,144 cr - leaving a ₹11,600 cr uncovered gap.
+ </div></div>
+
+ <div class="key-insights">
+ <h4>🔑 Key Insights - Stage 3</h4>
+ <ul>
+ <li>Debt has grown faster than the economy in every year 2021-26. The post-COVID nominal GSDP recovery did not reduce the debt ratio.</li>
+ <li>Interest payments at ₹67,050 cr now exceed CapEx (₹50,911 cr) by ₹16,139 cr - the "crossover" that first occurred in 2017-18 has widened to a structural chasm.</li>
+ <li>The cumulative 5-year GoTN support to the TNEB Group (₹1,45,185 cr) exceeds the entire capital expenditure budget for the same period - the State is literally subsidising past consumption more than it is building future assets.</li>
+ <li>CMWSSB losses nearly doubled (92%) in 5 years despite being explicitly called out in the 2021 WP for urgent reform.</li>
+ <li>The SoTR foregone since 2022-23 (relative to 6.33% peak) amounts to ₹51,000 cr over 3 years - approximately equal to the entire annual interest bill in 2021-22.</li>
+ </ul>
+ </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- STAGE 4: PROMISE TRACKING -->
+<!-- ============================================================ -->
+<div class="section" id="s4">
+ <h1 class="sec-title">📋 STAGE 4 - Promise Tracking & Policy Shifts</h1>
+
+ <h2 class="sec-subtitle">What the 2021 WP Promised vs. What Actually Happened (as documented in 2026 WP)</h2>
+ <table>
+ <thead><tr><th>2021 WP Commitment / Diagnosis</th><th>2026 WP Outcome</th><th>Delivered?</th></tr></thead>
+ <tbody>
+ <tr><td>"Business-as-usual cannot continue" - structural reforms promised</td><td>Revenue deficit higher in 2025-26 than 2020-21. No fiscal consolidation.</td><td>🔴 Not delivered</td></tr>
+ <tr><td>"Contain interest costs, reduce revenue deficit"</td><td>Interest grew from ₹41,564 cr to ₹67,050 cr (+61%). Revenue deficit rose from ₹46,538 to ₹78,324 cr.</td><td>🔴 Not delivered</td></tr>
+ <tr><td>"Once in a generation reforms" in governance</td><td>No structural expenditure reform; committed exp. ratio worsened from 60% to 64%.</td><td>🔴 Not delivered</td></tr>
+ <tr><td>GST compensation end in June 2022 - prepare own-revenue base</td><td>GST compensation ended; SOTR/GSDP declined from 6.33% to 5.45% despite 5-year preparation window.</td><td>🔴 Not delivered</td></tr>
+ <tr><td>Property Tax revision urgently needed (last done 2008)</td><td>No mention of property tax revision in 2026 WP - presumably still pending.</td><td>🔴 Not delivered</td></tr>
+ <tr><td>Motor Vehicle Tax revision (rates not revised in 15 years)</td><td>MVT revised November 2023 - after 2+ more years of delay. 2026 WP acknowledges improvement.</td><td>🟡 Partially delivered (late)</td></tr>
+ <tr><td>Tariff revision for TANGEDCO (7 years without revision)</td><td>Multi-Year Tariff (MYT) introduced 2022-23, CPI-linked annually. ACS-ARR gap narrowed.</td><td>🟢 Delivered</td></tr>
+ <tr><td>PSU reform "cannot be postponed further"</td><td>Power sector debt grew ₹79,270 cr. STU losses up 74%. CMWSSB losses up 92%. TNCSC new major liability.</td><td>🔴 Not delivered</td></tr>
+ <tr><td>Transparent governance, continuous engagement with electorate</td><td>CAG flagged systematic BE-vs-Actuals divergence - contradicts transparency claim.</td><td>🔴 Not delivered</td></tr>
+ <tr><td>Chief Minister's Global Economic Advisory Council formed</td><td>No reference in 2026 WP to advisory council recommendations being implemented.</td><td>🟡 Process followed; outcome unclear</td></tr>
+ <tr><td>FRBM Act compliance - revenue deficit elimination target</td><td>Fiscal Deficit breached 3% ceiling every year 2021-26. Revenue deficit target extended again to 2026-27 (8th extension).</td><td>🔴 Not delivered</td></tr>
+ <tr><td>Reduce over-reliance on borrowing for current expenditure</td><td>Debt grew from ₹5.7L cr to ₹10L cr. Borrowing for current consumption entrenched.</td><td>🔴 Not delivered</td></tr>
+ </tbody>
+ </table>
+
+ <h2 class="sec-subtitle">New Policies Introduced 2021-26 (from 2026 WP)</h2>
+ <table>
+ <thead><tr><th>Policy / Scheme</th><th>Nature</th><th>Fiscal Impact (per 2026 WP)</th></tr></thead>
+ <tbody>
+ <tr><td>Kalaignar Magalir Urimai Thittam</td><td>Direct income transfer to women</td><td>Part of ₹20,000+ cr/yr new recurring commitments post-2023</td></tr>
+ <tr><td>Free bus travel for women</td><td>Welfare scheme</td><td>Ongoing subsidy increase to STUs</td></tr>
+ <tr><td>Direct Benefit Transfer to college students (male & female)</td><td>Welfare scheme</td><td>Part of ₹20,000+ cr/yr new recurring commitments</td></tr>
+ <tr><td>Loan waivers</td><td>One-time welfare</td><td>Part of ₹20,000+ cr/yr burden</td></tr>
+ <tr><td>Tamil Nadu Assured Pension Scheme (TAPS)</td><td>Policy reversal - old-type pension for govt employees</td><td>₹13,000 cr one-time bridge + ₹5,000 cr/yr, growing 10%/yr</td></tr>
+ <tr><td>TNEB Trifurcation</td><td>Corporate restructuring of TANGEDCO</td><td>Created TNPDCL, TNPGCL, TNGECL, TANTRANSCO as separate entities</td></tr>
+ <tr><td>Multi-Year Tariff (MYT)</td><td>Power tariff reform</td><td>Helped narrow ACS-ARR gap. Positive structural step.</td></tr>
+ <tr><td>Enhancement of Pongal cash transfers</td><td>Welfare - ₹6,688 cr in 2026 alone</td><td>Highly variable, politically-driven; makes planning difficult</td></tr>
+ </tbody>
+ </table>
+
+ <h2 class="sec-subtitle">Contradictions Between the Two White Papers</h2>
+ <table>
+ <thead><tr><th>Area</th><th>2021 WP Position</th><th>2026 WP Revelation</th></tr></thead>
+ <tbody>
+ <tr><td>Fiscal Trajectory</td><td>2021 WP promises reversal, implies DMK will restore fiscal health.</td><td>2026 WP shows every fiscal metric worsened under DMK 2021-26.</td></tr>
+ <tr><td>Capital Expenditure</td><td>2021 WP criticises declining CapEx under previous govt.</td><td>2026 WP shows CapEx declined further from 1.79% to 1.44% under DMK.</td></tr>
+ <tr><td>Welfare Subsidies</td><td>2021 WP calls for "urgent course correction" on rising subsidies.</td><td>DMK introduced ₹20,000+ cr/yr NEW welfare commitments 2023-25 without revenue mobilisation.</td></tr>
+ <tr><td>PSU Reform</td><td>2021 WP states "reform cannot be postponed any further."</td><td>2026 WP shows PSU losses mushroomed - no turnaround achieved.</td></tr>
+ <tr><td>Revenue Mobilisation</td><td>2021 WP diagnosed revenue gap; implied corrective action would follow.</td><td>2026 WP shows SOTR/GSDP hit all-time low (5.45%) under DMK; corruption in tax departments explicitly named.</td></tr>
+ <tr><td>Transparency</td><td>2021 WP states commitment to transparent government.</td><td>2026 WP flags CAG concern on systematic BE-vs-Actuals divergence every year of DMK term.</td></tr>
+ </tbody>
+ </table>
+
+ <div class="key-insights">
+ <h4>🔑 Key Insights - Stage 4</h4>
+ <ul>
+ <li>The 2021 WP's promises served as accurate diagnostic benchmarks but were almost universally undelivered over 5 years.</li>
+ <li>Of 12 major commitments tracked, only 1 was clearly delivered (MYT tariff reform) and 1 partially (MVT revision, done late).</li>
+ <li>The one area of genuine fiscal improvement under DMK - MYT power tariff - is counteracted by massive expansion of loss-funding grants that maintain the TNEB Group's fiscal dependency.</li>
+ <li>The introduction of TAPS is a significant fiscal reversal - replacing the contributory pension scheme (CPS) that was introduced in 2003 specifically to reduce long-term pension liabilities.</li>
+ <li>New welfare schemes are individually defensible as social policy but represent the "large new recurring commitments without parallel revenue mobilisation" that the 2026 WP identifies as the #1 cause of fiscal deterioration from 2023-24.</li>
+ </ul>
+ </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- STAGE 5: CITIZEN IMPACT -->
+<!-- ============================================================ -->
+<div class="section" id="s5">
+ <h1 class="sec-title">👥 STAGE 5 - Citizen Impact Analysis</h1>
+
+ <h2 class="sec-subtitle">Impact by Citizen Group</h2>
+ <table>
+ <thead><tr><th>Citizen Group</th><th>Impact of 2021-26 Fiscal Trajectory</th><th>Severity</th></tr></thead>
+ <tbody>
+ <tr><td>🌾 <strong>Farmers</strong></td><td>TNCSC paddy procurement increased sharply (22.36L MT more in 2025-26 vs prior year) - positive for procurement. But State's fiscal stress may delay or reduce procurement support. STU poor service affects rural connectivity. Irrigation/water infrastructure starved of capital investment (TWAD losses unsolved).</td><td>🟡 Mixed</td></tr>
+ <tr><td>🎓 <strong>Students</strong></td><td>DBT to students introduced - direct benefit. BUT: development expenditure on education is crowded out by committed expenditure. Future generations inherit per-capita debt of ₹1,28,934 - they will pay for current consumption.</td><td>🟡 Short-term gain, long-term burden</td></tr>
+ <tr><td>👩 <strong>Women</strong></td><td>Free bus travel for women - directly beneficial for mobility. Kalaignar Magalir Urimai Thittam - income support directly deposited. Healthcare suffers from falling development expenditure (7.5% vs peers' 8%+).</td><td>🟢 Positive in welfare; 🔴 Gap in public health infra</td></tr>
+ <tr><td>👦 <strong>Youth</strong></td><td>Will inherit the fiscal burden: ₹13.18L cr aggregate exposure, demographic shift means shrinking tax base. Jobs may be affected if private investment declines (CapEx decline reduces infrastructure, competitiveness). Education investment is crowded out.</td><td>🔴 Severe long-term burden</td></tr>
+ <tr><td>🏛️ <strong>Government Employees</strong></td><td>TAPS replaces CPS - assured 50% pension, significant relief for employees. Pay revisions proceeded. DA suspended during COVID was restored. Positively impacted in the short term.</td><td>🟢 Positive (near-term)</td></tr>
+ <tr><td>🏭 <strong>Businesses / Industry</strong></td><td>High industrial tariff for TANGEDCO makes Tamil Nadu uncompetitive. CapEx decline means fewer roads/industrial parks. STU decline affects worker mobility. But positive: state's economy is large and diversified.</td><td>🔴 Infrastructure and power competitiveness concerns</td></tr>
+ <tr><td>💼 <strong>Investors</strong></td><td>Fiscal position at 28.3% debt/GSDP - well above peers. Crowding-out reduces fiscal space for investment incentives. CapEx lowest among peers (1.44% vs Gujarat 2.86%). Long-term competitiveness risk.</td><td>🔴 Warning signals</td></tr>
+ <tr><td>💡 <strong>Startups</strong></td><td>No specific mention in either WP. Tamil Nadu has a strong startup ecosystem but fiscal stress limits state support for innovation funds, infrastructure, and educational quality.</td><td>🟡 Indirect impact</td></tr>
+ <tr><td>🏪 <strong>MSMEs</strong></td><td>2021 WP noted MSME value-add lower than Maharashtra, Gujarat. Industrial power tariff is high - directly impacts MSME competitiveness. STU decline affects worker access. No specific MSME fiscal intervention mentioned in 2026 WP.</td><td>🔴 Structural disadvantage</td></tr>
+ <tr><td>🌾 <strong>Rural Citizens</strong></td><td>Gram Panchayats receive 10% SOTR devolution - linked to a declining SOTR base. TWAD water supply under-funded (44% cost recovery only). STU coverage declining. Rural infrastructure investment reduced by CapEx decline.</td><td>🔴 Negative</td></tr>
+ <tr><td>🏙️ <strong>Urban Citizens</strong></td><td>Property tax not revised since 2008 (as of 2021 WP; 2026 WP does not confirm revision). CMWSSB losses ballooned 92% - water supply funding precarious. Metro and urban transport investments may face crowding out.</td><td>🟡 Mixed, water supply at risk</td></tr>
+ <tr><td>👴 <strong>Senior Citizens</strong></td><td>Tamil Nadu ageing fastest among large states - 71.7% growth in elderly population by 2031. Healthcare expenditure per capita needs to rise. State fiscal stress may limit geriatric care expansion. Social security transfers rising but from a constrained budget.</td><td>🔴 Growing risk as cohort expands</td></tr>
+ <tr><td>👨‍👩‍👧‍👦 <strong>Middle-Class Families</strong></td><td>Per-capita fiscal liability: ₹1,28,934 - highest in peer group. Likely to bear future tax burden as State corrects fiscal position. Benefit from free utilities (power subsidies, free bus travel) but quality of public services (roads, hospitals) declining due to low CapEx.</td><td>🟡 Mixed - welfare gained, long-term burden rising</td></tr>
+ <tr><td>🏠 <strong>Low-Income Households</strong></td><td>Direct beneficiaries of free rice, subsidised power (first units), free bus travel for women, Magalir Urimai income transfer, PDS. Most welfare schemes are specifically targeted at this group. Short-term welfare improved.</td><td>🟢 Short-term positive (welfare); 🔴 Infrastructure quality declining</td></tr>
+ </tbody>
+ </table>
+
+ <div class="callout">
+ <strong>📌 Overall Citizen Impact Summary:</strong> Low-income and welfare-dependent households have benefited from expanded schemes under DMK 2021-26. Middle-class and future generations face the compounding consequences of a ₹10 lakh crore+ fiscal exposure and interest payments crowding out investments in roads, hospitals, schools, and water systems. The State's demographic trajectory (ageing fastest) makes course correction urgent before the window closes.
+ </div>
+
+ <div class="key-insights">
+ <h4>🔑 Key Insights - Stage 5</h4>
+ <ul>
+ <li>There is a clear trade-off: welfare expansion has benefited current low-income households while eroding the State's capacity to invest in infrastructure and services for the future.</li>
+ <li>The most vulnerable future citizens are the youth - who will inherit the highest per-capita debt burden in the peer group (₹1,28,934) alongside a shrinking working-age support base.</li>
+ <li>Senior citizens face a double bind - Tamil Nadu's ageing population will need more healthcare and social security exactly when the State has least fiscal capacity.</li>
+ <li>The power sector crisis (TANGEDCO losses, high industrial tariff) has a direct economic competitiveness impact on businesses, MSMEs, and employment.</li>
+ </ul>
+ </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- STAGE 6: INDEPENDENT ASSESSMENT -->
+<!-- ============================================================ -->
+<div class="section" id="s6">
+ <h1 class="sec-title">🔬 STAGE 6 - Independent Assessment</h1>
+
+ <h2 class="sec-subtitle">Comparative Judgements - Evidence Only</h2>
+
+ <div class="verdict-grid">
+ <div class="verdict-item win2021">
+ <div class="vi-label">Financial Discipline</div>
+ <div class="vi-winner">🔵 Marginally: 2021 WP Govt was inheriting a mess - not creating one</div>
+ <div class="vi-note">Neither government was fiscally disciplined. But DMK's actual 2021-26 record shows worsening on all metrics - including deficit, debt, and commitment ratio - despite inheriting a recovery window. The 2026 WP's data demonstrates the 2021-26 period was a consolidation failure, not success.</div>
+ </div>
+ <div class="verdict-item tie">
+ <div class="vi-label">Welfare Focus</div>
+ <div class="vi-winner">🟡 2021-26 Period: More Welfare Added</div>
+ <div class="vi-note">The DMK government (2021-26) added significant new welfare commitments (Magalir Urimai, free bus travel, DBT, TAPS). Both documents acknowledge Tamil Nadu's strong welfare tradition. 2026 WP implicitly critiques expanding welfare without revenue mobilisation.</div>
+ </div>
+ <div class="verdict-item win2021">
+ <div class="vi-label">Long-Term Growth Emphasis</div>
+ <div class="vi-winner">🔵 2021 WP</div>
+ <div class="vi-note">The 2021 WP dedicates an entire section to GSDP growth trends, sectoral analysis, and per-capita income trajectory. The 2026 WP is purely fiscal - no economic growth analysis. The aspiration for a "$1.5T economy by 2036" is mentioned but not modelled.</div>
+ </div>
+ <div class="verdict-item win2026">
+ <div class="vi-label">Infrastructure Priority</div>
+ <div class="vi-winner">🔴 Neither - both flag the decline</div>
+ <div class="vi-note">CapEx fell from 1.97% GSDP (2006-11) to 1.50% (2016-21) per 2021 WP. Then from 1.79% to 1.44% under DMK (per 2026 WP). The 2026 WP explicitly identifies CapEx as "permanently squeezed" and calculates ₹28,217 cr of foregone capital formation 2023-26.</div>
+ </div>
+ <div class="verdict-item win2026">
+ <div class="vi-label">Governance Reform Evidence</div>
+ <div class="vi-winner">🔴 Neither document strong - 2026 WP more honest</div>
+ <div class="vi-note">The 2026 WP explicitly names corruption in Commercial Taxes, State Excise, Stamp Registration, and Mining departments as causes of revenue loss. The 2021 WP calls for reform but is vaguer on accountability. Neither document presents verifiable governance improvement data.</div>
+ </div>
+ <div class="verdict-item win2026">
+ <div class="vi-label">Measurable Outcomes</div>
+ <div class="vi-winner">🔴 2026 WP - much more rigorous</div>
+ <div class="vi-note">The 2026 WP presents quantified peer comparisons across 6+ dimensions, CAGR analysis, ₹51,000 cr revenue foregone calculation, ₹28,217 cr CapEx foregone, and a forward budget projection with scenario analysis. The 2021 WP has rich historical data but no forward-looking metrics.</div>
+ </div>
+ <div class="verdict-item win2026">
+ <div class="vi-label">Evidence Quality & Data Sources</div>
+ <div class="vi-winner">🔴 2026 WP - stronger framework</div>
+ <div class="vi-note">2026 WP cites CAG, RBI, MoSPI, State Finance Accounts, and peer State budget documents systematically. Uses pre-specified methodology (Section 1.3). The 2021 WP is also data-rich but primarily uses State Budget documents and RBI State Finances Study, with fewer external cross-validations.</div>
+ </div>
+ <div class="verdict-item tie">
+ <div class="vi-label">Political Neutrality</div>
+ <div class="vi-winner">🟡 Both claim neutrality; neither is fully neutral</div>
+ <div class="vi-note">The 2021 WP explicitly states "we have deliberately kept any discussion of the causes of the decline out" - but the IMplications are clear (AIADMK blamed). The 2026 WP states "neither an exercise in retrospective blame nor a political manifesto" - but documents DMK's 5-year record as a consolidation failure.</div>
+ </div>
+ </div>
+
+ <h2 class="sec-subtitle">Where Each Document Is Stronger</h2>
+ <div class="two-col">
+ <div class="dashboard-card primary">
+ <div class="card-title">🔵 2021 WP Strengths</div>
+ <div class="card-body">
+ <ul class="plain">
+ <li>Comprehensive historical context (2006-2021)</li>
+ <li>Economic growth sector analysis</li>
+ <li>Detailed GSDP sectoral decomposition</li>
+ <li>Property tax / local body fiscal analysis</li>
+ <li>Powerful narrative arc - crisis to call for action</li>
+ <li>Public accessibility - written for citizens, not just technocrats</li>
+ <li>Central cess / surcharge impact quantified clearly</li>
+ <li>Global expert advisory council context</li>
+ </ul>
+ </div>
+ </div>
+ <div class="dashboard-card secondary">
+ <div class="card-title">🔴 2026 WP Strengths</div>
+ <div class="card-body">
+ <ul class="plain">
+ <li>Systematic peer comparison (Karnataka, Maharashtra, Gujarat)</li>
+ <li>Demographic fiscal analysis (ageing, debt-trap risk)</li>
+ <li>Corruption attribution by department (explicit)</li>
+ <li>Forward budget projection for 2026-27 with scenario analysis</li>
+ <li>Per-capita liability tracking across 5 years</li>
+ <li>Services sector GST gap quantified (16pp divergence)</li>
+ <li>Budget credibility gap analysis (BE vs RE vs Actuals)</li>
+ <li>Aggregate fiscal risk metric (₹13.18L cr exposure)</li>
+ <li>Scissors Effect / Demographic Debt Trap analysis</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+
+ <div class="key-insights">
+ <h4>🔑 Key Insights - Stage 6</h4>
+ <ul>
+ <li>On analytical rigour, the 2026 WP is superior - it has more peer benchmarking, forward projections, and accountability attribution.</li>
+ <li>On breadth of coverage, the 2021 WP is wider - it covers economic growth, sectoral analysis, and local body governance that the 2026 WP omits.</li>
+ <li>Neither government can claim strong fiscal discipline - both inherited or created structural deficits without delivering structural remedies.</li>
+ <li>The fiscal diagnosis in both documents is essentially the same - SOTR inadequacy, PSU losses, rising committed expenditure, declining CapEx - but the 2026 WP adds the crucial observation that peers were able to consolidate during this same window, making TN's deterioration a policy choice, not an inevitability.</li>
+ </ul>
+ </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- STAGE 7: FINAL VERDICT -->
+<!-- ============================================================ -->
+<div class="section" id="s7">
+ <h1 class="sec-title">⚖️ STAGE 7 - Final Verdict</h1>
+
+ <h2 class="sec-subtitle">🔟 Top 20 Major Differences</h2>
+ <table>
+ <thead><tr><th>#</th><th>Dimension</th><th>2021 WP</th><th>2026 WP</th></tr></thead>
+ <tbody>
+ <tr><td>1</td><td>Peer Comparison</td><td>Limited (2-3 states cited occasionally)</td><td>Systematic 4-state comparison throughout all metrics</td></tr>
+ <tr><td>2</td><td>Demographic Analysis</td><td>Absent</td><td>Central chapter - ageing as fiscal existential risk</td></tr>
+ <tr><td>3</td><td>Corruption Attribution</td><td>Implicit ("lax tax administration")</td><td>Explicit - names Commercial Taxes, State Excise, Registration, Mining</td></tr>
+ <tr><td>4</td><td>Forward Projection</td><td>None</td><td>Detailed 2026-27 scenario analysis with ₹41,800 cr gap identification</td></tr>
+ <tr><td>5</td><td>Welfare Scheme Critique</td><td>None - calls for targeting but no scheme mentioned</td><td>Names Kalaignar Magalir Urimai, free bus travel as uncompensated fiscal additions</td></tr>
+ <tr><td>6</td><td>Budget Credibility</td><td>Not explicitly addressed</td><td>Dedicated section - CAG-flagged systematic optimism in BEs</td></tr>
+ <tr><td>7</td><td>Economic Growth Coverage</td><td>Full section - GSDP, sectoral, per-capita rankings</td><td>Absent - purely fiscal focus</td></tr>
+ <tr><td>8</td><td>Local Body Governance</td><td>Dedicated analysis - property tax, devolution, LB dues to PSUs</td><td>Mentioned briefly in context of PSU receivables</td></tr>
+ <tr><td>9</td><td>FRBM Amendments</td><td>Noted</td><td>Fully documented (13 amendments) - called "retrospective legitimation"</td></tr>
+ <tr><td>10</td><td>Interest-CapEx Crossover</td><td>Not highlighted</td><td>Central structural finding - interest exceeds CapEx since 2017-18</td></tr>
+ <tr><td>11</td><td>TNCSC Liability</td><td>Not profiled</td><td>New major PSU risk - ₹27,181 cr debt, ₹24,000 cr subsidy receivable</td></tr>
+ <tr><td>12</td><td>Aggregate Fiscal Risk</td><td>Not aggregated</td><td>₹13.18 lakh crore composite exposure quantified</td></tr>
+ <tr><td>13</td><td>Services Sector GST Gap</td><td>Not quantified</td><td>53.6% of GSDP, only 37.8% of GST - 16pp enforcement opportunity</td></tr>
+ <tr><td>14</td><td>Tone</td><td>Crisis alarm; implicit political attribution</td><td>Analytical restraint; explicit data-driven attribution</td></tr>
+ <tr><td>15</td><td>Advisory Mechanism</td><td>Global Economic Advisory Council formed</td><td>Not mentioned</td></tr>
+ <tr><td>16</td><td>Property Tax</td><td>Major reform opportunity identified and urged</td><td>Not mentioned - presumably still unresolved</td></tr>
+ <tr><td>17</td><td>Centre-State Relations</td><td>Extensive - cesses, surcharges, petroleum levies</td><td>Covered but less emphasis; FC share as structural constraint</td></tr>
+ <tr><td>18</td><td>TAPS Pension Impact</td><td>Not relevant (CPS was in place)</td><td>New major structural liability - ₹5,000 cr/yr + ₹13,000 cr bridge</td></tr>
+ <tr><td>19</td><td>MYT Tariff Reform</td><td>Tariff revision urgently called for</td><td>MYT introduced - acknowledged as partial correction</td></tr>
+ <tr><td>20</td><td>Post-COVID Period Assessment</td><td>COVID as the immediate crisis</td><td>COVID as legitimate shock; post-2021 deterioration = policy choice</td></tr>
+ </tbody>
+ </table>
+
+ <h2 class="sec-subtitle">✅ Top 20 Major Similarities</h2>
+ <table>
+ <thead><tr><th>#</th><th>Common Finding</th></tr></thead>
+ <tbody>
+ <tr><td>1</td><td>Revenue deficit is structural - present since 2013-14 across all governments.</td></tr>
+ <tr><td>2</td><td>State's Own Tax Revenue has been in long-term decline relative to GSDP since 2006-07.</td></tr>
+ <tr><td>3</td><td>Outstanding debt is unsustainably high and growing faster than GSDP.</td></tr>
+ <tr><td>4</td><td>TANGEDCO/TNEB Group is the largest single fiscal risk - losses compounding across two documents.</td></tr>
+ <tr><td>5</td><td>STUs are structurally loss-making - cost base exceeds revenue by large and persistent margin.</td></tr>
+ <tr><td>6</td><td>Capital expenditure has declined over both periods - crowded out by committed expenditure.</td></tr>
+ <tr><td>7</td><td>Tamil Nadu's Finance Commission share has declined from 6.64% to ~4% - structural disadvantage.</td></tr>
+ <tr><td>8</td><td>Government guarantees are a major contingent liability risk, primarily from power and transport sectors.</td></tr>
+ <tr><td>9</td><td>FRBM Act compliance has been repeatedly compromised through amendments rather than corrective action.</td></tr>
+ <tr><td>10</td><td>Water sector boards (TWAD, CMWSSB) have chronic under-recovery and accumulating losses.</td></tr>
+ <tr><td>11</td><td>Central cess and surcharges reduce the divisible pool - reducing TN's share of Union taxes.</td></tr>
+ <tr><td>12</td><td>State Excise revenue is significantly below potential - lost revenue from policy changes and enforcement gaps.</td></tr>
+ <tr><td>13</td><td>Both documents call for honest, transparent public accounts as a prerequisite for reform.</td></tr>
+ <tr><td>14</td><td>Both documents quote Thiruvalluvar on fiscal prudence - situating fiscal discipline in Tamil cultural values.</td></tr>
+ <tr><td>15</td><td>Property registration revenue has been under-mobilised relative to actual market values.</td></tr>
+ <tr><td>16</td><td>Both acknowledge Tamil Nadu's enormous economic potential - strong GDP, human capital, industrial base.</td></tr>
+ <tr><td>17</td><td>PSU reform is repeatedly called "urgent" but not delivered - the pattern spans both documents.</td></tr>
+ <tr><td>18</td><td>Non-tax revenue is chronically under-exploited (mining royalties, fees).</td></tr>
+ <tr><td>19</td><td>Debt added in the period being critiqued is described as larger than all prior accumulated debt.</td></tr>
+ <tr><td>20</td><td>Both conclude that the fiscal situation is reversible through discipline, reform, and revenue mobilisation.</td></tr>
+ </tbody>
+ </table>
+
+ <h2 class="sec-subtitle">🎯 Biggest Surprises</h2>
+ <ul class="plain">
+ <li><strong>Revenue Deficit in 2025-26 exceeds the COVID year of 2020-21 in absolute terms</strong> - despite the economy growing at 7%+ CAGR. This is the single most startling finding in either document.</li>
+ <li><strong>GST collections in absolute terms from TN (₹72,008 cr) are lower than Karnataka (₹87,256 cr) and Gujarat (₹80,823 cr)</strong> - which have smaller economies. TN with India's 2nd largest GSDP collects less GST than peers with smaller economies.</li>
+ <li><strong>State Excise collections in TN (₹11,836 cr) are less than a third of Karnataka's (₹41,000 cr)</strong> - in a head where TN had structural advantages. A "parallel system" of rent-seeking is explicitly named.</li>
+ <li><strong>The 2021 White Paper's promised "once in a generation reforms" produced zero measurable fiscal improvement</strong> - all 12 major fiscal commitments were either undelivered or actively reversed.</li>
+ <li><strong>Debt added in 5 years (2021-26) is larger than all debt accumulated in TN's first 60 years of existence</strong> - a genuinely extraordinary historical fact from the 2026 WP.</li>
+ <li><strong>CMWSSB (Chennai water) losses nearly doubled (92%) in 5 years</strong> - despite being flagged as urgent in 2021. No reform evidence in the 2026 WP.</li>
+ </ul>
+
+ <h2 class="sec-subtitle">🚀 Most Ambitious Promises</h2>
+ <ul class="plain">
+ <li><strong>2021 WP:</strong> "Total and dramatic transformation" - CM's statement to Economic Advisory Council. Tamil Nadu to be "model state for all of India."</li>
+ <li><strong>2021 WP:</strong> Revenue deficit elimination target (again) - already extended 6 times at time of writing; now extended to 2026-27 (8th extension).</li>
+ <li><strong>2026 WP:</strong> Tamil Nadu to become $1.5 trillion economy by 2036 - requires fiscal correction, sustained investment, and private capital attraction.</li>
+ <li><strong>2026 WP Way Forward:</strong> Plugging leakages and corruption in revenue departments without imposing additional burden on citizens - ambitious, given structural depth of the issue.</li>
+ </ul>
+
+ <h2 class="sec-subtitle">⚠️ Highest-Risk Commitments</h2>
+ <ul class="plain">
+ <li><strong>TAPS (Tamil Nadu Assured Pension Scheme):</strong> Returns to old-type pension from CPS. Adds ₹5,000 cr/yr growing at 10%/yr - at 10% CAGR this becomes ₹8,052 cr/yr in 10 years. Actuarial liability undisclosed.</li>
+ <li><strong>TNPDCL Regulatory Asset Order (SC):</strong> ₹59,000 cr historical under-recovery to be repaid at ₹11,800 cr/yr over 7 years - mandatory, SC-directed, not in IBE 2026-27.</li>
+ <li><strong>Kalaignar Magalir Urimai (income transfer scheme):</strong> Large recurring commitment (part of ₹20,000+ cr/yr block) without dedicated revenue source.</li>
+ <li><strong>New government's programme commitments (2026 WP):</strong> WP explicitly states "absolutely no room in fiscal space" for new schemes under BAU - yet political mandates require delivery.</li>
+ </ul>
+
+ <h2 class="sec-subtitle">✅ Most Realistic Initiatives</h2>
+ <ul class="plain">
+ <li><strong>Anti-corruption drive in revenue departments:</strong> Named explicitly in 2026 WP as the primary opportunity. Would improve SOTR without raising tax rates - politically achievable.</li>
+ <li><strong>Guideline value rationalisation for stamp duty:</strong> Entirely within State authority. Would improve revenue from a head that has been stagnant despite a booming real estate market.</li>
+ <li><strong>MYT (Multi-Year Tariff) for TANGEDCO:</strong> Already implemented - narrowing ACS-ARR gap. Further expansion is realistic and within regulatory framework.</li>
+ <li><strong>Motor Vehicle Tax revision:</strong> Done in 2023. 2026 WP shows improvement (0.27% → 0.35% GSDP). Continued periodic revision is realistic.</li>
+ <li><strong>Mining revenue augmentation:</strong> TN has substantial mineral deposits. Regulatory tightening and fee revision are administratively achievable.</li>
+ </ul>
+
+ <h2 class="sec-subtitle">💡 Key Takeaways for Policymakers</h2>
+ <ul class="plain">
+ <li>The revenue crisis is the root cause - SOTR/GSDP at 5.45% (lowest ever) must be raised to 7%+ within 5 years through anti-corruption measures, not new tax rates.</li>
+ <li>The power sector requires structural resolution (not annual grants) - MYT is a positive start but ₹1,45,185 cr in 5-year GoTN support without structural turnaround is unsustainable.</li>
+ <li>CapEx must be protected from being crowded out - the interest-to-CapEx ratio of 1.32:1 must be reversed; a minimum CapEx floor (1.8% GSDP) should be statutory.</li>
+ <li>Welfare expansion must be paired with revenue mobilisation - the 2026 WP identifies this as the single most consequential policy failure of 2023-26.</li>
+ <li>Demographic urgency is real - Tamil Nadu's working-age window is closing fastest among large States. Fiscal correction must happen in the next 5-7 years or the debt trap becomes structural.</li>
+ <li>The FRBM Act must be converted from a "target revision instrument" back into a "binding constraint" - possibly with independent oversight.</li>
+ <li>PSU reform (especially TNPDCL and STUs) requires a sector-specific turnaround plan, not repeated annual bailouts.</li>
+ </ul>
+
+ <h2 class="sec-subtitle">💡 Key Takeaways for Citizens</h2>
+ <ul class="plain">
+ <li>Every ₹100 of State revenue: ₹22.80 goes to interest (before any school, hospital, or road). This ratio is the worst among peer States.</li>
+ <li>Each resident of Tamil Nadu carries a government liability of ₹1,28,934 - more than Karnataka (₹1,11,375) or Maharashtra (₹77,569) or Gujarat (₹70,798).</li>
+ <li>Welfare benefits are real and valuable - but they are being funded by debt that tomorrow's taxpayers will repay. The transfer from children to current recipients is embedded in the numbers.</li>
+ <li>The quality of roads, water, hospitals, and schools depends on CapEx - which has declined from 2% to 1.44% of GSDP while debt doubled. Public infrastructure quality will continue to lag unless this is reversed.</li>
+ <li>Tamil Nadu collects LESS GST than Karnataka and Gujarat in absolute terms despite having a LARGER economy - this gap (₹15,000-20,000 cr/year) is largely a corruption and enforcement problem, not a structural economic one.</li>
+ <li>The State has amended the Fiscal Responsibility Act 13 times since 2003, always to lower the bar when it was about to be crossed. Voters should demand independent fiscal oversight.</li>
+ </ul>
+
+ <div class="key-insights">
+ <h4>🔑 Final Overall Assessment</h4>
+ <ul>
+ <li>Both white papers serve the same function: legitimising a new government by documenting the predecessor's failures. Both are credible; neither is entirely politically neutral.</li>
+ <li>The 2026 WP is more rigorously researched and methodologically superior. The 2021 WP is broader in scope and more accessible to general readers.</li>
+ <li>Tamil Nadu's fiscal crisis is not the creation of any single government. It has structural roots (Finance Commission share loss, GST transition, demographic shift) and compounded over five governments.</li>
+ <li>The critical question - unanswered by both documents - is: what is the specific, costed, time-bound fiscal correction plan? Neither white paper transitions from diagnosis to prescription. That is the missing chapter in Tamil Nadu's fiscal history.</li>
+ <li>The emerging risk is a fiscal-demographic debt trap - the 2026 WP correctly identifies this for the first time. Tamil Nadu is ageing faster than any large Indian State while its debt stock is growing faster than its economy and its revenue effort is declining. The "scissors effect" described will be the defining fiscal challenge of the next decade.</li>
+ </ul>
+ </div>
+</div>
+
+</div><!-- /container -->
+
+<footer>
+ <strong>Tamil Nadu White Paper Comparative Analysis</strong><br>
+ Prepared as an independent, evidence-based analytical report. All figures sourced directly from the two white papers. | June 2026<br>
+ <em>This document is for research, policy, and educational purposes. Every conclusion is grounded in the primary source documents.</em>
+</footer>
+</div>
+</body>
+</html>
